@@ -16,12 +16,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  # Niri
-  programs.niri = {
-    enable = true;
-    useNautilus = true;
-  };
-
   # Experimental
   nix.settings.experimental-features = [
     "nix-command"
@@ -47,7 +41,6 @@
 
   # Networking
   networking.networkmanager.enable = true;
-  networking.wireless.enable = true;
   networking.firewall.enable = false;
 
   # Bluetooth
@@ -167,7 +160,18 @@
   services.libinput.enable = true;
   services.xserver.xkb.layout = "us,th";
 
-  # DE
+  # Desktop
+  services.greetd = {
+    enable = true;
+    settings.default_session = {
+      command = "${pkgs.niri}/bin/niri-session";
+      user = "cherr";
+    };
+  };
+  programs.niri = {
+    enable = true;
+    useNautilus = true;
+  };
   xdg.portal = {
     enable = true;
     config = {
