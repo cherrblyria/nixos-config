@@ -10,10 +10,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # DE
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
-
   # Programs
+  environment.systemPackages = with pkgs; [
+    kdePackages.kate
+  ];
   programs.firefox.enable = true;
 }
