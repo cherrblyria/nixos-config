@@ -47,6 +47,10 @@
     wget
     fastfetch
     eza
+
+    noto-fonts
+    noto-fonts-cjk-sans
+    nerd-fonts.caskaydia-cove
   ];
   programs.git.enable = true;
   programs.neovim.enable = true;
