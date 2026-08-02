@@ -75,6 +75,7 @@
     cava
 
     kitty
+    alacritty
     brave-origin
     obsidian
     vesktop
