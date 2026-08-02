@@ -133,8 +133,6 @@
   services.xserver.xkb.layout = "us,th";
 
   # DE
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
   xdg.portal = {
     enable = true;
     config = {
