@@ -12,9 +12,7 @@
   # Language stuff
   time.timeZone = "Asia/Bangkok";
   i18n.defaultLocale = "en_US.UTF-8";
-  i18n.extraLocaleSettings = {
-    LC_TIME = "C.UTF-8";
-  };
+  i18n.extraLocaleSettings.LC_TIME = "C.UTF-8";
 
   # Pipewire.
   services.pulseaudio.enable = false;
@@ -62,6 +60,7 @@
     loupe
     engrampa
     showtime
+    xdg-desktop-portal-gnome
 
     noto-fonts
     noto-fonts-cjk-sans
@@ -71,9 +70,7 @@
   programs.vscode = {
     enable = true;
     defaultEditor = true;
-    enterprisePolicies = {
-      "TelemetryLevel" = "off";
-    };
+    enterprisePolicies."TelemetryLevel" = "off";
   };
   programs.fish = {
     enable = true;
@@ -128,6 +125,8 @@
     enableFishIntegration = true;
   };
 
+  services.flatpak.enable = true;
+
   # X11 I think
   services.xserver.enable = false;
   services.libinput.enable = true;
@@ -136,6 +135,18 @@
   # DE
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
+  xdg.portal = {
+    enable = true;
+    config = {
+      common = {
+        default = [
+          "gnome"
+          "gtk"
+        ];
+        "org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
+      };
+    };
+  };
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
