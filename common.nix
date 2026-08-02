@@ -46,10 +46,65 @@
   environment.systemPackages = with pkgs; [
     wget
     fastfetch
+    eza
   ];
   programs.git.enable = true;
   programs.neovim.enable = true;
-  programs.fish.enable = true;
+  programs.fish = {
+    enable = true;
+    programs.fish.interactiveShellInit = "";
+    programs.fish.shellAliases = {
+      # Zoxide
+      cd = "z";
+
+      # Eza
+      ls = "eza -h  --icons --group-directories-first";
+      la = "ls -A";
+      l = "ls -lA";
+      ll = "ls -l";
+      lls = "ls -lA --total-size";
+      lt = "ls -T";
+      lat = "ls -TA";
+
+      # Shortcuts
+      c = "clear";
+      cls = "clear && fastfetch";
+
+      # Programs
+      f = "fzf";
+      ff = "fastfetch";
+      g = "git";
+      v = "nvim";
+      vi = "nvim";
+      vim = "nvim";
+
+      # File management
+      b = "bat -Pp";
+      cp = "cp -i";
+      mk = "touch";
+      mkd = "mkdir";
+      mkdir = "mkdir -pv";
+      mv = "mv -i";
+      rm = "rm -i";
+      tch = "touch";
+
+      grep = "grep --color=auto";
+      rg = "rg --color=always";
+    };
+    programs.fish.shellAbbrs = {
+      def = "find . -type f -empty -delete";
+      ded = "find . -type d -empty -delete";
+      dbl = "find . -xtype l -delete";
+
+      fef = "find . -type f -empty";
+      fed = "find . -type d -empty";
+      fbl = "find . -xtype l";
+    };
+  };
+  programs.zoxide = {
+    enable = true;
+    programs.zoxide.enableFishIntegration = true;
+  };
 
   # X11 I think
   services.xserver.enable = false;
