@@ -48,18 +48,26 @@
     fastfetch
     eza
 
+    kitty
     brave-origin
     obsidian
     vesktop
     spotify
     spicetify-cli
+    krita
+
+    nautilus
+    nautilus-open-any-terminal
+    sushi
+    loupe
+    engrampa
+    showtime
 
     noto-fonts
     noto-fonts-cjk-sans
     nerd-fonts.caskaydia-cove
   ];
   programs.git.enable = true;
-  programs.neovim.enable = true;
   programs.vscode = {
     enable = true;
     defaultEditor = true;
@@ -91,9 +99,6 @@
       f = "fzf";
       ff = "fastfetch";
       g = "git";
-      v = "nvim";
-      vi = "nvim";
-      vim = "nvim";
 
       # File management
       b = "bat -Pp";
