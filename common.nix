@@ -62,6 +62,7 @@
     loupe
     engrampa
     showtime
+    gnome-tweaks
 
     noto-fonts
     noto-fonts-cjk-sans
