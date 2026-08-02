@@ -64,6 +64,8 @@
   # List packages installed in system profile
   environment.systemPackages = with pkgs; [
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+    niri
+    xwayland-satellite
 
     wget
     fastfetch
