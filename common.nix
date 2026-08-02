@@ -52,8 +52,8 @@
   programs.neovim.enable = true;
   programs.fish = {
     enable = true;
-    programs.fish.interactiveShellInit = "";
-    programs.fish.shellAliases = {
+    interactiveShellInit = "";
+    shellAliases = {
       # Zoxide
       cd = "z";
 
@@ -91,7 +91,7 @@
       grep = "grep --color=auto";
       rg = "rg --color=always";
     };
-    programs.fish.shellAbbrs = {
+    shellAbbrs = {
       def = "find . -type f -empty -delete";
       ded = "find . -type d -empty -delete";
       dbl = "find . -xtype l -delete";
@@ -103,7 +103,7 @@
   };
   programs.zoxide = {
     enable = true;
-    programs.zoxide.enableFishIntegration = true;
+    enableFishIntegration = true;
   };
 
   # X11 I think
