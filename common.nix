@@ -45,6 +45,9 @@
     wget
     fastfetch
     eza
+    btop
+    duf
+    cava
 
     kitty
     brave-origin
@@ -60,6 +63,7 @@
     loupe
     engrampa
     showtime
+    gnome-text-editor
     xdg-desktop-portal-gnome
 
     noto-fonts
@@ -142,6 +146,47 @@
           "gtk"
         ];
         "org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
+      };
+    };
+  };
+
+  # Keyd
+  services.keyd = {
+    enable = true;
+    keyboards = {
+      default = {
+        ids = [
+          "*"
+          "-0000:0000"
+          "-1234:5678"
+          "-dec0:5eba"
+        ];
+        settings = {
+          main = {
+            capslock = "leftcontrol";
+            leftcontrol = "grave";
+
+            leftmeta = "leftalt";
+            leftalt = "leftmeta";
+
+            rightalt = "rightalt";
+            rightshift = "rightshift";
+            rightcontrol = "rightcontrol";
+
+            "leftshift+rightshift" = "capslock";
+          };
+          externalKeyboard = {
+            ids = [ "258a:002a" ];
+            settings = {
+              main = {
+                home = "delete";
+                delete = "sysrq";
+                pageup = "volumeup";
+                pagedown = "volumedown";
+              };
+            };
+          };
+        };
       };
     };
   };
