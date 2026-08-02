@@ -6,7 +6,10 @@
 }:
 
 {
-  imports = [ ./hardware-configuration.nix ];
+  imports = [
+    ./hardware-configuration.nix
+    inputs.noctalia-greeter.nixosModules.default
+  ];
 
   networking.hostName = "nixos";
   system.stateVersion = "26.05";
@@ -64,7 +67,6 @@
   # List packages installed in system profile
   environment.systemPackages = with pkgs; [
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
-    niri
     xwayland-satellite
 
     wget

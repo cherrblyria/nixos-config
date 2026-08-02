@@ -12,13 +12,15 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... }: {
-    nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
-      modules = [
-        ./hosts/default/configuration.nix
-      ];
+  outputs =
+    { self, nixpkgs, ... }@inputs:
+    {
+      nixosConfigurations.default = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/default/configuration.nix
+        ];
+      };
     };
-  };
 }
