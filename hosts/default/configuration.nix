@@ -10,10 +10,4 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  # Programs
-  environment.systemPackages = with pkgs; [
-    kdePackages.kate
-  ];
-  programs.firefox.enable = true;
 }

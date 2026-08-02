@@ -48,12 +48,25 @@
     fastfetch
     eza
 
+    brave-origin
+    obsidian
+    vesktop
+    spotify
+    spicetify-cli
+
     noto-fonts
     noto-fonts-cjk-sans
     nerd-fonts.caskaydia-cove
   ];
   programs.git.enable = true;
   programs.neovim.enable = true;
+  programs.vscode = {
+    enable = true;
+    defaultEditor = true;
+    vscode.enterprisePolicies = {
+      "TelemetryLevel" = "off";
+    };
+  };
   programs.fish = {
     enable = true;
     interactiveShellInit = "";
