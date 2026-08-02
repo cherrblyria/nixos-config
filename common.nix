@@ -71,7 +71,7 @@
   programs.vscode = {
     enable = true;
     defaultEditor = true;
-    vscode.enterprisePolicies = {
+    enterprisePolicies = {
       "TelemetryLevel" = "off";
     };
   };
