@@ -161,11 +161,18 @@
   services.xserver.xkb.layout = "us,th";
 
   # Desktop
-  services.greetd = {
+  programs.noctalia-greeter = {
     enable = true;
-    settings.default_session = {
-      command = "${pkgs.niri}/bin/niri-session";
-      user = "cherr";
+    greeter-args = "";
+    settings = {
+      cursor = {
+        # theme = "Bibata-Modern-Ice";
+        # size = 24;
+        # path = "${pkgs.bibata-cursors}/share/icons";
+      };
+      keyboard = {
+        layout = "us";
+      };
     };
   };
   programs.niri = {
