@@ -14,7 +14,7 @@
   networking.hostName = "nixos";
   system.stateVersion = "26.11";
 
-  # Bootloader.
+  # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -93,6 +93,7 @@
     spotify
     spicetify-cli
     krita
+    vscode-with-extensions
 
     nautilus
     nautilus-open-any-terminal
@@ -103,17 +104,16 @@
     gnome-text-editor
     xdg-desktop-portal-gnome
 
+    adwaita-icon-theme
+    adw-gtk3
+
+    adwaita-fonts
     noto-fonts
     noto-fonts-cjk-sans
     nerd-fonts.caskaydia-cove
   ];
 
   programs.git.enable = true;
-  programs.vscode = {
-    enable = true;
-    defaultEditor = true;
-    enterprisePolicies."TelemetryLevel" = "off";
-  };
   programs.fish = {
     enable = true;
     interactiveShellInit = "";
@@ -168,6 +168,10 @@
   };
 
   services.flatpak.enable = true;
+  services.udisks2.enable = true;
+  security.polkit.enable = true;
+  services.gvfs.enable = true;
+  services.dbus.enable = true;
 
   # X11 I think
   services.xserver.enable = false;
@@ -230,11 +234,25 @@
             rightcontrol = "rightcontrol";
 
             "leftshift+rightshift" = "capslock";
+        };
+      };
           };
           externalKeyboard = {
             ids = [ "258a:002a" ];
             settings = {
               main = {
+            capslock = "leftcontrol";
+            leftcontrol = "grave";
+
+            leftmeta = "leftalt";
+            leftalt = "leftmeta";
+
+            rightalt = "rightalt";
+            rightshift = "rightshift";
+            rightcontrol = "rightcontrol";
+
+            "leftshift+rightshift" = "capslock";
+
                 home = "delete";
                 delete = "sysrq";
                 pageup = "volumeup";
@@ -242,8 +260,6 @@
               };
             };
           };
-        };
-      };
     };
   };
 
