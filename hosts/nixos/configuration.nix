@@ -6,9 +6,9 @@
 }:
 
 let
-  myCustomCursor = pkgs.runCommand "my-custom-cursor" { } ''
-    mkdir -p $out/share/icons
-    cp -r ${../../assets/icons/mizuki-psekai-cursor} $out/share/icons/
+  myCursorTheme = pkgs.runCommand "my-cursor-theme" { } ''
+    mkdir -p $out/share/icons/mizuki-psekai-cursor
+    cp -r ${../../assets/cursors/mizuki-psekai-cursor}/* $out/share/icons/mizuki-psekai-cursor/
   '';
 in
 {
@@ -101,13 +101,13 @@ in
     wget
     fastfetch
     eza
+    fzf
     btop
     duf
     cava
     nixfmt
 
     kitty
-    alacritty
     brave-origin
     obsidian
     vesktop
@@ -126,7 +126,7 @@ in
 
     adwaita-icon-theme
     adw-gtk3
-    (myCustomCursor)
+    (myCursorTheme)
 
     adwaita-fonts
     noto-fonts
@@ -216,7 +216,6 @@ in
       cursor = {
         theme = "mizuki-psekai-cursor";
         size = 24;
-        path = "${myCustomCursor}/share/icons";
       };
       keyboard = {
         layout = "us";
