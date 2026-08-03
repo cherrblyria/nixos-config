@@ -63,8 +63,11 @@ in
   services.syncthing = {
     enable = true;
     openDefaultPorts = true;
+    user = "cherr";
+    group = "users";
+    dataDir = "/home/cherr";
     settings = {
-      gui.user = "myuser";
+      gui.user = "cherr";
       devices = {
         "Phone" = {
           id = "O76SLWB-LZJFWNX-XY3CRJV-SG7PIMM-P3HNDPU-XZYU7HR-736KX5Q-QGZ45QV";
@@ -127,6 +130,7 @@ in
   environment.variables = {
     XCURSOR_THEME = "mizuki-psekai-cursor";
     XCURSOR_SIZE = "24";
+    fish_greeting = "";
   };
 
   # Tailscale
@@ -141,6 +145,11 @@ in
       "networkmanager"
       "wheel"
     ];
+  };
+
+  programs.nh = {
+    enable = true;
+    flake = "/home/cherr/nixos-config";
   };
 
   # List packages installed in system profile
@@ -285,7 +294,6 @@ $cmd_duration $directory$git_branch
   };
   programs.fish = {
     enable = true;
-    interactiveShellInit = "";
     shellAliases = {
       # Zoxide
       cd = "z";
