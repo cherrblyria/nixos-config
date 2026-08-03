@@ -8,7 +8,7 @@
 let
   myCustomCursor = pkgs.runCommand "my-custom-cursor" { } ''
     mkdir -p $out/share/icons
-    cp -r ${./assets/icons/mizuki-psekai-cursor} $out/share/icons/
+    cp -r ${../../assets/icons/mizuki-psekai-cursor} $out/share/icons/
   '';
 in
 {
@@ -69,7 +69,7 @@ in
   fonts.packages = [
     (pkgs.runCommand "my-custom-fonts" { } ''
       mkdir -p $out/share/fonts/truetype
-      cp -r ${./assets/fonts}/* $out/share/fonts/truetype/
+      cp -r ${../../assets/fonts}/* $out/share/fonts/truetype/
     '')
   ];
 
