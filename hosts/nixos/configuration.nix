@@ -63,10 +63,60 @@ in
   services.syncthing = {
     enable = true;
     openDefaultPorts = true;
+    settings = {
+      gui.user = "myuser";
+      devices = {
+        "Phone" = {
+          id = "O76SLWB-LZJFWNX-XY3CRJV-SG7PIMM-P3HNDPU-XZYU7HR-736KX5Q-QGZ45QV";
+        };
+        "Tablet" = {
+          id = "7ZYRPOK-AJENNVR-JJFQG2A-NKX4HPY-MJNQQMU-3ADI5DV-DBIMFAY-ARZ3GAT";
+        };
+      };
+      folders = {
+        "vault" = {
+          id = "vault";
+          label = "Cherr's Sanctuary";
+          path = "/home/cherr/Documents/Cherr's Sanctuary";
+          ignorePatterns = [
+            ".git/"
+            ".git"
+            ".gitignore"
+            ".obsidian/community-plugins.json"
+          ];
+          devices = [
+            "Phone"
+            "Tablet"
+          ];
+        };
+        "shared-dcim" = {
+          id = "shared-dcim";
+          label = "DCIM";
+          path = "/home/cherr/DCIM";
+          devices = [
+            "Phone"
+            "Tablet"
+          ];
+        };
+        "shared-pics" = {
+          id = "shared-pics";
+          label = "Pictures";
+          path = "/home/cherr/Pictures";
+          devices = [
+            "Phone"
+            "Tablet"
+          ];
+        };
+      };
+    };
   };
 
   # Install custom local font files system-wide
-  fonts.packages = [
+  fonts.packages = with pkgs; [
+    adwaita-fonts
+    noto-fonts
+    noto-fonts-cjk-sans
+    nerd-fonts.caskaydia-cove
     (pkgs.runCommand "my-custom-fonts" { } ''
       mkdir -p $out/share/fonts/truetype
       cp -r ${../../assets/fonts}/* $out/share/fonts/truetype/
@@ -114,6 +164,7 @@ in
     spotify
     spicetify-cli
     krita
+    opencode-desktop
 
     nautilus
     nautilus-open-any-terminal
@@ -127,11 +178,6 @@ in
     adwaita-icon-theme
     adw-gtk3
     (myCursorTheme)
-
-    adwaita-fonts
-    noto-fonts
-    noto-fonts-cjk-sans
-    nerd-fonts.caskaydia-cove
   ];
   programs.vscode = {
     enable = true;
@@ -144,6 +190,99 @@ in
     enterprisePolicies.TelemetryLevel = "off";
   };
   programs.git.enable = true;
+  programs.starship = {
+    enable = true;
+    settings = {
+      add_newline = true;
+      format = "
+$cmd_duration $directory$git_branch
+  $character";
+
+      fill = {
+        symbol = " ";
+        style = "fg:245";
+      };
+
+      character = {
+        success_symbol = "[ ](bold fg:blue)";
+        error_symbol = "[ ](bold fg:red)";
+      };
+
+      package.disabled = true;
+      line_break.disabled = false;
+      memory_usage.disabled = true;
+      time.disabled = true;
+
+      git_branch = {
+        style = "bg:cyan";
+        symbol = "󰘬";
+        truncation_length = 12;
+        truncation_symbol = "";
+        format = " 󰜥 [](bold fg:cyan)[$symbol $branch(:$remote_branch)](fg:black bg:cyan)[ ](bold fg:cyan)";
+      };
+
+      git_commit = {
+        commit_hash_length = 4;
+        tag_symbol = " ";
+      };
+
+      git_state = {
+        format = "[\($state( $progress_current of $progress_total)\)]($style) ";
+        cherry_pick = "[🍒 PICKING](bold red)";
+      };
+
+      git_status = {
+        conflicted = " 🏳 ";
+        ahead = " 🏎💨 ";
+        behind = " 😰 ";
+        diverged = " 😵 ";
+        untracked = " 🤷 ‍";
+        stashed = " 📦 ";
+        modified = " 📝 ";
+        staged = "[++\($count\)](green)";
+        renamed = " ✍️ ";
+        deleted = " 🗑 ";
+      };
+
+      hostname = {
+        ssh_only = false;
+        format = "[•$hostname](bg:cyan bold fg:black)[](bold fg:cyan)";
+        trim_at = ".companyname.com";
+        disabled = false;
+      };
+
+      username = {
+        style_user = "bold bg:cyan fg:black";
+        style_root = "red bold";
+        format = "[](bold fg:cyan)[$user]($style)";
+        disabled = false;
+        show_always = true;
+      };
+
+      directory = {
+        home_symbol = " ";
+        read_only = "  ";
+        style = "bg:green fg:black";
+        truncation_length = 2;
+        truncation_symbol = "••/";
+        format = "[](bold fg:green)[󰉋 → $path]($style)[](bold fg:green)";
+        substitutions = {
+          "Desktop" = "  ";
+          "Documents" = "  ";
+          "Downloads" = "  ";
+          "Music" = " 󰎈 ";
+          "Pictures" = "  ";
+          "Videos" = "  ";
+          "GitHub" = " 󰊤 ";
+        };
+      };
+
+      cmd_duration = {
+        min_time = 0;
+        format = "[](bold fg:yellow)[󰪢 $duration](bold bg:yellow fg:black)[](bold fg:yellow)";
+      };
+    };
+  };
   programs.fish = {
     enable = true;
     interactiveShellInit = "";
