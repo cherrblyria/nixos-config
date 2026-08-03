@@ -5,6 +5,12 @@
   ...
 }:
 
+let
+  myCustomCursor = pkgs.runCommand "my-custom-cursor" { } ''
+    mkdir -p $out/share/icons
+    cp -r ${./assets/icons/mizuki-psekai-cursor} $out/share/icons/
+  '';
+in
 {
   imports = [
     ./hardware-configuration.nix
@@ -59,6 +65,20 @@
     openDefaultPorts = true;
   };
 
+  # Install custom local font files system-wide
+  fonts.packages = [
+    (pkgs.runCommand "my-custom-fonts" { } ''
+      mkdir -p $out/share/fonts/truetype
+      cp -r ${./assets/fonts}/* $out/share/fonts/truetype/
+    '')
+  ];
+
+  # Apply GTK / Pointer defaults system-wide
+  environment.variables = {
+    XCURSOR_THEME = "mizuki-psekai-cursor";
+    XCURSOR_SIZE = "24";
+  };
+
   # Tailscale
   services.tailscale.enable = true;
 
@@ -84,6 +104,7 @@
     btop
     duf
     cava
+    nixfmt
 
     kitty
     alacritty
@@ -93,7 +114,6 @@
     spotify
     spicetify-cli
     krita
-    vscode-with-extensions
 
     nautilus
     nautilus-open-any-terminal
@@ -106,13 +126,23 @@
 
     adwaita-icon-theme
     adw-gtk3
+    (myCustomCursor)
 
     adwaita-fonts
     noto-fonts
     noto-fonts-cjk-sans
     nerd-fonts.caskaydia-cove
   ];
-
+  programs.vscode = {
+    enable = true;
+    defaultEditor = true;
+    extensions = with pkgs.vscode-extensions; [
+      jnoortheen.nix-ide
+      vscodevim.vim
+      pkief.material-icon-theme
+    ];
+    enterprisePolicies.TelemetryLevel = "off";
+  };
   programs.git.enable = true;
   programs.fish = {
     enable = true;
@@ -184,9 +214,9 @@
     greeter-args = "";
     settings = {
       cursor = {
-        # theme = "Bibata-Modern-Ice";
-        # size = 24;
-        # path = "${pkgs.bibata-cursors}/share/icons";
+        theme = "mizuki-psekai-cursor";
+        size = 24;
+        path = "${myCustomCursor}/share/icons";
       };
       keyboard = {
         layout = "us";
@@ -234,13 +264,13 @@
             rightcontrol = "rightcontrol";
 
             "leftshift+rightshift" = "capslock";
+          };
         };
       };
-          };
-          externalKeyboard = {
-            ids = [ "258a:002a" ];
-            settings = {
-              main = {
+      externalKeyboard = {
+        ids = [ "258a:002a" ];
+        settings = {
+          main = {
             capslock = "leftcontrol";
             leftcontrol = "grave";
 
@@ -253,13 +283,13 @@
 
             "leftshift+rightshift" = "capslock";
 
-                home = "delete";
-                delete = "sysrq";
-                pageup = "volumeup";
-                pagedown = "volumedown";
-              };
-            };
+            home = "delete";
+            delete = "sysrq";
+            pageup = "volumeup";
+            pagedown = "volumedown";
           };
+        };
+      };
     };
   };
 
