@@ -1,4 +1,6 @@
-### Cherr's NixOS configs
+<img width="680" height="240" alt="standard (1)" src="https://github.com/user-attachments/assets/6effa075-b54b-4bc0-9b77-d431bc03594f" />
+
+---
 
 this is my NixOS configuration I currently setting it up and I'll keep improving it since NixOS *may* be my end game.
 
