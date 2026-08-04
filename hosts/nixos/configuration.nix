@@ -34,7 +34,7 @@ in
   # Tailscale
   services.tailscale = {
     enable = true;
-    authKeyFile = config.sops.secrets."tailscale_key".path;
+    # authKeyFile = config.sops.secrets."tailscale_key".path;
   };
 
   # Pipewire.

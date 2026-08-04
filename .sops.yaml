@@ -1,0 +1,7 @@
+keys:
+  - &cherr age1lq8xn4mhder3dne4uq9s49w3vx8ml50yq0v7y5dt88avz7dujs4q7vavtq
+creation_rules:
+  - path_regex: secrets/secrets\.yaml$
+    key_groups:
+      - age:
+          - *cherr
