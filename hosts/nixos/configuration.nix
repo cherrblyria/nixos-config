@@ -13,32 +13,29 @@ let
 in
 {
   imports = [
-    ./hardware-configuration.nix
     inputs.noctalia-greeter.nixosModules.default
+    inputs.sops-nix.nixosModules.sops
 
+    ./hardware-configuration.nix
+
+    ./modules/boot.nix
+    ./modules/users.nix
+    ./modules/locale.nix
     ./modules/syncthing.nix
   ];
 
-  networking.hostName = "nixos";
-  system.stateVersion = "26.11";
+  # Secrets management
+  sops = {
+    defaultSopsFile = ./secrets/secrets.yaml;
+    age.keyFile = "/var/lib/sops-nix/key.txt";
+    secrets."tailscale_key".owner = "cherr";
+  };
 
-  # Bootloader
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  # Experimental
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
-
-  nixpkgs.config.allowUnfree = true;
-
-  # Language stuff
-  time.timeZone = "Asia/Bangkok";
-  i18n.defaultLocale = "en_US.UTF-8";
-  i18n.extraLocaleSettings.LC_TIME = "C.UTF-8";
+  # Tailscale
+  services.tailscale = {
+    enable = true;
+    authKeyFile = config.sops.secrets."tailscale_key".path;
+  };
 
   # Pipewire.
   services.pulseaudio.enable = false;
@@ -103,20 +100,6 @@ in
     XCURSOR_THEME = "mizuki-psekai-cursor";
     XCURSOR_SIZE = "24";
     fish_greeting = "";
-  };
-
-  # Tailscale
-  services.tailscale.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users."cherr" = {
-    shell = pkgs.fish;
-    isNormalUser = true;
-    description = "cherr";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-    ];
   };
 
   programs.nh = {
