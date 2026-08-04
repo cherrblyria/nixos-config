@@ -1,11 +1,5 @@
 { pkgs, ... }:
 
-let
-  myCursorTheme = pkgs.runCommand "my-cursor-theme" { } ''
-    mkdir -p $out/share/icons/mizuki-psekai-cursor
-    cp -r ${./assets/cursors/mizuki-psekai-cursor}/* $out/share/icons/mizuki-psekai-cursor/
-  '';
-in
 {
   programs.noctalia-greeter = {
     enable = true;
@@ -49,7 +43,7 @@ in
 
       (pkgs.runCommand "my-custom-fonts" { } ''
         mkdir -p $out/share/fonts/truetype
-        cp -r ${./assets/fonts}/* $out/share/fonts/truetype/
+        cp -r ${../../assets/fonts}/* $out/share/fonts/truetype/
       '')
     ];
 
