@@ -1,4 +1,4 @@
-<img width="680" height="240" alt="standard (1)" src="https://github.com/user-attachments/assets/6effa075-b54b-4bc0-9b77-d431bc03594f" />
+<img width="680" height="240" src="https://github.com/user-attachments/assets/6effa075-b54b-4bc0-9b77-d431bc03594f" />
 
 ---
 
@@ -19,3 +19,7 @@ unofficial linux port: [here](https://www.gnome-look.org/p/2364244)
 
 Google Sans, Playfair Display\
 https://fonts.google.com/
+
+##### Banner
+
+https://auto.creavite.co/
