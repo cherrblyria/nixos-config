@@ -1,0 +1,77 @@
+{ pkgs, ... }:
+
+let
+  myCursorTheme = pkgs.runCommand "my-cursor-theme" { } ''
+    mkdir -p $out/share/icons/mizuki-psekai-cursor
+    cp -r ${./assets/cursors/mizuki-psekai-cursor}/* $out/share/icons/mizuki-psekai-cursor/
+  '';
+in
+{
+  programs.noctalia-greeter = {
+    enable = true;
+    greeter-args = "";
+    settings = {
+      cursor = {
+        theme = "mizuki-psekai-cursor";
+        size = 24;
+      };
+      keyboard = {
+        layout = "us";
+      };
+    };
+  };
+
+  programs.niri = {
+    enable = true;
+    useNautilus = true;
+  };
+
+  xdg.portal = {
+    enable = true;
+    config = {
+      niri = {
+        default = [
+          "gnome"
+          "gtk"
+        ];
+        "org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
+      };
+    };
+  };
+
+  fonts = {
+    packages = with pkgs; [
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-color-emoji
+      adwaita-fonts
+      nerd-fonts.caskaydia-cove
+
+      (pkgs.runCommand "my-custom-fonts" { } ''
+        mkdir -p $out/share/fonts/truetype
+        cp -r ${./assets/fonts}/* $out/share/fonts/truetype/
+      '')
+    ];
+
+    fontconfig = {
+      defaultFonts = {
+        serif = [
+          "Adwaita Sans"
+          "Noto Serif CJK JP"
+          "Google Sans"
+        ];
+        sansSerif = [
+          "Adwaita Sans"
+          "Noto Sans CJK JP"
+          "Google Sans"
+        ];
+        monospace = [
+          "Caskaydia Cove Nerd Font"
+          "Noto Sans Mono CJK JP"
+          "Google Sans"
+        ];
+        emoji = [ "Noto Color Emoji" ];
+      };
+    };
+  };
+}
