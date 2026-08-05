@@ -26,7 +26,6 @@ in
     brave-origin
     obsidian
     vesktop
-    spotify
     krita
     opencode-desktop
 
@@ -38,6 +37,9 @@ in
     showtime
     gnome-text-editor
     xdg-desktop-portal-gnome
+
+    webp-pixbuf-loader
+    imagemagick
 
     adwaita-icon-theme
     adw-gtk3

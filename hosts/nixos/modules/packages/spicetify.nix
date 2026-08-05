@@ -5,15 +5,15 @@ in
 {
   programs.spicetify = {
     enable = true;
+    wayland = true;
     enabledExtensions = with spicePkgs.extensions; [
       adblockify
       hidePodcasts
       shuffle
       autoSkipExplicit
-      popupLyrics
       copyToClipboard
     ];
-    enabledCustomApps = with spicePkgs.customApps; [
+    enabledCustomApps = with spicePkgs.apps; [
       lyricsPlus
       ncsVisualizer
       marketplace
