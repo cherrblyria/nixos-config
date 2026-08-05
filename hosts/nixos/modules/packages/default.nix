@@ -39,9 +39,11 @@ in
     xdg-desktop-portal-gnome
 
     webp-pixbuf-loader
+    ffmpegthumbnailer
     imagemagick
 
     adwaita-icon-theme
+    papirus-icon-theme
     adw-gtk3
     (myCursorTheme)
   ];
