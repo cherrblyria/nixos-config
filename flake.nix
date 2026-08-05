@@ -1,8 +1,9 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-
     sops-nix.url = "github:Mic92/sops-nix";
+
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
     noctalia = {
       url = "github:noctalia-dev/noctalia";

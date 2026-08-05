@@ -10,6 +10,7 @@ in
   environment.systemPackages = with pkgs; [
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     xwayland-satellite
+    wl-clipboard
 
     wget
     fastfetch
@@ -26,7 +27,6 @@ in
     obsidian
     vesktop
     spotify
-    spicetify-cli
     krita
     opencode-desktop
 
