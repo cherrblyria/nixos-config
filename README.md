@@ -4,7 +4,7 @@
 
 this is my NixOS configuration I currently setting it up and I'll keep improving it since NixOS *may* be my end game.
 
-for now this is just a simple one machine config w/ flake and literally everything else in `configuration.nix` it sounds cursed I know, But I'll split it soon.
+for now this is just a simple one machine config w/ flake and simple modular configs
 
 also I made ts 4 myself so just take whatever u want but DON'T fully build from it *I warned u*
 
