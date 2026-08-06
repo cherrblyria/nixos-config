@@ -1,11 +1,5 @@
 { pkgs, inputs, ... }:
 
-let
-  myCursorTheme = pkgs.runCommand "my-cursor-theme" { } ''
-    mkdir -p $out/share/icons/mizuki-psekai-cursor
-    cp -r ${../../assets/cursors/mizuki-psekai-cursor}/* $out/share/icons/mizuki-psekai-cursor/
-  '';
-in
 {
   environment.systemPackages = with pkgs; [
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
@@ -45,7 +39,6 @@ in
     adwaita-icon-theme
     papirus-icon-theme
     adw-gtk3
-    (myCursorTheme)
   ];
 
   programs.vscode = {

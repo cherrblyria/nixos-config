@@ -22,6 +22,7 @@
     ./modules/core/home.nix
 
     ./modules/packages/default.nix
+    ./modules/packages/cursor.nix
     ./modules/packages/fish.nix
     ./modules/packages/starship.nix
     ./modules/packages/spicetify.nix
