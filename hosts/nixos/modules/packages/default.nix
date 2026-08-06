@@ -41,6 +41,8 @@
     adw-gtk3
   ];
 
+  programs.fish.enable = true;
+
   programs.vscode = {
     enable = true;
     defaultEditor = true;
