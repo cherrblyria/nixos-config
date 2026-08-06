@@ -59,18 +59,6 @@ in
     enterprisePolicies.TelemetryLevel = "off";
   };
 
-  programs.git = {
-    enable = true;
-    config = {
-      gpg.format = "ssh";
-
-      signing = {
-        key = "/home/cherr/.ssh/id_ed25519.pub";
-        signByDefault = true;
-      };
-    };
-  };
-
   programs.zoxide = {
     enable = true;
     enableFishIntegration = true;

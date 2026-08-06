@@ -7,6 +7,7 @@
 
 {
   imports = [
+    inputs.home-manager.nixosModules.home-manager
     inputs.noctalia-greeter.nixosModules.default
     inputs.sops-nix.nixosModules.sops
     inputs.spicetify-nix.nixosModules.spicetify
@@ -18,6 +19,7 @@
     ./modules/core/locale.nix
     ./modules/core/network.nix
     ./modules/core/users.nix
+    ./modules/core/home.nix
 
     ./modules/packages/default.nix
     ./modules/packages/fish.nix
