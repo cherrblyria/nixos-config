@@ -2,7 +2,7 @@
 
 ---
 
-this is my NixOS configuration I currently setting it up and I'll keep improving it since NixOS *may* be my end game.
+this is my NixOS configuration I currently setting up and I'll keep improving it since NixOS *may* be my end game.
 
 for now this is just a simple one machine config w/ flake and simple modular configs
 
