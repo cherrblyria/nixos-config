@@ -16,15 +16,13 @@
 
     ./modules/core/boot.nix
     ./modules/core/desktop.nix
+    ./modules/core/home.nix
     ./modules/core/locale.nix
     ./modules/core/network.nix
     ./modules/core/users.nix
-    ./modules/core/home.nix
 
-    ./modules/packages/default.nix
     ./modules/packages/cursor.nix
-    ./modules/packages/fish.nix
-    ./modules/packages/starship.nix
+    ./modules/packages/default.nix
     ./modules/packages/spicetify.nix
 
     ./modules/services/keyd.nix

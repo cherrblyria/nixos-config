@@ -9,5 +9,5 @@ in
 {
   environment.systemPackages = with pkgs; [
     (myCursorTheme)
-  ]
+  ];
 }

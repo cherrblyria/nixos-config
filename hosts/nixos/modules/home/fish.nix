@@ -1,8 +1,8 @@
 {
   programs.fish = {
     enable = true;
-    shellInit = ''
-      function y
+    functions = {
+      y = ''
         set tmp (mktemp -t "yazi-cwd.XXXXXX")
         yazi $argv --cwd-file="$tmp"
         if read -z cwd <"$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
@@ -10,17 +10,17 @@
             z -- "$cwd"
             rm -f -- "$tmp"
         end
-      end
+      '';
 
-      function yc
+      yc = ''
         set tmp (mktemp -t "yazi-chooser.XXXXXX")
         yazi $argv --chooser-file="$tmp"
         if test -s "$tmp"
           echo (cat "$tmp")
           rm -f -- "$tmp"
         end
-      end
-    '';
+      '';
+    };
     shellAliases = {
       # Zoxide
       cd = "z";
