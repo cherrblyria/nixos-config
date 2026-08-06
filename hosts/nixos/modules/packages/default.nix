@@ -36,7 +36,6 @@
     ffmpegthumbnailer
     imagemagick
 
-    adwaita-icon-theme
     papirus-icon-theme
     adw-gtk3
   ];
