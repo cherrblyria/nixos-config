@@ -9,7 +9,7 @@
     ./hardware-configuration.nix
 
     ./modules/core/boot.nix
-    ./modules/core/desktop.nix
+    ./modules/core/font.nix
     ./modules/core/home.nix
     ./modules/core/locale.nix
     ./modules/core/network.nix
@@ -17,6 +17,7 @@
 
     ./modules/packages/cursor.nix
     ./modules/packages/list.nix
+    ./modules/packages/noctalia-greeter.nix
     ./modules/packages/spicetify.nix
 
     ./modules/services/keyd.nix

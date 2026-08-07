@@ -1,19 +1,5 @@
 { pkgs, ... }:
 {
-  programs.noctalia-greeter = {
-    enable = true;
-    greeter-args = "";
-    settings = {
-      cursor = {
-        theme = "mizuki-psekai-cursor";
-        size = 24;
-      };
-      keyboard.layout = "us";
-    };
-  };
-
-  programs.niri.enable = true;
-
   fonts = {
     packages = with pkgs; [
       adwaita-fonts
