@@ -10,15 +10,16 @@
         stateVersion = "26.11";
       };
       imports = [
-        ../home/fish.nix
-        ../home/git.nix
-        ../home/kitty.nix
-        ../home/nh.nix
-        ../home/starship.nix
-        ../home/vscode.nix
-        ../home/xdg.nix
-        ../home/zoxide.nix
-        ../home/gtk.nix
+        ./fish.nix
+        ./git.nix
+        ./gtk.nix
+        ./kitty.nix
+        ./nh.nix
+        ./niri.nix
+        ./starship.nix
+        ./vscode.nix
+        ./xdg.nix
+        ./zoxide.nix
       ];
     };
   };
