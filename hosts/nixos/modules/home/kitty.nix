@@ -33,6 +33,6 @@
       include = "/home/cherr/.config/kitty/themes/noctalia.conf";
     };
     enableGitIntegration = true;
-    enableFishIntegration = true;
+    shellIntegration.enableFishIntegration = true;
   };
 }
