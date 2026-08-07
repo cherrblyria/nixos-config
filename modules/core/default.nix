@@ -1,11 +1,13 @@
+{ lib, ... }:
+let
+  entries = builtins.readDir ./.;
+in
 {
-  imports = [
-    ./boot.nix
-    ./environment.nix
-    ./font.nix
-    ./locale.nix
-    ./network.nix
-    ./sops.nix
-    ./users.nix
-  ];
+  imports =
+    with lib;
+    map (f: ./. + "/${f}") (
+      filter (f: f != "default.nix" && (hasSuffix ".nix" f || entries.${f} == "directory")) (
+        builtins.attrNames entries
+      )
+    );
 }
