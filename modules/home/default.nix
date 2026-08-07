@@ -1,3 +1,7 @@
+{ lib, ... }:
+let
+  entries = builtins.readDir ./.;
+in
 {
   home-manager = {
     useGlobalPkgs = true;
@@ -9,18 +13,13 @@
         homeDirectory = "/home/cherr";
         stateVersion = "26.11";
       };
-      imports = [
-        ./fish.nix
-        ./git.nix
-        ./gtk.nix
-        ./kitty.nix
-        ./nh.nix
-        ./niri.nix
-        ./starship.nix
-        ./vscode.nix
-        ./xdg.nix
-        ./zoxide.nix
-      ];
+      imports =
+        with lib;
+        map (f: ./. + "/${f}") (
+          filter (f: f != "default.nix" && (hasSuffix ".nix" f || entries.${f} == "directory")) (
+            builtins.attrNames entries
+          )
+        );
     };
   };
 }
