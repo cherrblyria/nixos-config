@@ -21,11 +21,14 @@
       home.stateVersion = "26.11";
 
       gtk = {
-        theme.package = pkgs.adw-gtk3;
-        iconTheme.package = pkgs.papirus-icon-theme;
-        gtk4 = {
-          theme.package = pkgs.adw-gtk3;
-          iconTheme.package = pkgs.papirus-icon-theme;
+        enable = true;
+        theme = {
+          name = "adw-gtk3";
+          package = pkgs.adw-gtk3;
+        };
+        iconTheme = {
+          name = "Papirus";
+          package = pkgs.papirus-icon-theme;
         };
       };
     };

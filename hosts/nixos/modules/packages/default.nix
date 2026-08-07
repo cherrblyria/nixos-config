@@ -37,8 +37,6 @@
     ffmpegthumbnailer
     imagemagick
     webp-pixbuf-loader
-
-    adw-gtk3
   ];
 
   programs.fish.enable = true;
