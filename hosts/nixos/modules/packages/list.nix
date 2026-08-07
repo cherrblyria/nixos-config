@@ -1,11 +1,13 @@
 { pkgs, inputs, ... }:
-
 {
   environment.systemPackages = with pkgs; [
+    # WM/Shell
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     wl-clipboard
+    xdg-desktop-portal-gnome
     xwayland-satellite
 
+    # CLI/TUI
     btop
     cava
     duf
@@ -15,6 +17,7 @@
     wget
     yazi
 
+    # Desktop Apps
     brave-origin
     kitty
     krita
@@ -22,22 +25,22 @@
     opencode-desktop
     vesktop
 
+    # Gnome-ish
     engrampa
     gnome-text-editor
     loupe
     nautilus
-    nautilus-open-any-terminal
     showtime
     sushi
-    xdg-desktop-portal-gnome
 
+    # NIX
     nixfmt
     nixd
 
+    # Deps
     ffmpegthumbnailer
     imagemagick
     webp-pixbuf-loader
   ];
-
   programs.fish.enable = true;
 }

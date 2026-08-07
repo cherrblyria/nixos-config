@@ -1,5 +1,4 @@
 { pkgs, ... }:
-
 {
   users.users."cherr" = {
     shell = pkgs.fish;

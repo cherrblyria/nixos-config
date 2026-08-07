@@ -1,5 +1,4 @@
 { pkgs, ... }:
-
 let
   myCursorTheme = pkgs.runCommand "my-cursor-theme" { } ''
     mkdir -p $out/share/icons/mizuki-psekai-cursor

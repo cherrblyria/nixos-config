@@ -1,10 +1,4 @@
-{
-  config,
-  pkgs,
-  inputs,
-  ...
-}:
-
+{ inputs, ... }:
 {
   imports = [
     inputs.home-manager.nixosModules.home-manager
@@ -22,7 +16,7 @@
     ./modules/core/users.nix
 
     ./modules/packages/cursor.nix
-    ./modules/packages/default.nix
+    ./modules/packages/list.nix
     ./modules/packages/spicetify.nix
 
     ./modules/services/keyd.nix
