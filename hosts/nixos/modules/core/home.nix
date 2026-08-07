@@ -14,7 +14,7 @@
         ../home/nh.nix
         ../home/starship.nix
         ../home/vscode.nix
-        # ../home/xdg.nix
+        ../home/xdg.nix
         ../home/zoxide.nix
       ];
       home = {
