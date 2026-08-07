@@ -19,7 +19,6 @@
 
     # Desktop Apps
     brave-origin
-    kitty
     krita
     obsidian
     opencode-desktop

@@ -10,6 +10,7 @@
       imports = [
         ../home/fish.nix
         ../home/git.nix
+        ../home/kitty.nix
         ../home/nh.nix
         ../home/starship.nix
         ../home/vscode.nix
