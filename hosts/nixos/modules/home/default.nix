@@ -15,6 +15,7 @@
         ./gtk.nix
         ./kitty.nix
         ./nh.nix
+        ./niri.nix
         ./starship.nix
         ./vscode.nix
         ./xdg.nix
