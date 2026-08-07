@@ -7,7 +7,7 @@
     wl-clipboard
 
     wget
-    fastfetch
+    fetch
     eza
     fzf
     btop
@@ -49,6 +49,7 @@
       jnoortheen.nix-ide
       vscodevim.vim
       pkief.material-icon-theme
+      miguelsolorio.min-theme
     ];
     enterprisePolicies.TelemetryLevel = "off";
   };

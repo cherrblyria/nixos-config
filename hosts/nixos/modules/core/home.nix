@@ -4,6 +4,8 @@
     useGlobalPkgs = true;
     useUserPackages = true;
 
+    backupFileExtension = "backup";
+
     users.cherr = {
       imports = [
         ../home/git.nix
