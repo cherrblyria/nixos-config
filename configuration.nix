@@ -6,8 +6,6 @@
     inputs.sops-nix.nixosModules.sops
     inputs.spicetify-nix.nixosModules.spicetify
 
-    ./hardware-configuration.nix
-
     ./modules/core
     ./modules/home
     ./modules/packages
