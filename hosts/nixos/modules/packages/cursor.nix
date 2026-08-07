@@ -7,7 +7,7 @@ let
   '';
 in
 {
-  environment.systemPackages = with pkgs; [
-    (myCursorTheme)
+  environment.systemPackages = [
+    myCursorTheme
   ];
 }

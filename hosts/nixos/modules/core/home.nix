@@ -1,5 +1,3 @@
-{ pkgs, inputs, ... }:
-
 {
   home-manager = {
     useGlobalPkgs = true;
@@ -7,10 +5,11 @@
 
     backupFileExtension = "backup";
 
-    users.cherr = { 
+    users.cherr = {
       imports = [
         ../home/fish.nix
         ../home/git.nix
+        ../home/nh.nix
         ../home/starship.nix
         ../home/vscode.nix
         ../home/zoxide.nix
