@@ -12,7 +12,6 @@
     eza
     fetch
     fzf
-    nixfmt
     wget
     yazi
 
@@ -32,6 +31,9 @@
     sushi
     xdg-desktop-portal-gnome
 
+    nixfmt
+    nixd
+
     ffmpegthumbnailer
     imagemagick
     webp-pixbuf-loader
@@ -41,11 +43,6 @@
   ];
 
   programs.fish.enable = true;
-
-  programs.zoxide = {
-    enable = true;
-    enableFishIntegration = true;
-  };
 
   programs.nh = {
     enable = true;

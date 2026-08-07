@@ -36,11 +36,10 @@
 
       # Shortcuts
       c = "clear";
-      cls = "clear && fastfetch";
+      cls = "clear";
 
       # Programs
       f = "fzf";
-      ff = "fastfetch";
       g = "git";
 
       # File management

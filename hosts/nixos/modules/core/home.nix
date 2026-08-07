@@ -7,12 +7,13 @@
 
     backupFileExtension = "backup";
 
-    users.cherr = {
+    users.cherr = { 
       imports = [
         ../home/fish.nix
         ../home/git.nix
         ../home/starship.nix
         ../home/vscode.nix
+        ../home/zoxide.nix
       ];
       home.username = "cherr";
       home.homeDirectory = "/home/cherr";
