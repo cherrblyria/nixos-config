@@ -8,16 +8,11 @@
         theme = "mizuki-psekai-cursor";
         size = 24;
       };
-      keyboard = {
-        layout = "us";
-      };
+      keyboard.layout = "us";
     };
   };
 
-  programs.niri = {
-    enable = true;
-    useNautilus = true;
-  };
+  programs.niri.enable = true;
 
   fonts = {
     packages = with pkgs; [
@@ -33,25 +28,23 @@
       '')
     ];
 
-    fontconfig = {
-      defaultFonts = {
-        serif = [
-          "Adwaita Sans"
-          "Noto Serif CJK JP"
-          "Google Sans"
-        ];
-        sansSerif = [
-          "Adwaita Sans"
-          "Noto Sans CJK JP"
-          "Google Sans"
-        ];
-        monospace = [
-          "Caskaydia Cove Nerd Font"
-          "Noto Sans Mono CJK JP"
-          "Google Sans"
-        ];
-        emoji = [ "Noto Color Emoji" ];
-      };
+    fontconfig.defaultFonts = {
+      serif = [
+        "Adwaita Sans"
+        "Noto Serif CJK JP"
+        "Google Sans"
+      ];
+      sansSerif = [
+        "Adwaita Sans"
+        "Noto Sans CJK JP"
+        "Google Sans"
+      ];
+      monospace = [
+        "Caskaydia Cove Nerd Font"
+        "Noto Sans Mono CJK JP"
+        "Google Sans"
+      ];
+      emoji = [ "Noto Color Emoji" ];
     };
   };
 }

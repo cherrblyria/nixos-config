@@ -17,9 +17,11 @@
         ../home/xdg.nix
         ../home/zoxide.nix
       ];
-      home.username = "cherr";
-      home.homeDirectory = "/home/cherr";
-      home.stateVersion = "26.11";
+      home = {
+        username = "cherr";
+        homeDirectory = "/home/cherr";
+        stateVersion = "26.11";
+      };
 
       gtk = {
         enable = true;

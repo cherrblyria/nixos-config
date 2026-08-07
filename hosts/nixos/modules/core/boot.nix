@@ -5,9 +5,11 @@
   nixpkgs.config.allowUnfree = true;
 
   # Bootloader
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.systemd-boot.enable = true;
+  boot = {
+    kernelPackages = pkgs.linuxPackages_latest;
+    loader.efi.canTouchEfiVariables = true;
+    loader.systemd-boot.enable = true;
+  };
 
   # Experimental
   nix.settings.experimental-features = [

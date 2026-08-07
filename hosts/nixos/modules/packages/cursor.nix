@@ -6,7 +6,5 @@ let
   '';
 in
 {
-  environment.systemPackages = [
-    myCursorTheme
-  ];
+  environment.systemPackages = [ myCursorTheme ];
 }

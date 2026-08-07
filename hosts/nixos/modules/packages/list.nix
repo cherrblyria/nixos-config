@@ -4,7 +4,6 @@
     # WM/Shell
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     wl-clipboard
-    xdg-desktop-portal-gnome
     xwayland-satellite
 
     # CLI/TUI
