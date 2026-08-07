@@ -1,4 +1,5 @@
 { pkgs, inputs, ... }:
+
 let
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
 in
@@ -8,17 +9,17 @@ in
     wayland = true;
     enabledExtensions = with spicePkgs.extensions; [
       adblockify
-      hidePodcasts
-      shuffle
       autoSkipExplicit
       copyToClipboard
+      hidePodcasts
+      shuffle
     ];
     enabledCustomApps = with spicePkgs.apps; [
       lyricsPlus
-      ncsVisualizer
       marketplace
+      ncsVisualizer
     ];
-    # theme = spicePkgs.themes.sleek;
+    theme = "marketplace";
     # colorScheme = "";
   };
 }

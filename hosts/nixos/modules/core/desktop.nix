@@ -35,11 +35,11 @@
 
   fonts = {
     packages = with pkgs; [
+      adwaita-fonts
+      nerd-fonts.caskaydia-cove
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
-      adwaita-fonts
-      nerd-fonts.caskaydia-cove
 
       (pkgs.runCommand "my-custom-fonts" { } ''
         mkdir -p $out/share/fonts/truetype

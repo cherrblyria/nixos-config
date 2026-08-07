@@ -3,56 +3,44 @@
 {
   environment.systemPackages = with pkgs; [
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
-    xwayland-satellite
     wl-clipboard
+    xwayland-satellite
 
-    wget
-    fetch
-    eza
-    fzf
     btop
-    duf
     cava
+    duf
+    eza
+    fetch
+    fzf
     nixfmt
+    wget
     yazi
 
-    kitty
     brave-origin
-    obsidian
-    vesktop
+    kitty
     krita
+    obsidian
     opencode-desktop
+    vesktop
 
+    engrampa
+    gnome-text-editor
+    loupe
     nautilus
     nautilus-open-any-terminal
-    sushi
-    loupe
-    engrampa
     showtime
-    gnome-text-editor
+    sushi
     xdg-desktop-portal-gnome
 
-    webp-pixbuf-loader
     ffmpegthumbnailer
     imagemagick
+    webp-pixbuf-loader
 
-    papirus-icon-theme
     adw-gtk3
+    papirus-icon-theme
   ];
 
   programs.fish.enable = true;
-
-  programs.vscode = {
-    enable = true;
-    defaultEditor = true;
-    extensions = with pkgs.vscode-extensions; [
-      jnoortheen.nix-ide
-      vscodevim.vim
-      pkief.material-icon-theme
-      miguelsolorio.min-theme
-    ];
-    enterprisePolicies.TelemetryLevel = "off";
-  };
 
   programs.zoxide = {
     enable = true;
