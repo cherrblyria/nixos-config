@@ -8,8 +8,8 @@
     ];
     config.common = {
       default = [
-        "gnome"
         "gtk"
+        "gnome"
       ];
       "org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
     };
