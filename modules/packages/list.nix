@@ -7,13 +7,11 @@
 
     # CLI/TUI
     btop
-    cava
     duf
     eza
     fetch
     fzf
     wget
-    yazi
 
     # Desktop Apps
     brave-origin
