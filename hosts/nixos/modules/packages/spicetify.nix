@@ -19,7 +19,7 @@ in
       marketplace
       ncsVisualizer
     ];
-    theme = "marketplace";
+    # theme = "marketplace";
     # colorScheme = "";
   };
 }
