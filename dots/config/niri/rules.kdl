@@ -1,0 +1,36 @@
+window-rule {
+  clip-to-geometry true
+  geometry-corner-radius 16
+  background-effect {
+    // blur true
+    xray false
+  }
+}
+
+window-rule {
+  match app-id="org.gnome.NautilusPreviewer"
+  match app-id="obsidian" title="^Settings\\s-\\s(.*)\\s-\\sObsidian(.*)$"
+  match app-id="org.gnome.Nautilus" title="^Open(.*)"
+  open-floating true
+}
+
+layer-rule {
+  match namespace=r"noctalia-backdrop"
+  // match namespace=r"noctalia-wallpaper"
+  place-within-backdrop true
+}
+
+layer-rule {
+  match namespace="^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
+  match namespace="^noctalia-desktop-widget-(.*)$"
+  background-effect {
+    xray false
+  }
+}
+
+layer-rule {
+  match namespace="noctalia-window-switcher"
+  background-effect {
+    blur false
+  }
+}

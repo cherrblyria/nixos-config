@@ -1,0 +1,57 @@
+screenshot-path "~/Pictures/Screenshots/Screenshot_%Y%m%d_%H%M%S"
+
+prefer-no-csd
+hotkey-overlay { skip-at-startup; }
+gestures { hot-corners { top-left; }; }
+debug { honor-xdg-activation-with-invalid-serial; }
+
+blur {
+  // off
+  passes 2
+  offset 1.0
+  noise 0.02
+  saturation 1.0
+}
+
+overview {
+  workspace-shadow {
+    // off
+  }
+}
+
+layout {
+  gaps 6
+  background-color "transparent"
+
+  center-focused-column "never"
+  preset-column-widths {
+    proportion 0.5
+    proportion 0.75
+    proportion 0.92
+  }
+  default-column-width { proportion 0.5; }
+
+  focus-ring {
+    off
+    width 1
+  }
+  border {
+    // off
+    width 1
+  }
+  shadow {
+    softness 30
+    spread 5
+    offset x=0 y=5
+    color "#0007"
+  }
+  struts
+}
+
+cursor {
+  xcursor-theme "mizuki-psekai-cursor"
+  xcursor-size 24
+
+  hide-when-typing
+  hide-after-inactive-ms 5000
+}
