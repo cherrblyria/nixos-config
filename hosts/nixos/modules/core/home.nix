@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   home-manager = {
     useGlobalPkgs = true;
@@ -18,9 +20,14 @@
       home.homeDirectory = "/home/cherr";
       home.stateVersion = "26.11";
 
-      gtk.theme = "adw-gtk3";
-      gtk.gtk4.theme = "adw-gtk3";
-      gtk.iconTheme = "Papirus";
+      gtk = {
+        theme.package = pkgs.adw-gtk3;
+        iconTheme.package = pkgs.papirus-icon-theme;
+        gtk4 = {
+          theme.package = pkgs.adw-gtk3;
+          iconTheme.package = pkgs.papirus-icon-theme;
+        };
+      };
     };
   };
 }

@@ -39,7 +39,6 @@
     webp-pixbuf-loader
 
     adw-gtk3
-    papirus-icon-theme
   ];
 
   programs.fish.enable = true;
