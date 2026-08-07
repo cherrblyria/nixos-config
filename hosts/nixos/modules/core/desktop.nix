@@ -19,19 +19,6 @@
     useNautilus = true;
   };
 
-  xdg.portal = {
-    enable = true;
-    config = {
-      niri = {
-        default = [
-          "gnome"
-          "gtk"
-        ];
-        "org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
-      };
-    };
-  };
-
   fonts = {
     packages = with pkgs; [
       adwaita-fonts
