@@ -89,7 +89,7 @@
       };
 
       cmd_duration = {
-        min_time = 0;
+        min_time = 1000;
         format = "[](bold fg:yellow)[󰪢 $duration](bold bg:yellow fg:black)[](bold fg:yellow)";
       };
     };

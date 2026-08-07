@@ -33,8 +33,8 @@
 
           ./hardware-configuration.nix
 
+          ./home
           ./modules/core
-          ./modules/home
           ./modules/packages
           ./modules/services
         ];
