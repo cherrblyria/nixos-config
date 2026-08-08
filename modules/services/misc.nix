@@ -28,4 +28,8 @@
       xkb.layout = "us,th";
     };
   };
+  hardware.opentabletdriver = {
+    enable = true;
+    daemon.enable = true;
+  };
 }

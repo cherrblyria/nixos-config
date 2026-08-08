@@ -20,6 +20,16 @@
     opencode-desktop
     vesktop
 
+    # Games
+    (inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.osu-stable.override {
+      tricks = [
+        "gdiplus"
+        "dotnet48"
+        "meiryo"
+      ];
+      useGameMode = false;
+    })
+
     # Gnome-ish
     engrampa
     gnome-text-editor
