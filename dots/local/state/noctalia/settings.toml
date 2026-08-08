@@ -1,0 +1,775 @@
+config_version = 11
+
+[audio]
+enable_sounds = true
+sound_volume = 1
+
+[backdrop]
+blur_intensity = 0.29999999999999999
+enabled = true
+
+[bar]
+order = [ "Main" ]
+
+    [bar.Main]
+    background_opacity = 0.5
+    capsule = true
+    capsule_border = "outline"
+    capsule_opacity = 0.24999999441206455
+    center = [ "clock", "group:g3" ]
+    end = [ "privacy", "tray", "group:g2", "group:g4" ]
+    font_weight = 400
+    margin_ends = 0
+    padding = 6
+    panel_overlap = 0
+    position = "left"
+    radius = 32
+    radius_bottom_left = 0
+    radius_top_left = 0
+    start = [ "group:g5", "workspaces", "group:g1" ]
+    widget_spacing = 4
+
+        [bar.Main.dead_zone.actions]
+        back = "workspace-switch prev"
+        forward = "workspace-switch next"
+        scroll_down = "workspace-switch next"
+        scroll_up = "workspace-switch prev"
+
+        [[bar.Main.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        border = "outline"
+        enabled = true
+        fill = "surface_variant"
+        id = "g1"
+        members = [ "cpu", "ram", "sysmon" ]
+        opacity = 0.25
+        padding = 6.0
+
+        [[bar.Main.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        border = "outline"
+        enabled = true
+        fill = "surface_variant"
+        id = "g2"
+        members = [ "media", "audio_visualizer" ]
+        opacity = 0.25
+        padding = 6.0
+
+        [[bar.Main.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        border = "outline"
+        enabled = true
+        fill = "surface_variant"
+        id = "g4"
+        members = [ "battery", "volume", "notifications" ]
+        opacity = 0.25
+        padding = 6.0
+
+        [[bar.Main.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        border = "outline"
+        enabled = true
+        fill = "surface_variant"
+        id = "g5"
+        members = [ "launcher", "caffeine" ]
+        opacity = 0.25
+        padding = 6.0
+
+        [[bar.Main.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        border = "outline"
+        enabled = false
+        fill = "surface_variant"
+        id = "g3"
+        members = [ "wallpaper", "wallhaven" ]
+        opacity = 0.25
+        padding = 6.0
+
+[battery]
+warning_threshold = 30
+
+[brightness]
+minimum_brightness = 0.0099999997764825821
+
+[calendar]
+enabled = true
+
+    [calendar.account.personal_nutty]
+    name = "Cherrblyria"
+    type = "google"
+
+[[control_center.shortcuts]]
+type = "bluetooth"
+
+[[control_center.shortcuts]]
+type = "nightlight"
+
+[[control_center.shortcuts]]
+type = "caffeine"
+
+[[control_center.shortcuts]]
+type = "notification"
+
+[desktop_widgets]
+schema_version = 2
+widget_order = [
+    "desktop-widget-0000000000000002",
+    "desktop-widget-0000000000000008",
+    "desktop-widget-0000000000000006",
+    "desktop-widget-0000000000000001",
+    "desktop-widget-0000000000000009",
+    "desktop-widget-000000000000000a"
+]
+
+    [desktop_widgets.grid]
+    cell_size = 8
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000001]
+    box_height = 128.0
+    box_width = 128.0
+    cx = 1239.0
+    cy = 127.19921875
+    output = "eDP-1"
+    rotation = 0.0
+    type = "clock"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
+        background = false
+        background_opacity = 0.25
+        background_radius = 16
+        center_text = true
+        circle = false
+        clock_style = "analog"
+        font_family = "Playfair Display"
+        shadow = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000002]
+    box_height = 144.0
+    box_width = 320.0
+    cx = 1192.23828125
+    cy = 320.8828125
+    output = "eDP-1"
+    rotation = 0.0
+    type = "media_player"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000002.settings]
+        background = true
+        background_opacity = 0.25
+        background_padding = 10
+        background_radius = 20
+        font_family = ""
+        hide_when_no_media = true
+        layout = "horizontal"
+        shadow = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000006]
+    box_height = 96.0
+    box_width = 1360.0
+    cx = 683.0
+    cy = 720.0
+    output = "eDP-1"
+    rotation = -0.0
+    type = "audio_visualizer"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000006.settings]
+        background = false
+        background_opacity = 0.75
+        bands = 72
+        centered = false
+        color_2 = "tertiary"
+        mirrored = true
+        show_when_idle = false
+
+    [desktop_widgets.widget.desktop-widget-0000000000000008]
+    box_height = 224.0
+    box_width = 224.0
+    cx = 1239.0
+    cy = 127.19921875
+    output = "eDP-1"
+    rotation = 0.0
+    type = "fancy_audio_visualizer"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000008.settings]
+        background = true
+        background_opacity = 0.25
+        background_padding = 0
+        background_radius = 20
+        bloom_intensity = 0.34999999999999998
+        fade_when_idle = false
+        inner_diameter = 1.0
+        primary_color = "tertiary"
+        ring_opacity = 0.40000000000000002
+        rotation_speed = 0.40000000000000002
+        secondary_color = "primary"
+        visualization_mode = "wave_rings"
+        wave_thickness = 0.29999999999999999
+
+    [desktop_widgets.widget.desktop-widget-0000000000000009]
+    box_height = 83.640632629394531
+    box_width = 223.27734375
+    cx = 1073.1796875
+    cy = 126.837890625
+    output = "eDP-1"
+    rotation = -1.5707963705062866
+    type = "clock"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000009.settings]
+        background_opacity = 0.25
+        background_radius = 20
+        center_text = true
+        font_family = "Playfair Display"
+        shadow = true
+
+    [desktop_widgets.widget.desktop-widget-000000000000000a]
+    box_height = 80.0
+    box_width = 72.0
+    cx = 1328.1260986328125
+    cy = 248.8828125
+    output = "eDP-1"
+    rotation = 0.2617993950843811
+    type = "sticker"
+
+        [desktop_widgets.widget.desktop-widget-000000000000000a.settings]
+        background = false
+        image_path = "/home/cherr/Documents/Noctalia/cat_1.png"
+        opacity = 0.82000000000000006
+
+[dock]
+auto_hide = true
+background_opacity = 0.4999999888241291
+enabled = true
+inactive_opacity = 0.99999997764825821
+inactive_scale = 1.0
+item_spacing = 8
+launcher_custom_image = "/home/cherr/Documents/Noctalia/bunny.png"
+launcher_position = "start"
+magnification_scale = 2.0
+main_axis_padding = 8
+margin_edge = 8
+pinned = [
+    "kitty",
+    "org.gnome.Nautilus",
+    "brave-origin",
+    "obsidian",
+    "ai.opencode.desktop",
+    "code",
+    "org.gnome.TextEditor",
+    "org.kde.krita",
+    "spotify",
+    "vesktop"
+]
+radius = 80
+reserve_space = false
+show_dots = true
+show_instance_count = false
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+pre_action_fade_seconds = 3
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = false
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 660.0
+
+[keybinds]
+down = [ "Down", "Ctrl+j" ]
+left = [ "Left", "Ctrl+h" ]
+right = [ "Right", "Ctrl+l" ]
+up = [ "Up", "Ctrl+k" ]
+
+[location]
+address = "Nakhon Pathom"
+
+[lockscreen]
+blur_intensity = 0.29999999329447746
+tint_intensity = 0.21999999508261681
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [
+    "lockscreen-widget-0000000000000017",
+    "lockscreen-widget-0000000000000018",
+    "lockscreen-widget-0000000000000011",
+    "lockscreen-widget-0000000000000016",
+    "lockscreen-widget-0000000000000019",
+    "lockscreen-widget-0000000000000015",
+    "lockscreen-widget-000000000000000d",
+    "lockscreen-widget-000000000000000f",
+    "lockscreen-widget-0000000000000008",
+    "lockscreen-widget-000000000000000e",
+    "lockscreen-login-box@eDP-1",
+    "lockscreen-widget-000000000000000c",
+    "lockscreen-widget-000000000000001a"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 8
+    major_interval = 4
+    visible = false
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 70.0
+    box_width = 336.0
+    cx = 1187.0
+    cy = 720.41204833984375
+    output = "eDP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface"
+        background_opacity = 0.5
+        background_radius = 10.0
+        center_password_text = true
+        input_opacity = 0.65000000000000002
+        input_radius = 32.0
+        layout = "compact"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = false
+        show_unlock_hint = false
+        show_weather = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000008]
+    box_height = 48.0
+    box_width = 48.0
+    cx = 651.0
+    cy = 352.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000008.settings]
+        background = false
+        center_text = true
+        color = "primary"
+        font_family = "Playfair Display"
+        format = "{:%H}"
+        shadow = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-000000000000000c]
+    box_height = 256.0
+    box_width = 256.0
+    cx = 683.0
+    cy = 384.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-000000000000000c.settings]
+        background = false
+        circle = false
+        clock_style = "analog"
+        color = "on_surface"
+
+    [lockscreen_widgets.widget.lockscreen-widget-000000000000000d]
+    box_height = 448.0
+    box_width = 448.0
+    cx = 683.0
+    cy = 384.0
+    output = "eDP-1"
+    rotation = 1.5707963705062866
+    type = "fancy_audio_visualizer"
+
+        [lockscreen_widgets.widget.lockscreen-widget-000000000000000d.settings]
+        background = false
+        background_radius = 32
+        bloom_intensity = 0.35000000000000003
+        fade_when_idle = false
+        inner_diameter = 1.0
+        primary_color = "tertiary"
+        ring_opacity = 0.40000000000000002
+        rotation_speed = 0.0
+        secondary_color = "primary"
+        sensitivity = 1.5
+        visualization_mode = "wave_rings"
+        wave_thickness = 0.29999999999999999
+
+    [lockscreen_widgets.widget.lockscreen-widget-000000000000000e]
+    box_height = 48.0
+    box_width = 48.0
+    cx = 707.0
+    cy = 408.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-000000000000000e.settings]
+        background = false
+        center_text = true
+        color = "secondary"
+        font_family = "Playfair Display"
+        format = "{:%M}"
+        shadow = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-000000000000000f]
+    box_height = 88.0
+    box_width = 968.0
+    cx = 900.78448486328125
+    cy = 610.57110595703125
+    output = "eDP-1"
+    rotation = -0.2617993950843811
+    type = "audio_visualizer"
+
+        [lockscreen_widgets.widget.lockscreen-widget-000000000000000f.settings]
+        background = false
+        bands = 28
+        centered = false
+        color_1 = "outline"
+        color_2 = "primary"
+        mirrored = true
+        show_when_idle = false
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000011]
+    box_height = 128.0
+    box_width = 304.0
+    cx = 167.0
+    cy = 78.58795166015625
+    output = "eDP-1"
+    rotation = 0.0
+    type = "media_player"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000011.settings]
+        background_opacity = 0.29999999999999999
+        background_radius = 20
+        font_family = ""
+        hide_when_no_media = true
+        layout = "horizontal"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000015]
+    box_height = 120.0
+    box_width = 328.0
+    cx = 179.0
+    cy = 692.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "sticker"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000015.settings]
+        background = false
+        background_opacity = 0.5
+        background_padding = 22
+        background_radius = 20
+        image_path = "/home/cherr/Documents/Noctalia/tex_title_logo_all_01.png"
+        opacity = 0.45000000000000001
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000016]
+    box_height = 80.0
+    box_width = 896.0
+    cx = 943.9124755859375
+    cy = 685.41204833984375
+    output = "eDP-1"
+    rotation = -0.2617993950843811
+    type = "label"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000016.settings]
+        background = false
+        color = "surface"
+        font_family = "Playfair Display"
+        opacity = 0.20000000000000001
+        shadow = false
+        title = "L         O         C         K         E         D"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000017]
+    box_height = 456.0
+    box_width = 1736.0
+    cx = 1366.0
+    cy = 768.0
+    output = "eDP-1"
+    rotation = -0.2617993950843811
+    type = "label"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000017.settings]
+        background_color = "on_surface"
+        background_opacity = 0.20000000000000001
+        background_padding = 0
+        background_radius = 0
+        shadow = false
+        title = ""
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000018]
+    box_height = 456.0
+    box_width = 1736.0
+    cx = 0.0
+    cy = 0.0
+    output = "eDP-1"
+    rotation = -0.2617993950843811
+    type = "label"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000018.settings]
+        background_color = "on_surface"
+        background_opacity = 0.20000000000000001
+        background_padding = 0
+        background_radius = 0
+        shadow = false
+        title = ""
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000019]
+    box_height = 80.0
+    box_width = 896.0
+    cx = 422.0875244140625
+    cy = 82.58795166015625
+    output = "eDP-1"
+    rotation = -0.2617993950843811
+    type = "label"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000019.settings]
+        background = false
+        color = "surface"
+        font_family = "Playfair Display"
+        opacity = 0.20000000000000001
+        shadow = false
+        title = "L         O         C         K         E         D"
+
+    [lockscreen_widgets.widget.lockscreen-widget-000000000000001a]
+    box_height = 88.0
+    box_width = 968.0
+    cx = 468.565673828125
+    cy = 156.3984375
+    flip_x = true
+    flip_y = true
+    output = "eDP-1"
+    rotation = -0.2617993950843811
+    type = "audio_visualizer"
+
+        [lockscreen_widgets.widget.lockscreen-widget-000000000000001a.settings]
+        background = false
+        bands = 28
+        centered = false
+        color_1 = "outline"
+        color_2 = "primary"
+        mirrored = true
+        show_when_idle = false
+
+[nightlight]
+enabled = true
+temperature_night = 5400
+
+[notification]
+background_opacity = 0.4999999888241291
+layer = "overlay"
+
+[osd]
+background_opacity = 0.4999999888241291
+orientation = "vertical"
+position = "bottom_center"
+position_vertical = "center_right"
+
+[plugin_settings."blackbartblues/keymap"]
+compositor = "niri"
+
+[plugin_settings."kenn/keybind-cheatsheet"]
+compositor = "niri"
+
+[plugin_settings."noctalia/mpvpaper"]
+video_directory = "/home/cherr/Videos/Wallpapers"
+
+[plugin_settings."noctalia/wallhaven"]
+download_dir = "/home/cherr/Wallpapers/Wallheaven"
+
+[plugin_settings."tadomika_ari/config-swap"]
+panel_position = "center"
+
+[plugins]
+enabled = [ "noctalia/kaomoji", "noctalia/wallhaven" ]
+
+[shell]
+avatar_path = "/home/cherr/Pictures/Anime/400.jpeg"
+clipboard_auto_paste = "off"
+corner_radius_scale = 2.0
+font_family = "Adwaita Sans"
+niri_overview_type_to_launch_enabled = true
+panel_anchor_bar = "Main"
+password_style = "random"
+polkit_agent = true
+
+    [shell.animation]
+    speed = 0.7500000111758709
+
+    [shell.launcher]
+    app_grid = true
+    auto_paste = "off"
+    sort_by_usage = false
+
+        [shell.launcher.providers.calculator]
+        global = true
+        prefix = ""
+
+    [shell.panel]
+    clipboard_placement = "attached"
+    launcher_placement = "attached"
+    transparency_mode = "soft"
+
+    [shell.screen_corners]
+    enabled = true
+
+    [shell.screenshot]
+    confirm_region = true
+    directory = "/home/cherr/Pictures/Screenshots"
+    filename_pattern = "Screenshot_%Y%m%d_%H%M%S"
+
+    [shell.session]
+    grid = true
+    grid_columns = 1
+
+        [[shell.session.actions]]
+        action = "lock"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "1"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "logout"
+        countdown_seconds = 3.0
+        enabled = true
+        shortcut = "2"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "lock_and_suspend"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "3"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "reboot"
+        countdown_seconds = 3.0
+        enabled = true
+        shortcut = "4"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "shutdown"
+        countdown_seconds = 3.0
+        enabled = true
+        shortcut = "5"
+        variant = "destructive"
+
+    [shell.shadow]
+    direction = "center"
+
+[theme]
+builtin = "Catppuccin"
+community_palette = "Oxocarbon"
+source = "wallpaper"
+wallpaper_scheme = "soft"
+
+    [theme.templates]
+    builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "kcolorscheme", "kitty", "niri", "qt" ]
+    community_ids = [ "discord", "vscode", "papirus-icons", "bat", "lazygit", "yazi" ]
+
+        [theme.templates.user.obsidian_extra]
+        input_path = "~/.config/noctalia/Obsidian/obsidian.css"
+        output_path = "~/Documents/Cherr's Sanctuary/.obsidian/snippets/noctalia.css"
+
+[wallpaper]
+directory = "/home/cherr/Wallpapers"
+transition = [ "fade" ]
+transition_on_startup = true
+
+    [wallpaper.automation]
+    enabled = true
+    interval_seconds = 600
+
+    [wallpaper.default]
+    path = "/home/cherr/Wallpapers/PJSK/Kiritani Haruka/帰ってきたこの場所_normal.png"
+
+    [wallpaper.last]
+    path = "/home/cherr/Wallpapers/PJSK/Kiritani Haruka/帰ってきたこの場所_normal.png"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/cherr/Wallpapers/PJSK/Kiritani Haruka/帰ってきたこの場所_normal.png"
+
+[widget.audio_visualizer]
+color_2 = "tertiary"
+width = 112
+
+    [widget.audio_visualizer.actions]
+    back = "media previous"
+    forward = "media next"
+    left = "panel-toggle control-center media"
+    right = "media toggle"
+    scroll_down = "media previous"
+    scroll_up = "media next"
+
+[widget.battery]
+display_mode = "graphic"
+hide_when_full = true
+hide_when_plugged = true
+scale = 0.70000000000000007
+show_label = false
+
+[widget.clock]
+anchor = true
+format = "{:%R}"
+vertical_format = "{:%H\\n%M}"
+
+[widget.cpu]
+show_label = false
+show_value = false
+
+[widget.launcher]
+custom_image = "/home/cherr/Documents/Noctalia/bunny.png"
+
+[widget.lock_keys]
+hide_when_off = true
+scale = 0.90000000000000002
+show_num_lock = false
+
+[widget.media]
+album_art_only = true
+art_size = 19
+hide_when_no_media = true
+
+[widget.privacy]
+hide_inactive = true
+
+[widget.ram]
+show_label = false
+show_value = false
+
+[widget.session]
+color = "error"
+
+[widget.sysmon]
+show_value = false
+stat = "gpu_usage"
+
+[widget.tray]
+drawer = true
+
+[widget.volume]
+show_label = false
+
+[widget.wallhaven]
+type = "noctalia/wallhaven:wallhaven"
+
+[widget.weather]
+show_temperature = false
+
+[widget.workspaces]
+hide_when_empty = true
+style = "focus_hint"
