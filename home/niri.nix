@@ -1,5 +1,6 @@
 {
   wayland.windowManager.niri.enable = true;
+  xsession.enable = true;
   home.file = {
     ".config/niri/config.kdl".source = ../dots/config/niri/config.kdl;
     ".config/niri/animations.kdl".source = ../dots/config/niri/animations.kdl;

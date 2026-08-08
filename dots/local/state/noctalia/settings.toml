@@ -30,8 +30,8 @@ order = [ "Main" ]
     widget_spacing = 4
 
         [bar.Main.dead_zone.actions]
-        back = "workspace-switch prev"
-        forward = "workspace-switch next"
+        back = "workspace-switch next"
+        forward = "workspace-switch prev"
         scroll_down = "workspace-switch next"
         scroll_up = "workspace-switch prev"
 
@@ -263,7 +263,10 @@ pinned = [
     "org.gnome.TextEditor",
     "org.kde.krita",
     "spotify",
-    "vesktop"
+    "vesktop",
+    "org.vinegarhq.Sober",
+    "org.polymc.PolyMC",
+    "osu-stable"
 ]
 radius = 80
 reserve_space = false
@@ -679,7 +682,7 @@ wallpaper_scheme = "soft"
 
     [theme.templates]
     builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "kcolorscheme", "kitty", "niri", "qt" ]
-    community_ids = [ "discord", "vscode", "papirus-icons", "bat", "lazygit", "yazi" ]
+    community_ids = [ "discord", "vscode", "bat", "lazygit", "yazi" ]
 
         [theme.templates.user.obsidian_extra]
         input_path = "~/.config/noctalia/Obsidian/obsidian.css"
@@ -695,13 +698,13 @@ transition_on_startup = true
     interval_seconds = 600
 
     [wallpaper.default]
-    path = "/home/cherr/Wallpapers/PJSK/Kiritani Haruka/帰ってきたこの場所_normal.png"
+    path = "/home/cherr/Wallpapers/PJSK/Shinonome Ena/アーム弱すぎ！_normal.png"
 
     [wallpaper.last]
-    path = "/home/cherr/Wallpapers/PJSK/Kiritani Haruka/帰ってきたこの場所_normal.png"
+    path = "/home/cherr/Wallpapers/PJSK/Shinonome Ena/アーム弱すぎ！_normal.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/cherr/Wallpapers/PJSK/Kiritani Haruka/帰ってきたこの場所_normal.png"
+    path = "/home/cherr/Wallpapers/PJSK/Shinonome Ena/アーム弱すぎ！_normal.png"
 
 [widget.audio_visualizer]
 color_2 = "tertiary"

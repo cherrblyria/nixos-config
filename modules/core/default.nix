@@ -10,4 +10,6 @@ in
         builtins.attrNames entries
       )
     );
+
+  nixpkgs.overlays = [ (import ../../overlays) ];
 }

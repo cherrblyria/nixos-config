@@ -1,9 +1,5 @@
 {
   environment.variables = {
-    XCURSOR_THEME = "mizuki-psekai-cursor";
-    XCURSOR_SIZE = "24";
-    GTK_THEME = "adw-gtk3";
-
     ELECTRON_OZONE_PLATFORM_HINT = "wayland";
     MOZ_ENABLE_WAYLAND = "1";
     NIXOS_OZONE_WL = "1";

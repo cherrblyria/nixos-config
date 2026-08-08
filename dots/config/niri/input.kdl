@@ -14,7 +14,7 @@ input {
   }
   mouse {
     natural-scroll
-    accel-speed -0.12
+    accel-speed -0.88
     accel-profile "flat"
   }
   trackpoint

@@ -4,6 +4,7 @@
     # WM/Shell
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     wl-clipboard
+    mizuki-psekai-cursor
 
     # CLI/TUI
     btop
