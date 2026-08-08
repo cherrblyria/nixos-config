@@ -2,7 +2,7 @@
 {
   home.pointerCursor = {
     name = "mizuki-psekai-cursor";
-    package = pkgs.mizukiCursor;
+    package = pkgs.mizuki-psekai-cursor;
     size = 24;
     gtk.enable = true;
     x11.enable = true;
