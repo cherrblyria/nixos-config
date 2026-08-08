@@ -1,17 +1,10 @@
 {
   programs.fish = {
     enable = true;
+    interactiveShellInit = ''
+      set fish_greeting
+    '';
     functions = {
-      y = ''
-          set tmp (mktemp -t "yazi-cwd.XXXXXX")
-          yazi $argv --cwd-file="$tmp"
-          if read -z cwd < "$tmp"; and [ "$cwd" != "$PWD" ]; and test -d "$cwd"
-            z cd -- "$cwd"
-          end
-          rm -f -- "$tmp"
-        end
-      '';
-
       yc = ''
         set tmp (mktemp -t "yazi-chooser.XXXXXX")
         yazi $argv --chooser-file="$tmp"
