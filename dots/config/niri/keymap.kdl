@@ -1,6 +1,6 @@
 binds {
   // Keyboard Layout
-  Alt+Space { switch-layout "next"; }
+  Alt+Space       { switch-layout "next"; }
   Alt+Shift+Space { switch-layout "prev"; }
 
   // Window Switcher
@@ -14,68 +14,69 @@ binds {
   // Session
   Mod+Alt+L { spawn-sh "noctalia msg session lock"; }
 
-  // Media Controls (Mod+Alt)
-  Mod+Alt+B allow-when-locked=true { spawn-sh "noctalia msg media previous"; }
-  Mod+Alt+N allow-when-locked=true { spawn-sh "noctalia msg media next"; }
-  Mod+Alt+P allow-when-locked=true { spawn-sh "noctalia msg media toggle"; }
-
   // Launch
-  Mod+Return { spawn-sh "kitty"; }
-  Mod+E { spawn-sh "nautilus -w"; }
-  Mod+Shift+E { spawn-sh "kitty yazi"; }
+  Mod+Return      { spawn-sh "kitty"; }
+  Mod+E           { spawn-sh "nautilus -w"; }
+  Mod+Shift+E     { spawn-sh "kitty yazi"; }
   Mod+Shift+Comma { spawn-sh "noctalia msg settings-toggle"; }
 
   // Window Operations
-  Mod+Q { close-window; }
-  Mod+C { center-column; }
+  Mod+Q      { close-window; }
+  Mod+C      { center-column; }
   Mod+Ctrl+C { center-visible-columns; }
 
-  Mod+F { maximize-column; }
-  Mod+M { maximize-window-to-edges; }
+  Mod+F       { maximize-column; }
+  Mod+M       { maximize-window-to-edges; }
   Mod+Shift+F { fullscreen-window; }
 
-  Mod+T { toggle-window-floating; }
+  Mod+T       { toggle-window-floating; }
   Mod+Shift+T { switch-focus-between-floating-and-tiling; }
 
-  Mod+Period { expel-window-from-column; }
-  Mod+Comma { consume-window-into-column; }
-  Mod+BracketLeft { consume-or-expel-window-left; }
+  Mod+Period       { expel-window-from-column; }
+  Mod+Comma        { consume-window-into-column; }
+  Mod+BracketLeft  { consume-or-expel-window-left; }
   Mod+BracketRight { consume-or-expel-window-right; }
 
   Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
   // Resize
-  Mod+R { switch-preset-column-width; }
-  Mod+Shift+R { switch-preset-column-width-back; }
-  Mod+Ctrl+R { reset-window-height; }
+  Mod+R            { switch-preset-column-width; }
+  Mod+Shift+R      { switch-preset-column-width-back; }
+  Mod+Ctrl+R       { reset-window-height; }
   Mod+Ctrl+Shift+R { switch-preset-window-height; }
 
-  Mod+Equal { set-column-width "+10%"; }
-  Mod+Minus { set-column-width "-10%"; }
+  Mod+Equal       { set-column-width "+10%"; }
+  Mod+Minus       { set-column-width "-10%"; }
   Mod+Shift+Equal { set-window-height "+10%"; }
   Mod+Shift+Minus { set-window-height "-10%"; }
 
   // Window Movement
   Mod+Ctrl+H { move-column-left; }
+  Mod+Ctrl+L { move-column-right; }
   Mod+Ctrl+J { move-window-down-or-to-workspace-down; }
   Mod+Ctrl+K { move-window-up-or-to-workspace-up; }
-  Mod+Ctrl+L { move-column-right; }
 
-  Mod+Ctrl+End { move-column-to-last; }
+  Mod+Ctrl+Left  { move-column-left; }
+  Mod+Ctrl+Right { move-column-right; }
+  Mod+Ctrl+Down  { move-window-down-or-to-workspace-down; }
+  Mod+Ctrl+Up    { move-window-up-or-to-workspace-up; }
+
+  Mod+Ctrl+End  { move-column-to-last; }
   Mod+Ctrl+Home { move-column-to-first; }
-
-  Mod+Ctrl+I { move-window-to-workspace-up; }
-  Mod+Ctrl+U { move-window-to-workspace-down; }
-  Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
-  Mod+Ctrl+Page_Up { move-window-to-workspace-up; }
 
   // Focus Navigation
   Mod+H { focus-column-left; }
   Mod+L { focus-column-right; }
   Mod+J { focus-window-or-workspace-down; }
   Mod+K { focus-window-or-workspace-up; }
+
+  Mod+Left  { focus-column-left; }
+  Mod+Right { focus-column-right; }
+  Mod+Down  { focus-window-or-workspace-down; }
+  Mod+Up    { focus-window-or-workspace-up; }
+
   Mod+Home { focus-column-first; }
-  Mod+End { focus-column-last; }
+  Mod+End  { focus-column-last; }
 
   // Workspace Navigation
   Mod+W { toggle-overview; }
@@ -83,15 +84,8 @@ binds {
 
   Mod+Tab { focus-workspace-previous; }
 
-  Mod+I { focus-workspace-up; }
-  Mod+U { focus-workspace-down; }
-  Mod+Page_Down { focus-workspace-down; }
-  Mod+Page_Up { focus-workspace-up; }
-
-  Mod+Shift+I { move-workspace-up; }
-  Mod+Shift+U { move-workspace-down; }
-  Mod+Shift+Page_Down { move-workspace-down; }
-  Mod+Shift+Page_Up { move-workspace-up; }
+  Mod+I { move-workspace-up; }
+  Mod+U { move-workspace-down; }
 
   // Focus Workspace
   Mod+1 { focus-workspace 1; }
@@ -116,66 +110,70 @@ binds {
   Mod+Ctrl+9 { move-window-to-workspace 9; }
 
   // Toggles
-  Mod+Alt+W allow-when-locked=true { spawn-sh "noctalia msg wallpaper-random"; }
-  Mod+Shift+N allow-when-locked=true { spawn-sh "noctalia msg notification-dnd-toggle"; }
+  Mod+Alt+W   allow-when-locked=true { spawn-sh "noctalia msg wallpaper-random"; }
   Mod+Shift+D allow-when-locked=true { spawn-sh "noctalia msg caffeine-toggle"; }
-  Mod+Shift+P { power-off-monitors; }
+  Mod+Shift+N allow-when-locked=true { spawn-sh "noctalia msg notification-dnd-toggle"; }
+  Mod+Shift+P                        { power-off-monitors; }
 
   // Panels
-  Mod+Space { spawn-sh "noctalia msg panel-toggle launcher"; }
-  Mod+D { spawn-sh "noctalia msg panel-toggle control-center home"; }
-  Mod+S { spawn-sh "noctalia msg panel-toggle control-center media"; }
-  Mod+A { spawn-sh "noctalia msg panel-toggle control-center audio"; }
-  Mod+N { spawn-sh "noctalia msg panel-toggle control-center notifications"; }
-  Mod+V { spawn-sh "noctalia msg panel-toggle clipboard"; }
-  Mod+Shift+W { spawn-sh "noctalia msg panel-toggle wallpaper"; }
-  Mod+Ctrl+W { spawn-sh "noctalia msg panel-toggle noctalia/wallhaven:browser"; }
+  Mod+Space         { spawn-sh "noctalia msg panel-toggle launcher"; }
+  Mod+D             { spawn-sh "noctalia msg panel-toggle control-center home"; }
+  Mod+S             { spawn-sh "noctalia msg panel-toggle control-center media"; }
+  Mod+A             { spawn-sh "noctalia msg panel-toggle control-center audio"; }
+  Mod+N             { spawn-sh "noctalia msg panel-toggle control-center notifications"; }
+  Mod+V             { spawn-sh "noctalia msg panel-toggle clipboard"; }
+  Mod+Shift+W       { spawn-sh "noctalia msg panel-toggle wallpaper"; }
+  Mod+Ctrl+W        { spawn-sh "noctalia msg panel-toggle noctalia/wallhaven:browser"; }
   Ctrl+Shift+Escape { spawn-sh "noctalia msg panel-toggle control-center system"; }
-  Ctrl+Alt+Delete { spawn-sh "noctalia msg panel-toggle session"; }
+  Ctrl+Alt+Delete   { spawn-sh "noctalia msg panel-toggle session"; }
 
   // Scroll
-  Mod+WheelScrollUp cooldown-ms=150 { focus-workspace-up; }
+  Mod+WheelScrollUp   cooldown-ms=150 { focus-workspace-up; }
   Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
 
-  Mod+WheelScrollLeft { focus-column-left; }
-  Mod+WheelScrollRight { focus-column-right; }
+  Mod+WheelScrollLeft       { focus-column-left; }
+  Mod+WheelScrollRight      { focus-column-right; }
   Mod+Shift+WheelScrollDown { focus-column-right; }
-  Mod+Shift+WheelScrollUp { focus-column-left; }
+  Mod+Shift+WheelScrollUp   { focus-column-left; }
 
   Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
-  Mod+Ctrl+Shift+WheelScrollUp { move-column-left; }
-  Mod+Ctrl+WheelScrollLeft { move-column-left; }
-  Mod+Ctrl+WheelScrollRight { move-column-right; }
+  Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
+  Mod+Ctrl+WheelScrollLeft       { move-column-left; }
+  Mod+Ctrl+WheelScrollRight      { move-column-right; }
 
   Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
-  Mod+Ctrl+WheelScrollUp cooldown-ms=150 { move-column-to-workspace-up; }
+  Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
 
   // Widgets
-  Mod+Z { spawn-sh "noctalia msg desktop-widgets-toggle"; }
+  Mod+Z       { spawn-sh "noctalia msg desktop-widgets-toggle"; }
   Mod+Shift+Z { spawn-sh "noctalia msg desktop-widgets-toggle-edit"; }
-  Mod+Ctrl+Z { spawn-sh "noctalia msg lockscreen-widgets-toggle-edit"; }
+  Mod+Ctrl+Z  { spawn-sh "noctalia msg lockscreen-widgets-toggle-edit"; }
 
   // Screenshots
-  Print allow-when-locked=true { spawn-sh "noctalia msg screenshot-fullscreen"; }
+  Print       allow-when-locked=true { spawn-sh "noctalia msg screenshot-fullscreen"; }
   Shift+Print allow-when-locked=true { spawn-sh "noctalia msg screenshot-region"; }
 
   // Volume
-  XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "noctalia msg volume-up 5"; }
-  XF86AudioLowerVolume allow-when-locked=true { spawn-sh "noctalia msg volume-down 5"; }
+  XF86AudioRaiseVolume       allow-when-locked=true { spawn-sh "noctalia msg volume-up 5"; }
+  XF86AudioLowerVolume       allow-when-locked=true { spawn-sh "noctalia msg volume-down 5"; }
   Shift+XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "noctalia msg volume-up 1"; }
   Shift+XF86AudioLowerVolume allow-when-locked=true { spawn-sh "noctalia msg volume-down 1"; }
-  XF86AudioMute allow-when-locked=true { spawn-sh "noctalia msg volume-mute"; }
-  XF86AudioMicMute allow-when-locked=true { spawn-sh "noctalia msg mic-mute"; }
+  XF86AudioMute              allow-when-locked=true { spawn-sh "noctalia msg volume-mute"; }
+  XF86AudioMicMute           allow-when-locked=true { spawn-sh "noctalia msg mic-mute"; }
 
   // Brightness
-  XF86MonBrightnessDown allow-when-locked=true { spawn-sh "noctalia msg brightness-down"; }
-  XF86MonBrightnessUp allow-when-locked=true { spawn-sh "noctalia msg brightness-up"; }
+  XF86MonBrightnessDown       allow-when-locked=true { spawn-sh "noctalia msg brightness-down"; }
+  XF86MonBrightnessUp         allow-when-locked=true { spawn-sh "noctalia msg brightness-up"; }
   Shift+XF86MonBrightnessDown allow-when-locked=true { spawn-sh "noctalia msg brightness-down 1"; }
-  Shift+XF86MonBrightnessUp allow-when-locked=true { spawn-sh "noctalia msg brightness-up 1"; }
+  Shift+XF86MonBrightnessUp   allow-when-locked=true { spawn-sh "noctalia msg brightness-up 1"; }
 
   // Media Keys
   XF86AudioNext allow-when-locked=true { spawn-sh "noctalia msg media next"; }
   XF86AudioPlay allow-when-locked=true { spawn-sh "noctalia msg media toggle"; }
   XF86AudioPrev allow-when-locked=true { spawn-sh "noctalia msg media prev"; }
   XF86AudioStop allow-when-locked=true { spawn-sh "noctalia msg media stop"; }
+
+  Mod+Alt+B allow-when-locked=true { spawn-sh "noctalia msg media previous"; }
+  Mod+Alt+N allow-when-locked=true { spawn-sh "noctalia msg media next"; }
+  Mod+Alt+P allow-when-locked=true { spawn-sh "noctalia msg media toggle"; }
 }
