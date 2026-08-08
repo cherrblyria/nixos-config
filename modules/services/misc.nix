@@ -10,6 +10,8 @@
       pulse.enable = true;
     };
 
+    flatpak.enable = true;
+
     openssh.enable = true;
     dbus.enable = true;
 
