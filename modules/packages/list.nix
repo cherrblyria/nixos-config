@@ -17,7 +17,6 @@
     # Desktop Apps
     brave-origin
     krita
-    obsidian
     opencode-desktop
     vesktop
 

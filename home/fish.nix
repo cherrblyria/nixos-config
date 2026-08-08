@@ -3,12 +3,12 @@
     enable = true;
     functions = {
       y = ''
-        set tmp (mktemp -t "yazi-cwd.XXXXXX")
-        yazi $argv --cwd-file="$tmp"
-        if read -z cwd <"$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-            # @fish-lsp-disable-next-line 7001
-            z -- "$cwd"
-            rm -f -- "$tmp"
+          set tmp (mktemp -t "yazi-cwd.XXXXXX")
+          yazi $argv --cwd-file="$tmp"
+          if read -z cwd < "$tmp"; and [ "$cwd" != "$PWD" ]; and test -d "$cwd"
+            z cd -- "$cwd"
+          end
+          rm -f -- "$tmp"
         end
       '';
 
