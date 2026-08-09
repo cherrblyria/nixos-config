@@ -1,6 +1,5 @@
 <img src="https://github.com/user-attachments/assets/675aeb4f-1ad0-4b15-b4b7-744c566cd39f" />
 
-
 ---
 
 this is my highly opinionated NixOS configuration I currently setting up.\
