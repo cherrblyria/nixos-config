@@ -14,6 +14,7 @@ paths=(
   ".config/btop/btop.conf"
   ".config/kritarc"
   ".config/mimeapps.list"
+  ".config/OpenTabletDriver/settings.json"
 )
 
 sync_dir_or_file() {
