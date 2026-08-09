@@ -9,5 +9,6 @@
       "wheel"
       "uinput"
     ];
+    initialPassword = "1234";
   };
 }
