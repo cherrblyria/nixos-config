@@ -579,20 +579,8 @@ orientation = "vertical"
 position = "bottom_center"
 position_vertical = "center_right"
 
-[plugin_settings."blackbartblues/keymap"]
-compositor = "niri"
-
-[plugin_settings."kenn/keybind-cheatsheet"]
-compositor = "niri"
-
-[plugin_settings."noctalia/mpvpaper"]
-video_directory = "/home/cherr/Videos/Wallpapers"
-
 [plugin_settings."noctalia/wallhaven"]
 download_dir = "/home/cherr/Wallpapers/Wallheaven"
-
-[plugin_settings."tadomika_ari/config-swap"]
-panel_position = "center"
 
 [plugins]
 enabled = [ "noctalia/kaomoji", "noctalia/wallhaven" ]
@@ -682,11 +670,7 @@ wallpaper_scheme = "soft"
 
     [theme.templates]
     builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "kcolorscheme", "kitty", "niri", "qt" ]
-    community_ids = [ "discord", "vscode", "bat", "lazygit", "yazi" ]
-
-        [theme.templates.user.obsidian_extra]
-        input_path = "~/.config/noctalia/Obsidian/obsidian.css"
-        output_path = "~/Documents/Cherr's Sanctuary/.obsidian/snippets/noctalia.css"
+    community_ids = [ "discord", "vscode", "papirus-icons", "bat", "lazygit", "yazi" ]
 
 [wallpaper]
 directory = "/home/cherr/Wallpapers"
@@ -698,13 +682,13 @@ transition_on_startup = true
     interval_seconds = 600
 
     [wallpaper.default]
-    path = "/home/cherr/Wallpapers/PJSK/Shiraishi An/仲間だから_after_training.png"
+    path = "/home/cherr/Wallpapers/PJSK/Otori Emu/ぐわぐわ☆アヒルチャレンジ！_normal.png"
 
     [wallpaper.last]
-    path = "/home/cherr/Wallpapers/PJSK/Shiraishi An/仲間だから_after_training.png"
+    path = "/home/cherr/Wallpapers/PJSK/Otori Emu/ぐわぐわ☆アヒルチャレンジ！_normal.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/cherr/Wallpapers/PJSK/Shiraishi An/仲間だから_after_training.png"
+    path = "/home/cherr/Wallpapers/PJSK/Otori Emu/ぐわぐわ☆アヒルチャレンジ！_normal.png"
 
 [widget.audio_visualizer]
 color_2 = "tertiary"
@@ -731,7 +715,6 @@ format = "{:%R}"
 vertical_format = "{:%H\\n%M}"
 
 [widget.cpu]
-show_label = false
 show_value = false
 
 [widget.launcher]
@@ -751,7 +734,6 @@ hide_when_no_media = true
 hide_inactive = true
 
 [widget.ram]
-show_label = false
 show_value = false
 
 [widget.session]
