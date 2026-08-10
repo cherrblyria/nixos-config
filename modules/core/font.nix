@@ -4,6 +4,7 @@
     packages = with pkgs; [
       adwaita-fonts
       nerd-fonts.caskaydia-cove
+      nerd-fonts.departure-mono
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
