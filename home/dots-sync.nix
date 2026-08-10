@@ -31,9 +31,9 @@
           fi
         }
 
-        for rel in "$\{paths[@]}"; do
+        for rel in "''${paths[@]}"; do
           target="$HOME/$rel"
-          repo="$REPO_DOTS/$\{rel#.}"
+          repo="$REPO_DOTS/''${rel#.}"
 
           if [[ -e "$target" ]]; then
             sync_dir_or_file "$target" "$repo"
