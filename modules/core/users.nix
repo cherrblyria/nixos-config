@@ -11,4 +11,8 @@
     ];
     initialPassword = "superstrongpassword";
   };
+
+  security.sudo.extraConfig = ''
+    Defaults passwd_timeout=0
+  '';
 }

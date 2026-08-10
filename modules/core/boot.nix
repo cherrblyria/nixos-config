@@ -5,8 +5,8 @@
   nixpkgs.config.allowUnfree = true;
 
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest; # Use latest linux kernel
-    loader.systemd-boot.enable = true; # Bootloader
+    kernelPackages = pkgs.linuxPackages_latest;
+    loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
   };
 

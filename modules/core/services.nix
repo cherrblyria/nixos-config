@@ -11,13 +11,10 @@
       };
     };
 
-    # Flatpak
     flatpak.enable = true;
 
-    # SSH
     openssh.enable = true;
 
-    # DBUS
     dbus.enable = true;
 
     # Disks
