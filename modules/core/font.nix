@@ -8,12 +8,14 @@
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
 
-      (pkgs.runCommand "my-custom-fonts" { } ''
+      # Install fonts in assets dir
+      (pkgs.runCommand "my-fonts" { } ''
         mkdir -p $out/share/fonts/truetype
         cp -r ${../../assets/fonts}/* $out/share/fonts/truetype/
       '')
     ];
 
+    # Default fonts fallback
     fontconfig.defaultFonts = {
       serif = [
         "Adwaita Sans"

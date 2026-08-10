@@ -37,7 +37,6 @@
           ./home
           ./modules/core
           ./modules/packages
-          ./modules/services
         ];
       };
     };

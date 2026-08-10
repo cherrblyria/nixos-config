@@ -5,9 +5,9 @@
   nixpkgs.config.allowUnfree = true;
 
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_latest; # Use latest linux kernel
+    loader.systemd-boot.enable = true; # Bootloader
     loader.efi.canTouchEfiVariables = true;
-    loader.systemd-boot.enable = true;
   };
 
   nix.settings = {
@@ -20,6 +20,7 @@
     ];
   };
 
+  # Enable 32bit for osu!
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
