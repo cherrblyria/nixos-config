@@ -35,8 +35,7 @@
           ./hardware-configuration.nix
 
           ./home
-          ./modules/core
-          ./modules/packages
+          ./modules
         ];
       };
     };
