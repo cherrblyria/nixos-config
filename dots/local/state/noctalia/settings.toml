@@ -260,7 +260,6 @@ pinned = [
     "obsidian",
     "ai.opencode.desktop",
     "code",
-    "org.gnome.TextEditor",
     "org.kde.krita",
     "spotify",
     "vesktop",
@@ -586,7 +585,7 @@ download_dir = "/home/cherr/Wallpapers/Wallheaven"
 enabled = [ "noctalia/kaomoji", "noctalia/wallhaven" ]
 
 [shell]
-avatar_path = "/home/cherr/Pictures/Anime/130.jpg"
+avatar_path = "/home/cherr/Pictures/Anime/⋆·˚ ༘ _ kanade yoisaki pfp.jpeg"
 clipboard_auto_paste = "off"
 corner_radius_scale = 2.0
 font_family = "Adwaita Sans"
@@ -682,13 +681,13 @@ transition_on_startup = true
     interval_seconds = 600
 
     [wallpaper.default]
-    path = "/home/cherr/Wallpapers/PJSK/Otori Emu/ぐわぐわ☆アヒルチャレンジ！_normal.png"
+    path = "/home/cherr/Wallpapers/PJSK/Meiko/赤が似合うニューフェイス！_after_training.png"
 
     [wallpaper.last]
-    path = "/home/cherr/Wallpapers/PJSK/Otori Emu/ぐわぐわ☆アヒルチャレンジ！_normal.png"
+    path = "/home/cherr/Wallpapers/PJSK/Meiko/赤が似合うニューフェイス！_after_training.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/cherr/Wallpapers/PJSK/Otori Emu/ぐわぐわ☆アヒルチャレンジ！_normal.png"
+    path = "/home/cherr/Wallpapers/PJSK/Meiko/赤が似合うニューフェイス！_after_training.png"
 
 [widget.audio_visualizer]
 color_2 = "tertiary"
