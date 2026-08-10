@@ -4,7 +4,48 @@
     (pkgs.writeShellApplication {
       name = "dots-sync";
       runtimeInputs = [ pkgs.rsync ];
-      text = builtins.readFile ../scripts/dots-sync.sh;
+      text = ''
+        #!/usr/bin/env bash
+
+        set -euo pipefail
+
+        REPO_DOTS="$HOME/nixos-config/dots"
+
+        # paths relative to $HOME (files or directories, both work)
+        paths=(
+          ".local/state/noctalia/settings.toml"
+          ".config/btop/btop.conf"
+          ".config/kritarc"
+          ".config/mimeapps.list"
+          ".config/OpenTabletDriver/settings.json"
+        )
+
+        sync_dir_or_file() {
+          local src="$1" dst="$2"
+          mkdir -p "$(dirname "$dst")"
+          if [[ -d "$src" ]]; then
+            mkdir -p "$dst"
+            rsync -a --delete "$src"/ "$dst"/
+          else
+            rsync -a "$src" "$dst"
+          fi
+        }
+
+        for rel in "$\{paths[@]}"; do
+          target="$HOME/$rel"
+          repo="$REPO_DOTS/$\{rel#.}"
+
+          if [[ -e "$target" ]]; then
+            sync_dir_or_file "$target" "$repo"
+            echo "[backup] $rel"
+          elif [[ -e "$repo" ]]; then
+            sync_dir_or_file "$repo" "$target"
+            echo "[deploy] $rel"
+          else
+            echo "[skip]   $rel (missing on both sides)"
+          fi
+        done
+      '';
     })
   ];
 }

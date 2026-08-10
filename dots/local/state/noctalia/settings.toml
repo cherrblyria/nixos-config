@@ -681,13 +681,13 @@ transition_on_startup = true
     interval_seconds = 600
 
     [wallpaper.default]
-    path = "/home/cherr/Wallpapers/PJSK/Meiko/赤が似合うニューフェイス！_after_training.png"
+    path = "/home/cherr/Wallpapers/PJSK/Kiritani Haruka/受け取られた希望_after_training.png"
 
     [wallpaper.last]
-    path = "/home/cherr/Wallpapers/PJSK/Meiko/赤が似合うニューフェイス！_after_training.png"
+    path = "/home/cherr/Wallpapers/PJSK/Kiritani Haruka/受け取られた希望_after_training.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/cherr/Wallpapers/PJSK/Meiko/赤が似合うニューフェイス！_after_training.png"
+    path = "/home/cherr/Wallpapers/PJSK/Kiritani Haruka/受け取られた希望_after_training.png"
 
 [widget.audio_visualizer]
 color_2 = "tertiary"
