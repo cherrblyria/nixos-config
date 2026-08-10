@@ -2,9 +2,9 @@
 
 ---
 
-this is my highly opinionated NixOS configuration I currently setting up.\
-for now this is just a simple one machine config w/ flake and simple modular configs.\
-also I made this for myself so just take whatever u want but DON'T fully build from it *I warned u*.
+This is my daily driver NixOS configuration.\
+It's just a simple one machine config w/ flake and simple modular configs.\
+Also I made this for myself so just take whatever u want but DON'T fully build from it *I warned u*.
 
 #### Assets credits
 
