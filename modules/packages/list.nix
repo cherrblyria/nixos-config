@@ -10,8 +10,11 @@
     btop
     duf
     eza
+    fd
     fetch
     fzf
+    imagemagick
+    ripgrep
     wget
 
     # Desktop Apps
@@ -43,8 +46,10 @@
     nixd
 
     # Deps
+    ffmpeg
     ffmpegthumbnailer
-    imagemagick
+    poppler
+    resvg
     webp-pixbuf-loader
   ];
   programs.fish.enable = true;
