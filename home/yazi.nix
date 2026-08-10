@@ -3,9 +3,9 @@
     enable = true;
     enableFishIntegration = true;
   };
-  home.file = {
-    ".config/yazi/yazi.toml".source = ../dots/config/yazi/yazi.toml;
-    ".config/yazi/keymap.toml".source = ../dots/config/yazi/keymap.toml;
-    ".config/yazi/theme.toml".source = ../dots/config/yazi/theme.toml;
+  xdg.configFile = {
+    "yazi/yazi.toml".source = ../dots/config/yazi/yazi.toml;
+    "yazi/keymap.toml".source = ../dots/config/yazi/keymap.toml;
+    "yazi/theme.toml".source = ../dots/config/yazi/theme.toml;
   };
 }
