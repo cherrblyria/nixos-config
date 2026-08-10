@@ -3,7 +3,7 @@
   users.users."cherr" = {
     shell = pkgs.fish;
     isNormalUser = true;
-    description = "cherr";
+    description = "Cherrblyria";
     extraGroups = [
       "networkmanager"
       "wheel"
