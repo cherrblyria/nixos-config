@@ -9,6 +9,6 @@
       "wheel"
       "uinput"
     ];
-    initialPassword = "1234";
+    initialPassword = "superstrongpassword";
   };
 }
