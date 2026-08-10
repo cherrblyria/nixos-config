@@ -4,7 +4,6 @@
     packages = with pkgs; [
       adwaita-fonts
       nerd-fonts.caskaydia-cove
-      nerd-fonts.departure-mono
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
@@ -18,17 +17,31 @@
     fontconfig.defaultFonts = {
       serif = [
         "Adwaita Sans"
-        "Noto Serif CJK JP"
+        "Noto Sans CJK JP"
+        "Noto Sans CJK KR"
+        "Noto Sans CJK HK"
+        "Noto Sans CJK TC"
+        "Noto Sans CJK SC"
         "Google Sans"
+        "Caskaydia Cove Nerd Font"
       ];
       sansSerif = [
         "Adwaita Sans"
         "Noto Sans CJK JP"
+        "Noto Sans CJK KR"
+        "Noto Sans CJK HK"
+        "Noto Sans CJK TC"
+        "Noto Sans CJK SC"
         "Google Sans"
+        "Caskaydia Cove Nerd Font"
       ];
       monospace = [
         "Caskaydia Cove Nerd Font"
-        "Noto Sans Mono CJK JP"
+        "Noto Sans CJK JP"
+        "Noto Sans CJK KR"
+        "Noto Sans CJK HK"
+        "Noto Sans CJK TC"
+        "Noto Sans CJK SC"
         "Google Sans"
       ];
       emoji = [ "Noto Color Emoji" ];
