@@ -311,28 +311,27 @@ widget_order = [
     "lockscreen-widget-0000000000000017",
     "lockscreen-widget-0000000000000018",
     "lockscreen-widget-0000000000000011",
-    "lockscreen-widget-0000000000000016",
     "lockscreen-widget-0000000000000019",
-    "lockscreen-widget-0000000000000015",
     "lockscreen-widget-000000000000000d",
     "lockscreen-widget-000000000000000f",
     "lockscreen-widget-0000000000000008",
     "lockscreen-widget-000000000000000e",
     "lockscreen-login-box@eDP-1",
     "lockscreen-widget-000000000000000c",
-    "lockscreen-widget-000000000000001a"
+    "lockscreen-widget-000000000000001a",
+    "lockscreen-widget-0000000000000016"
 ]
 
     [lockscreen_widgets.grid]
     cell_size = 8
     major_interval = 4
-    visible = false
+    visible = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
     box_height = 70.0
     box_width = 336.0
-    cx = 1187.12109375
-    cy = 720.29486083984375
+    cx = 1187.0
+    cy = 720.0
     output = "eDP-1"
     rotation = 0.0
     type = "login_box"
@@ -428,8 +427,8 @@ widget_order = [
     [lockscreen_widgets.widget.lockscreen-widget-000000000000000f]
     box_height = 88.0
     box_width = 968.0
-    cx = 901.26495361328125
-    cy = 610.09063720703125
+    cx = 903.19134521484375
+    cy = 608.2308349609375
     output = "eDP-1"
     rotation = -0.2617993950843811
     type = "audio_visualizer"
@@ -446,8 +445,8 @@ widget_order = [
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000011]
     box_height = 128.0
     box_width = 304.0
-    cx = 167.0
-    cy = 78.58795166015625
+    cx = 163.0
+    cy = 72.0
     output = "eDP-1"
     rotation = 0.0
     type = "media_player"
@@ -459,27 +458,10 @@ widget_order = [
         hide_when_no_media = true
         layout = "horizontal"
 
-    [lockscreen_widgets.widget.lockscreen-widget-0000000000000015]
-    box_height = 120.0
-    box_width = 328.0
-    cx = 179.0
-    cy = 692.0
-    output = "eDP-1"
-    rotation = 0.0
-    type = "sticker"
-
-        [lockscreen_widgets.widget.lockscreen-widget-0000000000000015.settings]
-        background = false
-        background_opacity = 0.5
-        background_padding = 22
-        background_radius = 20
-        image_path = "/home/cherr/Documents/Noctalia/tex_title_logo_all_01.png"
-        opacity = 0.45000000000000001
-
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000016]
     box_height = 80.0
     box_width = 896.0
-    cx = 943.9124755859375
+    cx = 939.0
     cy = 685.41204833984375
     output = "eDP-1"
     rotation = -0.2617993950843811
@@ -530,7 +512,7 @@ widget_order = [
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000019]
     box_height = 80.0
     box_width = 896.0
-    cx = 422.0875244140625
+    cx = 427.0
     cy = 82.58795166015625
     output = "eDP-1"
     rotation = -0.2617993950843811
@@ -547,8 +529,8 @@ widget_order = [
     [lockscreen_widgets.widget.lockscreen-widget-000000000000001a]
     box_height = 88.0
     box_width = 968.0
-    cx = 468.565673828125
-    cy = 156.3984375
+    cx = 462.80859375
+    cy = 160.23085021972656
     flip_x = true
     flip_y = true
     output = "eDP-1"
@@ -578,15 +560,35 @@ orientation = "vertical"
 position = "bottom_center"
 position_vertical = "center_right"
 
+[plugin_settings."cherrblyria/sekai-wallpaper"]
+keep_count = 3
+
 [plugin_settings."noctalia/wallhaven"]
 download_dir = "/home/cherr/Wallpapers/Wallheaven"
 
 [plugins]
 enabled = [ "noctalia/kaomoji", "noctalia/wallhaven" ]
 
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/official-plugins"
+    name = "official"
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/community-plugins"
+    name = "community"
+
+    [[plugins.source]]
+    enabled = false
+    kind = "path"
+    location = "~/Projects"
+    name = "Cherrblyria"
+
 [shell]
 avatar_path = "/home/cherr/Pictures/Anime/⋆·˚ ༘ _ kanade yoisaki pfp.jpeg"
 clipboard_auto_paste = "off"
+clipboard_history_max_entries = 200
 corner_radius_scale = 2.0
 font_family = "Adwaita Sans"
 niri_overview_type_to_launch_enabled = true
@@ -596,6 +598,10 @@ polkit_agent = true
 
     [shell.animation]
     speed = 0.7500000111758709
+
+    [shell.keyboard_layout.custom_labels]
+    "English (US)" = "US"
+    Thai = "TH"
 
     [shell.launcher]
     app_grid = true
@@ -681,13 +687,13 @@ transition_on_startup = true
     interval_seconds = 600
 
     [wallpaper.default]
-    path = "/home/cherr/Wallpapers/PJSK/Kiritani Haruka/受け取られた希望_after_training.png"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-3lx736.jpg"
 
     [wallpaper.last]
-    path = "/home/cherr/Wallpapers/PJSK/Kiritani Haruka/受け取られた希望_after_training.png"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-3lx736.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/cherr/Wallpapers/PJSK/Kiritani Haruka/受け取られた希望_after_training.png"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-3lx736.jpg"
 
 [widget.audio_visualizer]
 color_2 = "tertiary"
