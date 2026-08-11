@@ -16,8 +16,7 @@ order = [ "Main" ]
     capsule = true
     capsule_border = "outline"
     capsule_opacity = 0.24999999441206455
-    center = [ "clock", "group:g3" ]
-    end = [ "privacy", "tray", "group:g2", "group:g4" ]
+    end = [ "privacy", "lock_keys", "group:g2", "group:g4" ]
     font_weight = 400
     margin_ends = 0
     padding = 6
@@ -58,13 +57,13 @@ order = [ "Main" ]
         padding = 6.0
 
         [[bar.Main.capsule_group]]
-        accordion = false
+        accordion = true
         accordion_direction = "end"
         border = "outline"
         enabled = true
         fill = "surface_variant"
         id = "g4"
-        members = [ "battery", "volume", "notifications" ]
+        members = [ "battery", "notifications", "volume", "brightness", "wallhaven", "tray" ]
         opacity = 0.25
         padding = 6.0
 
@@ -76,17 +75,6 @@ order = [ "Main" ]
         fill = "surface_variant"
         id = "g5"
         members = [ "launcher", "caffeine" ]
-        opacity = 0.25
-        padding = 6.0
-
-        [[bar.Main.capsule_group]]
-        accordion = false
-        accordion_direction = "end"
-        border = "outline"
-        enabled = false
-        fill = "surface_variant"
-        id = "g3"
-        members = [ "wallpaper", "wallhaven" ]
         opacity = 0.25
         padding = 6.0
 
@@ -687,13 +675,13 @@ transition_on_startup = true
     interval_seconds = 600
 
     [wallpaper.default]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-3lx736.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-5ym138.jpg"
 
     [wallpaper.last]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-3lx736.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-5ym138.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-3lx736.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-5ym138.jpg"
 
 [widget.audio_visualizer]
 color_2 = "tertiary"
@@ -712,6 +700,9 @@ display_mode = "graphic"
 hide_when_full = true
 hide_when_plugged = true
 scale = 0.70000000000000007
+show_label = false
+
+[widget.brightness]
 show_label = false
 
 [widget.clock]
