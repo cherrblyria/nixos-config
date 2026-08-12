@@ -141,7 +141,7 @@ widget_order = [
     [desktop_widgets.widget.desktop-widget-0000000000000002]
     box_height = 144.0
     box_width = 320.0
-    cx = 1192.23828125
+    cx = 1191.359375
     cy = 320.8828125
     output = "eDP-1"
     rotation = 0.0
@@ -173,6 +173,7 @@ widget_order = [
         centered = false
         color_2 = "tertiary"
         mirrored = true
+        reversed = false
         show_when_idle = false
 
     [desktop_widgets.widget.desktop-widget-0000000000000008]
@@ -301,13 +302,15 @@ widget_order = [
     "lockscreen-widget-0000000000000011",
     "lockscreen-widget-0000000000000019",
     "lockscreen-widget-000000000000000d",
-    "lockscreen-widget-000000000000000f",
     "lockscreen-widget-0000000000000008",
     "lockscreen-widget-000000000000000e",
     "lockscreen-login-box@eDP-1",
     "lockscreen-widget-000000000000000c",
-    "lockscreen-widget-000000000000001a",
-    "lockscreen-widget-0000000000000016"
+    "lockscreen-widget-0000000000000016",
+    "lockscreen-widget-000000000000001b",
+    "lockscreen-widget-000000000000000f",
+    "lockscreen-widget-000000000000001c",
+    "lockscreen-widget-000000000000001d"
 ]
 
     [lockscreen_widgets.grid]
@@ -415,8 +418,8 @@ widget_order = [
     [lockscreen_widgets.widget.lockscreen-widget-000000000000000f]
     box_height = 88.0
     box_width = 968.0
-    cx = 903.19134521484375
-    cy = 608.2308349609375
+    cx = 916.1038818359375
+    cy = 608.0
     output = "eDP-1"
     rotation = -0.2617993950843811
     type = "audio_visualizer"
@@ -514,18 +517,34 @@ widget_order = [
         shadow = false
         title = "L         O         C         K         E         D"
 
-    [lockscreen_widgets.widget.lockscreen-widget-000000000000001a]
+    [lockscreen_widgets.widget.lockscreen-widget-000000000000001b]
+    box_height = 32.0
+    box_width = 72.0
+    cx = 1319.0
+    cy = 24.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "yocraft/battery-widget:widget"
+
+        [lockscreen_widgets.widget.lockscreen-widget-000000000000001b.settings]
+        background = false
+        battery = "auto"
+        hide_full = true
+        hide_plugged = true
+        layout = "horizontal"
+        show_glyph = true
+        show_label = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-000000000000001c]
     box_height = 88.0
     box_width = 968.0
-    cx = 462.80859375
-    cy = 160.23085021972656
-    flip_x = true
-    flip_y = true
+    cx = 449.89614868164062
+    cy = 160.23089599609375
     output = "eDP-1"
-    rotation = -0.2617993950843811
+    rotation = 2.8797934055328369
     type = "audio_visualizer"
 
-        [lockscreen_widgets.widget.lockscreen-widget-000000000000001a.settings]
+        [lockscreen_widgets.widget.lockscreen-widget-000000000000001c.settings]
         background = false
         bands = 28
         centered = false
@@ -533,6 +552,20 @@ widget_order = [
         color_2 = "primary"
         mirrored = true
         show_when_idle = false
+
+    [lockscreen_widgets.widget.lockscreen-widget-000000000000001d]
+    box_height = 56.0
+    box_width = 128.0
+    cx = 75.0
+    cy = 728.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "weather"
+
+        [lockscreen_widgets.widget.lockscreen-widget-000000000000001d.settings]
+        background = false
+        shadow = false
+        show_forecast = false
 
 [nightlight]
 enabled = true
@@ -555,7 +588,7 @@ keep_count = 3
 download_dir = "/home/cherr/Wallpapers/Wallheaven"
 
 [plugins]
-enabled = [ "noctalia/kaomoji", "noctalia/wallhaven" ]
+enabled = [ "noctalia/kaomoji", "noctalia/wallhaven", "yocraft/battery-widget" ]
 
     [[plugins.source]]
     kind = "git"
@@ -658,6 +691,7 @@ polkit_agent = true
 [theme]
 builtin = "Catppuccin"
 community_palette = "Oxocarbon"
+mode = "dark"
 source = "wallpaper"
 wallpaper_scheme = "soft"
 
@@ -675,13 +709,13 @@ transition_on_startup = true
     interval_seconds = 600
 
     [wallpaper.default]
-    path = "/home/cherr/Wallpapers/Pixiv/126656035_p0.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-zp5zpv.png"
 
     [wallpaper.last]
-    path = "/home/cherr/Wallpapers/Pixiv/126656035_p0.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-zp5zpv.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/cherr/Wallpapers/Pixiv/126656035_p0.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-zp5zpv.png"
 
 [widget.audio_visualizer]
 color_2 = "tertiary"
