@@ -1,11 +1,16 @@
-{ pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 {
   home = {
     # Papirus Icons
     activation.installPapirus = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-      if [ ! -d "$HOME/.local/share/icons/Papirus" ]; then
-        run cp -r ${pkgs.papirus-icon-theme}/share/icons/Papirus* $HOME/.local/share/icons/
-        run chmod -R u+w $HOME/.local/share/icons/Papirus*
+      if [ ! -d "${config.home.homeDirectory}/.local/share/icons/Papirus" ]; then
+        run cp -r ${pkgs.papirus-icon-theme}/share/icons/Papirus* ${config.home.homeDirectory}/.local/share/icons/
+        run chmod -R u+w ${config.home.homeDirectory}/.local/share/icons/Papirus*
       fi
     '';
 

@@ -1,3 +1,4 @@
+{ config, ... }:
 {
   programs.kitty = {
     enable = true;
@@ -30,7 +31,7 @@
       background_opacity = "1.0";
       background_blur = "0";
 
-      include = "/home/cherr/.config/kitty/themes/noctalia.conf";
+      include = "${config.home.homeDirectory}/.config/kitty/themes/noctalia.conf";
     };
     enableGitIntegration = true;
     shellIntegration.enableFishIntegration = true;

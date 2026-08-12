@@ -1,7 +1,8 @@
+{ config, ... }:
 {
   programs.nh = {
     enable = true;
-    flake = "/home/cherr/nixos-config";
+    flake = "${config.home.homeDirectory}/nixos-config";
     clean = {
       enable = true;
       dates = "weekly";

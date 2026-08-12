@@ -1,3 +1,4 @@
+{ config, ... }:
 {
   services.syncthing = {
     enable = true;
@@ -5,7 +6,7 @@
 
     user = "cherr";
     group = "users";
-    dataDir = "/home/cherr";
+    dataDir = "${config.users.users.cherr.home}";
 
     settings = {
       gui.user = "cherr";
@@ -19,7 +20,7 @@
         "vault" = {
           id = "vault";
           label = "Cherr's Sanctuary";
-          path = "/home/cherr/Documents/Cherr's Sanctuary";
+          path = "${config.services.syncthing.dataDir}/Documents/Cherr's Sanctuary";
           ignorePatterns = [ ".obsidian/community-plugins.json" ];
           devices = [
             "Phone"
@@ -30,7 +31,7 @@
         "shared-dcim" = {
           id = "shared-dcim";
           label = "DCIM";
-          path = "/home/cherr/DCIM";
+          path = "${config.services.syncthing.dataDir}/DCIM";
           devices = [
             "Phone"
             "Tablet"
@@ -40,7 +41,7 @@
         "shared-pics" = {
           id = "shared-pics";
           label = "Pictures";
-          path = "/home/cherr/Pictures";
+          path = "${config.services.syncthing.dataDir}/Pictures";
           devices = [
             "Phone"
             "Tablet"
