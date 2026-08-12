@@ -709,13 +709,13 @@ transition_on_startup = true
     interval_seconds = 600
 
     [wallpaper.default]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-zp5zpv.png"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-xe7ydz.png"
 
     [wallpaper.last]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-zp5zpv.png"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-xe7ydz.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-zp5zpv.png"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-xe7ydz.png"
 
 [widget.audio_visualizer]
 color_2 = "tertiary"

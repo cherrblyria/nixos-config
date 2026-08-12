@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 {
   home.packages = [
     (pkgs.writeShellApplication {
@@ -9,7 +9,7 @@
 
         set -euo pipefail
 
-        REPO_DOTS="$HOME/nixos-config/dots"
+        REPO_DOTS="${config.home.homeDirectory}/nixos-config/home/dots"
 
         # paths relative to $HOME (files or directories, both work)
         paths=(
@@ -32,7 +32,7 @@
         }
 
         for rel in "''${paths[@]}"; do
-          target="$HOME/$rel"
+          target="${config.home.homeDirectory}/$rel"
           repo="$REPO_DOTS/''${rel#.}"
 
           if [[ -e "$target" ]]; then

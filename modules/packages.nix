@@ -22,6 +22,7 @@
     krita
     opencode-desktop
     vesktop
+    czkawka
 
     # Games
     (inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.osu-stable.override {
