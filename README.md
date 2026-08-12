@@ -10,7 +10,7 @@ Also I made this for myself so just take whatever u want but DON'T fully build f
 
 | items | desc | source |
 | --- | --- | --- |
-| banner | readme | [creavite](https://auto.creavite.co/) |
+| banner | ADHD banner above :3 | [creavite](https://auto.creavite.co/) |
 | font | google sans, playfair display | [google fonts](https://fonts.google.com/) |
 | cursor | mizuki cursor (offcial) | [colorfulstage](https://www.colorfulstage.com/media/download) |
 | cursor | mizuki cursor (unoffcial linux port) | [gnome look](https://www.gnome-look.org/p/2364244) |
