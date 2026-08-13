@@ -22,10 +22,10 @@ jobs:
           extra-conf: |
             accept-flake-config = true
 
-      - name: Update flake inputs
+      - name: Flake update
         run: nix flake update
 
-      - name: Try build
+      - name: Test build
         id: build
         run: nix build .#nixosConfigurations.nixos.config.system.build.toplevel -L
         continue-on-error: true
@@ -34,8 +34,8 @@ jobs:
         if: steps.build.outcome == 'success'
         uses: peter-evans/create-pull-request@v6
         with:
-          commit-message: "flake.lock: weekly update"
-          title: "Weekly flake.lock update"
+          commit-message: "chore: flake update"
+          title: "Weekly flake update"
           branch: flake-update
           delete-branch: true
           body: Automated `nix flake update` — build passed.
