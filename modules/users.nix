@@ -3,7 +3,7 @@
   users.users."cherr" = {
     shell = pkgs.fish;
     isNormalUser = true;
-    description = "Cherrblyria";
+    description = "cherr";
     extraGroups = [
       "networkmanager"
       "wheel"
@@ -11,11 +11,6 @@
     ];
     initialPassword = "superstrongpassword";
   };
-  nix.settings.trusted-users = [
-    "root"
-    "cherr"
-  ];
-  security.sudo.extraConfig = ''
-    Defaults passwd_timeout=0
-  '';
+  nix.settings.trusted-users = [ "cherr" ];
+  security.sudo.extraConfig = "Defaults passwd_timeout=0";
 }

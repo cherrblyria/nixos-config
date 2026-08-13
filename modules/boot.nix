@@ -10,10 +10,13 @@
     loader.efi.canTouchEfiVariables = true;
   };
 
-  nix.settings.experimental-features = [
-    "flakes"
-    "nix-command"
-  ];
+  nix.settings = {
+    experimental-features = [
+      "flakes"
+      "nix-command"
+    ];
+    accept-flake-config = true;
+  };
 
   # Enable 32bit for osu!
   hardware.graphics = {

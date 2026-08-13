@@ -5,8 +5,8 @@
     flake = "${config.home.homeDirectory}/nixos-config";
     clean = {
       enable = true;
-      dates = "weekly";
-      extraArgs = "--keep 5 --keep-since 3d";
+      dates = "saturday";
+      extraArgs = "--keep 14 --keep-since 7d";
     };
   };
 }
