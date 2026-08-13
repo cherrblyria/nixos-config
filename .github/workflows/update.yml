@@ -1,4 +1,4 @@
-name: Weekly Flake Update
+name: Flake Update
 
 on:
   schedule:
@@ -35,7 +35,7 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "chore: flake update"
-          title: "Weekly flake update"
+          title: "Flake update"
           branch: flake-update
           delete-branch: true
           body: Automated `nix flake update` — build passed.
@@ -50,5 +50,5 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               title: `flake update broke the build — ${new Date().toISOString().slice(0,10)}`,
-              body: `Weekly `nix flake update` produced a flake.lock that fails to build.\n\nLogs: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`
+              body: `Automated `nix flake update` produced a flake.lock that fails to build.\n\nLogs: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`
             })
