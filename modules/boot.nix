@@ -2,8 +2,6 @@
 {
   networking.hostName = "nixos";
   system.stateVersion = "26.11";
-
-  # Overlays
   nixpkgs.config.allowUnfree = true;
 
   boot = {
@@ -13,9 +11,9 @@
   };
 
   nix.settings.experimental-features = [
-      "flakes"
-      "nix-command"
-    ];
+    "flakes"
+    "nix-command"
+  ];
 
   # Enable 32bit for osu!
   hardware.graphics = {
