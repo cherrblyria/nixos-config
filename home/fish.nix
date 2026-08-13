@@ -34,6 +34,7 @@
       # Programs
       f = "fzf";
       g = "git";
+      lg = "lazygit";
 
       # File management
       b = "bat -Pp";

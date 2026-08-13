@@ -15,6 +15,7 @@
     imagemagick
     ripgrep
     wget
+    lazygit
 
     # Desktop Apps
     brave-origin
