@@ -25,6 +25,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           inputs.home-manager.nixosModules.home-manager
+          inputs.noctalia.nixosModules.default
           inputs.noctalia-greeter.nixosModules.default
           inputs.sops-nix.nixosModules.sops
           inputs.spicetify-nix.nixosModules.spicetify
