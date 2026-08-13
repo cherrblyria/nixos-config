@@ -2,8 +2,8 @@ name: Weekly Flake Update
 
 on:
   schedule:
-    - cron: '0 6 * * 1'   # every Monday
-  workflow_dispatch:        # lets you trigger manually too
+    - cron: '0 6 * * 6'
+  workflow_dispatch:
 
 jobs:
   update:
@@ -39,6 +39,7 @@ jobs:
           branch: flake-update
           delete-branch: true
           body: Automated `nix flake update` — build passed.
+          reviewers: cherrblyria
 
       - name: Open issue if build failed
         if: steps.build.outcome == 'failure'
