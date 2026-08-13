@@ -63,4 +63,4 @@ jobs:
       - name: statix
         run: nix run nixpkgs#statix -- check .
       - name: deadnix
-        run: nix run nixpkgs#deadnix -- --fail .
+        run: nix run nixpkgs#deadnix -- --fail --exclude '**/hardware-configuration.nix' .
