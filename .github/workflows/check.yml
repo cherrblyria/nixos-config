@@ -35,11 +35,10 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v4
-      - uses: DeterminateSystems/nix-installer-action@main
+      - uses: cachix/install-nix-action@v25
         with:
-          determinate: false
-          extra-conf: |
-            accept-flake-config = true
+          nix_path: nixpkgs=channel:nixos-unstable
+          extra_nix_config: accept-flake-config = true
       - uses: cachix/cachix-action@v14
         with:
           name: cherrblyria
@@ -54,11 +53,10 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v4
-      - uses: DeterminateSystems/nix-installer-action@main
+      - uses: cachix/install-nix-action@v25
         with:
-          determinate: false
-          extra-conf: |
-            accept-flake-config = true
+          nix_path: nixpkgs=channel:nixos-unstable
+          extra_nix_config: accept-flake-config = true
       - name: statix
         run: nix run nixpkgs#statix -- check .
       - name: deadnix
