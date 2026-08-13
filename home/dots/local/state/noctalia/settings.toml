@@ -12,11 +12,10 @@ enabled = true
 order = [ "Main" ]
 
     [bar.Main]
-    background_opacity = 0.5
-    capsule = true
+    background_opacity = 0.59999998658895493
     capsule_border = "outline"
     capsule_opacity = 0.24999999441206455
-    end = [ "privacy", "lock_keys", "group:g2", "group:g4" ]
+    end = [ "privacy", "lock_keys", "media", "audio_visualizer", "group:g4" ]
     font_weight = 400
     margin_ends = 0
     padding = 6
@@ -25,8 +24,7 @@ order = [ "Main" ]
     radius = 32
     radius_bottom_left = 0
     radius_top_left = 0
-    start = [ "group:g5", "workspaces", "group:g1" ]
-    widget_spacing = 4
+    start = [ "launcher", "workspaces", "cat" ]
 
         [bar.Main.dead_zone.actions]
         back = "workspace-switch next"
@@ -35,47 +33,14 @@ order = [ "Main" ]
         scroll_up = "workspace-switch prev"
 
         [[bar.Main.capsule_group]]
-        accordion = false
-        accordion_direction = "end"
-        border = "outline"
-        enabled = true
-        fill = "surface_variant"
-        id = "g1"
-        members = [ "cpu", "ram", "sysmon" ]
-        opacity = 0.25
-        padding = 6.0
-
-        [[bar.Main.capsule_group]]
-        accordion = false
-        accordion_direction = "end"
-        border = "outline"
-        enabled = true
-        fill = "surface_variant"
-        id = "g2"
-        members = [ "media", "audio_visualizer" ]
-        opacity = 0.25
-        padding = 6.0
-
-        [[bar.Main.capsule_group]]
         accordion = true
         accordion_direction = "end"
-        border = "outline"
+        border = ""
         enabled = true
         fill = "surface_variant"
         id = "g4"
         members = [ "battery", "notifications", "volume", "brightness", "wallhaven", "tray" ]
-        opacity = 0.25
-        padding = 6.0
-
-        [[bar.Main.capsule_group]]
-        accordion = false
-        accordion_direction = "end"
-        border = "outline"
-        enabled = true
-        fill = "surface_variant"
-        id = "g5"
-        members = [ "launcher", "caffeine" ]
-        opacity = 0.25
+        opacity = 0.0
         padding = 6.0
 
 [battery]
@@ -232,12 +197,13 @@ widget_order = [
 
 [dock]
 auto_hide = true
-background_opacity = 0.4999999888241291
+background_opacity = 0.59999998658895493
 enabled = true
 inactive_opacity = 0.99999997764825821
 inactive_scale = 1.0
 item_spacing = 8
-launcher_custom_image = "/home/cherr/Documents/Noctalia/bunny.png"
+launcher_custom_image = "/home/cherr/Documents/Noctalia/nix.png"
+launcher_custom_image_colorize = true
 launcher_position = "start"
 magnification_scale = 2.0
 main_axis_padding = 8
@@ -588,7 +554,7 @@ keep_count = 3
 download_dir = "/home/cherr/Wallpapers/Wallheaven"
 
 [plugins]
-enabled = [ "noctalia/kaomoji", "noctalia/wallhaven", "yocraft/battery-widget" ]
+enabled = [ "noctalia/kaomoji", "noctalia/wallhaven", "yocraft/battery-widget", "dotnetrob/cat" ]
 
     [[plugins.source]]
     kind = "git"
@@ -697,7 +663,7 @@ wallpaper_scheme = "soft"
 
     [theme.templates]
     builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "kcolorscheme", "kitty", "niri", "qt" ]
-    community_ids = [ "discord", "vscode", "papirus-icons", "bat", "lazygit", "yazi" ]
+    community_ids = [ "discord", "vscode", "papirus-icons", "yazi" ]
 
 [wallpaper]
 directory = "/home/cherr/Wallpapers"
@@ -709,13 +675,13 @@ transition_on_startup = true
     interval_seconds = 600
 
     [wallpaper.default]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-rqjkzw.png"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-3l1p3d.jpg"
 
     [wallpaper.last]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-rqjkzw.png"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-3l1p3d.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-rqjkzw.png"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-3l1p3d.jpg"
 
 [widget.audio_visualizer]
 color_2 = "tertiary"
@@ -739,16 +705,24 @@ show_label = false
 [widget.brightness]
 show_label = false
 
+[widget.caffeine]
+enabled = false
+
+[widget.cat]
+type = "dotnetrob/cat:cat"
+
 [widget.clock]
 anchor = true
+font_family = "CaskaydiaCove Nerd Font"
+font_weight = 350
 format = "{:%R}"
 vertical_format = "{:%H\\n%M}"
 
-[widget.cpu]
-show_value = false
-
 [widget.launcher]
-custom_image = "/home/cherr/Documents/Noctalia/bunny.png"
+custom_image = "/home/cherr/Documents/Noctalia/nix.png"
+custom_image_colorize = true
+icon_color = "secondary"
+scale = 1.4000000000000001
 
 [widget.lock_keys]
 hide_when_off = true
@@ -762,9 +736,6 @@ hide_when_no_media = true
 
 [widget.privacy]
 hide_inactive = true
-
-[widget.ram]
-show_value = false
 
 [widget.session]
 color = "error"
