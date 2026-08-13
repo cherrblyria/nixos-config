@@ -53,10 +53,12 @@
     resvg
     webp-pixbuf-loader
   ];
-  programs.noctalia = {
-    enable = true;
-    recommendedServices.enable = true;
+  programs = {
+    noctalia = {
+      enable = true;
+      recommendedServices.enable = true;
+    };
+    fish.enable = true;
+    niri.enable = true;
   };
-  programs.fish.enable = true;
-  programs.niri.enable = true;
 }
