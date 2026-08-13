@@ -11,9 +11,11 @@
     ];
     initialPassword = "superstrongpassword";
   };
-
+  nix.settings.trusted-users = [
+    "root"
+    "cherr"
+  ];
   security.sudo.extraConfig = ''
     Defaults passwd_timeout=0
   '';
-nix.settings.trusted-users = [ "root" "cherr" ];
 }

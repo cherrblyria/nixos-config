@@ -16,9 +16,7 @@ in
       imports =
         with lib;
         map (f: ./. + "/${f}") (
-          filter (f: f != "default.nix" && hasSuffix ".nix" f) (
-            builtins.attrNames entries
-          )
+          filter (f: f != "default.nix" && hasSuffix ".nix" f) (builtins.attrNames entries)
         );
     };
   };

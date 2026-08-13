@@ -4,7 +4,7 @@ on:
   pull_request:
   push:
     branches: [main]
-  
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -23,9 +23,9 @@ jobs:
           determinate: false
           extra-conf: |
             accept-flake-config = true
-          
+
       - name: flake check
         run: nix flake check
-        
+
       - name: build system closure
         run: nix build .#nixosConfigurations.nixos.config.system.build.toplevel -L
