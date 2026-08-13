@@ -9,7 +9,7 @@
       "wheel"
       "uinput"
     ];
-    initialPassword = "superstrongpassword";
+    initialPassword = "password";
   };
   nix.settings.trusted-users = [ "cherr" ];
   security.sudo.extraConfig = "Defaults passwd_timeout=0";
