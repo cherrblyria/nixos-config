@@ -2,7 +2,6 @@
 {
   environment.systemPackages = with pkgs; [
     # WM/Shell
-    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     wl-clipboard
     mizuki-psekai-cursor
 
@@ -53,6 +52,10 @@
     resvg
     webp-pixbuf-loader
   ];
+  programs.noctalia = {
+    enable = true;
+    recommendedServices.enable = true;
+  };
   programs.fish.enable = true;
   programs.niri.enable = true;
 }
