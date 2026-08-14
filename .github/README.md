@@ -12,6 +12,7 @@ Also I made this for myself so just take whatever u want but DON'T fully build f
 | items | description | source |
 | --- | --- | --- |
 | banner | ADHD banner above :3 | [creavite](https://auto.creavite.co/) |
+| image | (The) Herta | random [pins](https://www.pinterest.com/search/pins/?q=the%20herta%20png) |
 | font | google sans, playfair display | [google fonts](https://fonts.google.com/) |
 | cursor | mizuki cursor (offcial) | [colorfulstage](https://www.colorfulstage.com/media/download) |
 | cursor | mizuki cursor (unoffcial linux port) | [gnome look](https://www.gnome-look.org/p/2364244) |

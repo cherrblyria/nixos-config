@@ -74,7 +74,8 @@ widget_order = [
     "desktop-widget-0000000000000006",
     "desktop-widget-0000000000000001",
     "desktop-widget-0000000000000009",
-    "desktop-widget-000000000000000a"
+    "desktop-widget-000000000000000a",
+    "desktop-widget-000000000000000b"
 ]
 
     [desktop_widgets.grid]
@@ -182,8 +183,8 @@ widget_order = [
     [desktop_widgets.widget.desktop-widget-000000000000000a]
     box_height = 80.0
     box_width = 72.0
-    cx = 1328.1260986328125
-    cy = 248.8828125
+    cx = 1331.0
+    cy = 232.04547119140625
     output = "eDP-1"
     rotation = 0.2617993950843811
     type = "sticker"
@@ -191,7 +192,21 @@ widget_order = [
         [desktop_widgets.widget.desktop-widget-000000000000000a.settings]
         background = false
         image_path = "/home/cherr/Documents/Noctalia/cat_1.png"
-        opacity = 0.82000000000000006
+        opacity = 1.0
+
+    [desktop_widgets.widget.desktop-widget-000000000000000b]
+    box_height = 96.0
+    box_width = 104.0
+    cx = 1123.0
+    cy = 208.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "sticker"
+
+        [desktop_widgets.widget.desktop-widget-000000000000000b.settings]
+        background = false
+        image_path = "/home/cherr/Documents/Noctalia/herta.png"
+        opacity = 1.0
 
 [dock]
 auto_hide = true
@@ -642,8 +657,8 @@ source = "wallpaper"
 wallpaper_scheme = "m3-content"
 
     [theme.templates]
-    builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "kcolorscheme", "kitty", "niri", "qt" ]
-    community_ids = [ "discord", "vscode", "papirus-icons", "yazi" ]
+    builtin_ids = [ "cava", "gtk3", "gtk4", "kcolorscheme", "kitty", "niri", "qt" ]
+    community_ids = [ "discord", "vscode", "papirus-icons", "lazygit", "yazi" ]
 
 [wallpaper]
 directory = "/home/cherr/Wallpapers"
@@ -655,13 +670,13 @@ transition_on_startup = true
     interval_seconds = 600
 
     [wallpaper.default]
-    path = "/home/cherr/Wallpapers/Project Sekai/服作り奮闘中_after_training.png"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-exvkkl.jpg"
 
     [wallpaper.last]
-    path = "/home/cherr/Wallpapers/Project Sekai/服作り奮闘中_after_training.png"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-exvkkl.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/cherr/Wallpapers/Project Sekai/服作り奮闘中_after_training.png"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-exvkkl.jpg"
 
 [widget.audio_visualizer]
 color_2 = "tertiary"
