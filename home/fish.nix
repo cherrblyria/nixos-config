@@ -1,7 +1,10 @@
 {
   programs.fish = {
     enable = true;
-    interactiveShellInit = "set fish_greeting";
+    interactiveShellInit = ''
+      set fish_greeting
+      fastfetch
+    '';
     functions = {
       yc = ''
         set -l tmp (mktemp -t "yazi-chooser.XXXXXX")
@@ -27,7 +30,7 @@
 
       # Shortcuts
       c = "clear";
-      cls = "clear";
+      cls = "clear && fastfetch";
 
       # Programs
       f = "fzf";

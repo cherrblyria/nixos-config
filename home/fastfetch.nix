@@ -9,8 +9,10 @@
         "source" = "${../assets/images/herta_3.png}";
         "width" = 30;
         "padding" = {
-          "left" = 1;
-          "top" = 1;
+          "left" = 0;
+          "top" = 0;
+          "right" = 0;
+          "bottom" = 0;
         };
       };
       "display"."separator" = "";
