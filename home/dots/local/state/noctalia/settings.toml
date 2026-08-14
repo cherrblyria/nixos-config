@@ -271,7 +271,6 @@ widget_order = [
     "lockscreen-login-box@eDP-1",
     "lockscreen-widget-000000000000000c",
     "lockscreen-widget-0000000000000016",
-    "lockscreen-widget-000000000000001b",
     "lockscreen-widget-000000000000000f",
     "lockscreen-widget-000000000000001c",
     "lockscreen-widget-000000000000001d"
@@ -557,7 +556,7 @@ avatar_path = "/home/cherr/Pictures/Anime/⋆·˚ ༘ _ kanade yoisaki pfp.jpeg"
 clipboard_auto_paste = "off"
 clipboard_history_max_entries = 200
 corner_radius_scale = 2.0
-font_family = "Adwaita Sans"
+font_family = "Inter"
 niri_overview_type_to_launch_enabled = true
 panel_anchor_bar = "Main"
 password_style = "random"
@@ -640,7 +639,7 @@ builtin = "Catppuccin"
 community_palette = "Oxocarbon"
 mode = "dark"
 source = "wallpaper"
-wallpaper_scheme = "soft"
+wallpaper_scheme = "m3-content"
 
     [theme.templates]
     builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "kcolorscheme", "kitty", "niri", "qt" ]
@@ -656,13 +655,13 @@ transition_on_startup = true
     interval_seconds = 600
 
     [wallpaper.default]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-vqjv63.jpg"
+    path = "/home/cherr/Wallpapers/Project Sekai/服作り奮闘中_after_training.png"
 
     [wallpaper.last]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-vqjv63.jpg"
+    path = "/home/cherr/Wallpapers/Project Sekai/服作り奮闘中_after_training.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-vqjv63.jpg"
+    path = "/home/cherr/Wallpapers/Project Sekai/服作り奮闘中_after_training.png"
 
 [widget.audio_visualizer]
 color_2 = "tertiary"
@@ -695,8 +694,7 @@ type = "dotnetrob/cat:cat"
 [widget.clock]
 anchor = true
 color = "on_surface_variant"
-font_family = "CaskaydiaCove Nerd Font"
-font_weight = 350
+font_family = "Inter Display ExtraBold"
 format = "{:%R}"
 vertical_format = "{:%H\\n%M}"
 
