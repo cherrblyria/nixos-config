@@ -15,15 +15,13 @@ order = [ "Main" ]
     background_opacity = 0.59999998658895493
     capsule_border = "outline"
     capsule_opacity = 0.24999999441206455
-    end = [ "privacy", "lock_keys", "media", "audio_visualizer", "group:g4" ]
+    end = [ "media", "audio_visualizer", "privacy", "lock_keys", "group:g4" ]
     font_weight = 400
     margin_ends = 0
     padding = 6
     panel_overlap = 0
     position = "left"
     radius = 32
-    radius_bottom_left = 0
-    radius_top_left = 0
     start = [ "launcher", "workspaces", "cat" ]
 
         [bar.Main.dead_zone.actions]
@@ -34,12 +32,12 @@ order = [ "Main" ]
 
         [[bar.Main.capsule_group]]
         accordion = true
-        accordion_direction = "end"
+        accordion_direction = "start"
         border = ""
         enabled = true
         fill = "surface_variant"
         id = "g4"
-        members = [ "battery", "notifications", "volume", "brightness", "wallhaven", "tray" ]
+        members = [ "battery", "volume", "brightness", "wallhaven", "tray", "notifications" ]
         opacity = 0.0
         padding = 6.0
 
@@ -582,9 +580,10 @@ polkit_agent = true
         prefix = ""
 
     [shell.panel]
+    borders = false
     clipboard_placement = "attached"
     launcher_placement = "attached"
-    transparency_mode = "soft"
+    transparency_mode = "glass"
 
     [shell.screen_corners]
     enabled = true
@@ -657,13 +656,13 @@ transition_on_startup = true
     interval_seconds = 600
 
     [wallpaper.default]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-7pl6q3.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-vqjv63.jpg"
 
     [wallpaper.last]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-7pl6q3.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-vqjv63.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-7pl6q3.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-vqjv63.jpg"
 
 [widget.audio_visualizer]
 color_2 = "tertiary"
@@ -695,6 +694,7 @@ type = "dotnetrob/cat:cat"
 
 [widget.clock]
 anchor = true
+color = "on_surface_variant"
 font_family = "CaskaydiaCove Nerd Font"
 font_weight = 350
 format = "{:%R}"
@@ -713,8 +713,11 @@ show_num_lock = false
 
 [widget.media]
 album_art_only = true
-art_size = 19
+art_size = 20
 hide_when_no_media = true
+
+[widget.notifications]
+hide_when_no_unread = true
 
 [widget.privacy]
 hide_inactive = true
@@ -728,6 +731,7 @@ stat = "gpu_usage"
 
 [widget.tray]
 drawer = true
+drawer_columns = 1
 
 [widget.volume]
 show_label = false
