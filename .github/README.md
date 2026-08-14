@@ -9,7 +9,7 @@ Also I made this for myself so just take whatever u want but DON'T fully build f
 
 #### Assets credits
 
-| items | desc | source |
+| items | description | source |
 | --- | --- | --- |
 | banner | ADHD banner above :3 | [creavite](https://auto.creavite.co/) |
 | font | google sans, playfair display | [google fonts](https://fonts.google.com/) |
