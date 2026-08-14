@@ -483,24 +483,6 @@ widget_order = [
         shadow = false
         title = "L         O         C         K         E         D"
 
-    [lockscreen_widgets.widget.lockscreen-widget-000000000000001b]
-    box_height = 32.0
-    box_width = 72.0
-    cx = 1319.0
-    cy = 24.0
-    output = "eDP-1"
-    rotation = 0.0
-    type = "yocraft/battery-widget:widget"
-
-        [lockscreen_widgets.widget.lockscreen-widget-000000000000001b.settings]
-        background = false
-        battery = "auto"
-        hide_full = true
-        hide_plugged = true
-        layout = "horizontal"
-        show_glyph = true
-        show_label = true
-
     [lockscreen_widgets.widget.lockscreen-widget-000000000000001c]
     box_height = 88.0
     box_width = 968.0
@@ -554,7 +536,7 @@ keep_count = 3
 download_dir = "/home/cherr/Wallpapers/Wallheaven"
 
 [plugins]
-enabled = [ "noctalia/kaomoji", "noctalia/wallhaven", "yocraft/battery-widget", "dotnetrob/cat" ]
+enabled = [ "noctalia/kaomoji", "noctalia/wallhaven", "dotnetrob/cat" ]
 
     [[plugins.source]]
     kind = "git"
@@ -675,13 +657,13 @@ transition_on_startup = true
     interval_seconds = 600
 
     [wallpaper.default]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-3l1p3d.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-7pl6q3.jpg"
 
     [wallpaper.last]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-3l1p3d.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-7pl6q3.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-3l1p3d.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-7pl6q3.jpg"
 
 [widget.audio_visualizer]
 color_2 = "tertiary"
