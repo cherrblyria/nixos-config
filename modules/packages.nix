@@ -6,23 +6,20 @@
     mizuki-psekai-cursor
 
     # CLI/TUI
-    btop
-    duf
     eza
     fd
-    fetch
     fzf
     imagemagick
+    lazygit
     ripgrep
     wget
-    lazygit
 
     # Desktop Apps
     brave-origin
+    czkawka
     krita
     opencode-desktop
     vesktop
-    czkawka
 
     # Games
     (inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.osu-stable.override {
@@ -53,12 +50,5 @@
     resvg
     webp-pixbuf-loader
   ];
-  programs = {
-    noctalia = {
-      enable = true;
-      recommendedServices.enable = true;
-    };
-    fish.enable = true;
-    niri.enable = true;
-  };
+  programs.fish.enable = true;
 }

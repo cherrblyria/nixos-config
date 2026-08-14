@@ -14,7 +14,6 @@
         # paths relative to $HOME (files or directories, both work)
         paths=(
           ".local/state/noctalia/settings.toml"
-          ".config/btop/btop.conf"
           ".config/kritarc"
           ".config/mimeapps.list"
           ".config/OpenTabletDriver/settings.json"

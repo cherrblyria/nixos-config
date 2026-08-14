@@ -1,9 +1,7 @@
 {
   programs.fish = {
     enable = true;
-    interactiveShellInit = ''
-      set fish_greeting
-    '';
+    interactiveShellInit = "set fish_greeting";
     functions = {
       yc = ''
         set -l tmp (mktemp -t "yazi-chooser.XXXXXX")
