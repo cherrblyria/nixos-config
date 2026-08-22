@@ -14,6 +14,9 @@
           rm -f -- "$tmp"
         end
       '';
+      run = ''
+        nix run $argv
+      '';
     };
     shellAliases = {
       # Zoxide
@@ -38,7 +41,7 @@
       lg = "lazygit";
 
       # File management
-      b = "bat -Pp";
+      b = "nix run nixpkgs#bat -Pp";
       cp = "cp -i";
       mk = "touch";
       mkd = "mkdir";
