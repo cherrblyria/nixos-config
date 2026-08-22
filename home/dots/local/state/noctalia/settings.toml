@@ -9,20 +9,20 @@ blur_intensity = 0.29999999999999999
 enabled = true
 
 [bar]
-order = [ "Main" ]
+order = [ "Main", "WS" ]
 
     [bar.Main]
-    background_opacity = 0.59999998658895493
+    background_opacity = 0.74999998323619366
     capsule_border = "outline"
     capsule_opacity = 0.24999999441206455
-    end = [ "media", "audio_visualizer", "privacy", "lock_keys", "group:g4" ]
+    center = [ "cat", "clock", "text_3", "date" ]
+    end = [ "audio_visualizer", "privacy", "lock_keys", "group:g4", "notifications", "battery" ]
     font_weight = 400
-    margin_ends = 0
     padding = 6
     panel_overlap = 0
-    position = "left"
-    radius = 32
-    start = [ "launcher", "workspaces", "cat" ]
+    radius = 35
+    shadow = false
+    start = [ "launcher", "media" ]
 
         [bar.Main.dead_zone.actions]
         back = "workspace-switch next"
@@ -37,12 +37,29 @@ order = [ "Main" ]
         enabled = true
         fill = "surface_variant"
         id = "g4"
-        members = [ "battery", "volume", "brightness", "wallhaven", "tray", "notifications" ]
+        members = [ "tray", "wallhaven", "brightness", "volume" ]
         opacity = 0.0
-        padding = 6.0
+        padding = 0.0
+
+    [bar.WS]
+    auto_hide = true
+    background_opacity = 0.74999998323619366
+    center = [ "text_1", "workspaces", "text_2" ]
+    enabled = true
+    end = []
+    margin_ends = 600
+    padding = 0
+    panel_overlap = 0
+    radius = 35
+    reserve_space = false
+    shadow = false
+    start = []
 
 [battery]
 warning_threshold = 30
+
+    [battery.device."/org/freedesktop/UPower/devices/mouse_dev_FF_35_05_27_06_D1"]
+    warning_threshold = 10
 
 [brightness]
 minimum_brightness = 0.0099999997764825821
@@ -54,17 +71,20 @@ enabled = true
     name = "Cherrblyria"
     type = "google"
 
-[[control_center.shortcuts]]
-type = "bluetooth"
+[control_center]
+width = 750
 
-[[control_center.shortcuts]]
-type = "nightlight"
+    [[control_center.shortcuts]]
+    type = "bluetooth"
 
-[[control_center.shortcuts]]
-type = "caffeine"
+    [[control_center.shortcuts]]
+    type = "nightlight"
 
-[[control_center.shortcuts]]
-type = "notification"
+    [[control_center.shortcuts]]
+    type = "caffeine"
+
+    [[control_center.shortcuts]]
+    type = "notification"
 
 [desktop_widgets]
 schema_version = 2
@@ -73,9 +93,7 @@ widget_order = [
     "desktop-widget-0000000000000008",
     "desktop-widget-0000000000000006",
     "desktop-widget-0000000000000001",
-    "desktop-widget-0000000000000009",
-    "desktop-widget-000000000000000a",
-    "desktop-widget-000000000000000b"
+    "desktop-widget-0000000000000009"
 ]
 
     [desktop_widgets.grid]
@@ -86,8 +104,8 @@ widget_order = [
     [desktop_widgets.widget.desktop-widget-0000000000000001]
     box_height = 128.0
     box_width = 128.0
-    cx = 1239.0
-    cy = 127.19921875
+    cx = 1243.0
+    cy = 160.0
     output = "eDP-1"
     rotation = 0.0
     type = "clock"
@@ -105,8 +123,8 @@ widget_order = [
     [desktop_widgets.widget.desktop-widget-0000000000000002]
     box_height = 144.0
     box_width = 320.0
-    cx = 1191.359375
-    cy = 320.8828125
+    cx = 1195.359375
+    cy = 353.68359375
     output = "eDP-1"
     rotation = 0.0
     type = "media_player"
@@ -143,8 +161,8 @@ widget_order = [
     [desktop_widgets.widget.desktop-widget-0000000000000008]
     box_height = 224.0
     box_width = 224.0
-    cx = 1239.0
-    cy = 127.19921875
+    cx = 1243.0
+    cy = 160.0
     output = "eDP-1"
     rotation = 0.0
     type = "fancy_audio_visualizer"
@@ -167,8 +185,8 @@ widget_order = [
     [desktop_widgets.widget.desktop-widget-0000000000000009]
     box_height = 83.640632629394531
     box_width = 223.27734375
-    cx = 1073.1796875
-    cy = 126.837890625
+    cx = 1077.1796875
+    cy = 159.638671875
     output = "eDP-1"
     rotation = -1.5707963705062866
     type = "clock"
@@ -180,37 +198,9 @@ widget_order = [
         font_family = "Playfair Display"
         shadow = true
 
-    [desktop_widgets.widget.desktop-widget-000000000000000a]
-    box_height = 80.0
-    box_width = 72.0
-    cx = 1331.0
-    cy = 232.04547119140625
-    output = "eDP-1"
-    rotation = 0.2617993950843811
-    type = "sticker"
-
-        [desktop_widgets.widget.desktop-widget-000000000000000a.settings]
-        background = false
-        image_path = "/home/cherr/Documents/Noctalia/cat_1.png"
-        opacity = 1.0
-
-    [desktop_widgets.widget.desktop-widget-000000000000000b]
-    box_height = 96.0
-    box_width = 104.0
-    cx = 1123.0
-    cy = 208.0
-    output = "eDP-1"
-    rotation = 0.0
-    type = "sticker"
-
-        [desktop_widgets.widget.desktop-widget-000000000000000b.settings]
-        background = false
-        image_path = "/home/cherr/Documents/Noctalia/herta.png"
-        opacity = 1.0
-
 [dock]
 auto_hide = true
-background_opacity = 0.59999998658895493
+background_opacity = 0.74999998323619366
 enabled = true
 inactive_opacity = 0.99999997764825821
 inactive_scale = 1.0
@@ -220,7 +210,7 @@ launcher_custom_image_colorize = true
 launcher_position = "start"
 magnification_scale = 2.0
 main_axis_padding = 8
-margin_edge = 8
+margin_edge = 6
 pinned = [
     "kitty",
     "org.gnome.Nautilus",
@@ -288,7 +278,8 @@ widget_order = [
     "lockscreen-widget-0000000000000016",
     "lockscreen-widget-000000000000000f",
     "lockscreen-widget-000000000000001c",
-    "lockscreen-widget-000000000000001d"
+    "lockscreen-widget-000000000000001d",
+    "lockscreen-widget-000000000000001e"
 ]
 
     [lockscreen_widgets.grid]
@@ -527,19 +518,38 @@ widget_order = [
         shadow = false
         show_forecast = false
 
+    [lockscreen_widgets.widget.lockscreen-widget-000000000000001e]
+    box_height = 112.0
+    box_width = 120.0
+    cx = 1246.12109375
+    cy = 634.76171875
+    output = "eDP-1"
+    rotation = 0.0
+    type = "sticker"
+
+        [lockscreen_widgets.widget.lockscreen-widget-000000000000001e.settings]
+        background = false
+        image_path = "/home/cherr/Documents/Noctalia/herta.png"
+        opacity = 1.0
+
 [nightlight]
 enabled = true
 temperature_night = 5400
 
 [notification]
-background_opacity = 0.4999999888241291
+background_opacity = 0.74999998323619366
 layer = "overlay"
+offset_x = 6
+offset_y = 6
 
 [osd]
-background_opacity = 0.4999999888241291
+background_opacity = 0.74999998323619366
+offset_x = 6
+offset_y = 6
 orientation = "vertical"
 position = "bottom_center"
-position_vertical = "center_right"
+position_vertical = "top_right"
+scale = 0.85000000521540642
 
 [plugin_settings."cherrblyria/sekai-wallpaper"]
 keep_count = 3
@@ -567,15 +577,17 @@ enabled = [ "noctalia/kaomoji", "noctalia/wallhaven", "dotnetrob/cat" ]
     name = "Cherrblyria"
 
 [shell]
-avatar_path = "/home/cherr/Pictures/Anime/⋆·˚ ༘ _ kanade yoisaki pfp.jpeg"
+avatar_path = "/home/cherr/Pictures/Anime/メ.jpeg"
 clipboard_auto_paste = "off"
 clipboard_history_max_entries = 200
 corner_radius_scale = 2.0
+date_format = "%A, %d %B %Y"
 font_family = "Inter"
 niri_overview_type_to_launch_enabled = true
 panel_anchor_bar = "Main"
 password_style = "random"
 polkit_agent = true
+screen_time_enabled = true
 
     [shell.animation]
     speed = 0.7500000111758709
@@ -596,55 +608,65 @@ polkit_agent = true
     [shell.panel]
     borders = false
     clipboard_placement = "attached"
+    floating_offset = 6
     launcher_placement = "attached"
+    polkit_placement = "attached"
+    session_position = "center"
     transparency_mode = "glass"
 
     [shell.screen_corners]
     enabled = true
+    size = 35
 
     [shell.screenshot]
     confirm_region = true
     directory = "/home/cherr/Pictures/Screenshots"
     filename_pattern = "Screenshot_%Y%m%d_%H%M%S"
 
-    [shell.session]
-    grid = true
-    grid_columns = 1
+    [[shell.session.actions]]
+    action = "lock"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "1"
+    variant = "default"
 
-        [[shell.session.actions]]
-        action = "lock"
-        countdown_seconds = 0.0
-        enabled = true
-        shortcut = "1"
-        variant = "default"
+    [[shell.session.actions]]
+    action = "lock_and_suspend"
+    countdown_seconds = 3.0
+    enabled = true
+    shortcut = "2"
+    variant = "default"
 
-        [[shell.session.actions]]
-        action = "logout"
-        countdown_seconds = 3.0
-        enabled = true
-        shortcut = "2"
-        variant = "default"
+    [[shell.session.actions]]
+    action = "logout"
+    countdown_seconds = 5.0
+    enabled = true
+    shortcut = "3"
+    variant = "default"
 
-        [[shell.session.actions]]
-        action = "lock_and_suspend"
-        countdown_seconds = 0.0
-        enabled = true
-        shortcut = "3"
-        variant = "default"
+    [[shell.session.actions]]
+    action = "reboot"
+    countdown_seconds = 5.0
+    enabled = true
+    shortcut = "4"
+    variant = "default"
 
-        [[shell.session.actions]]
-        action = "reboot"
-        countdown_seconds = 3.0
-        enabled = true
-        shortcut = "4"
-        variant = "default"
+    [[shell.session.actions]]
+    action = "command"
+    command = "sudo systemctl reboot --firmware-setup"
+    countdown_seconds = 5.0
+    enabled = true
+    glyph = "cpu"
+    label = "Reboot to UEFI"
+    shortcut = "5"
+    variant = "default"
 
-        [[shell.session.actions]]
-        action = "shutdown"
-        countdown_seconds = 3.0
-        enabled = true
-        shortcut = "5"
-        variant = "destructive"
+    [[shell.session.actions]]
+    action = "shutdown"
+    countdown_seconds = 5.0
+    enabled = true
+    shortcut = "6"
+    variant = "destructive"
 
     [shell.shadow]
     direction = "center"
@@ -670,13 +692,13 @@ transition_on_startup = true
     interval_seconds = 600
 
     [wallpaper.default]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-exvkkl.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-k8d8q1.png"
 
     [wallpaper.last]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-exvkkl.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-k8d8q1.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-exvkkl.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-k8d8q1.png"
 
 [widget.audio_visualizer]
 color_2 = "tertiary"
@@ -691,11 +713,11 @@ width = 112
     scroll_up = "media next"
 
 [widget.battery]
+color = "#B8CE99"
 display_mode = "graphic"
 hide_when_full = true
 hide_when_plugged = true
-scale = 0.70000000000000007
-show_label = false
+scale = 0.85000000000000009
 
 [widget.brightness]
 show_label = false
@@ -704,14 +726,17 @@ show_label = false
 enabled = false
 
 [widget.cat]
+color = "on_surface_variant"
 type = "dotnetrob/cat:cat"
 
 [widget.clock]
-anchor = true
+capsule_radius = "auto"
 color = "on_surface_variant"
-font_family = "Inter Display ExtraBold"
 format = "{:%R}"
-vertical_format = "{:%H\\n%M}"
+
+[widget.date]
+color = "on_surface_variant"
+format = "{:%a, %d %b}"
 
 [widget.launcher]
 custom_image = "/home/cherr/Documents/Noctalia/nix.png"
@@ -725,9 +750,11 @@ scale = 0.90000000000000002
 show_num_lock = false
 
 [widget.media]
-album_art_only = true
 art_size = 20
+artist_first = true
 hide_when_no_media = true
+max_length = 300
+title_scroll = "on_hover"
 
 [widget.notifications]
 hide_when_no_unread = true
@@ -741,6 +768,22 @@ color = "error"
 [widget.sysmon]
 show_value = false
 stat = "gpu_usage"
+
+[widget.text_1]
+color = "outline"
+text = "「"
+type = "text"
+
+[widget.text_2]
+color = "outline"
+text = "」"
+type = "text"
+
+[widget.text_3]
+anchor = true
+color = "outline"
+text = "|"
+type = "text"
 
 [widget.tray]
 drawer = true
@@ -757,4 +800,4 @@ show_temperature = false
 
 [widget.workspaces]
 hide_when_empty = true
-style = "focus_hint"
+style = "minimal"
