@@ -9,7 +9,7 @@ blur_intensity = 0.29999999999999999
 enabled = true
 
 [bar]
-order = ["Main", "WS"]
+order = ["Main", "Workspace-OSD"]
 
 [bar.Main]
 background_opacity = 0.74999998323619366
@@ -28,7 +28,6 @@ font_weight = 400
 padding = 6
 panel_overlap = 0
 radius = 35
-shadow = false
 start = ["launcher", "media"]
 
 [bar.Main.dead_zone.actions]
@@ -48,19 +47,24 @@ members = ["tray", "wallhaven", "brightness", "volume"]
 opacity = 0.0
 padding = 0.0
 
-[bar.WS]
+[bar.Workspace-OSD]
 auto_hide = true
 background_opacity = 0.74999998323619366
-center = ["text_1", "workspaces", "text_2"]
+border_width = 1.0
+center = ["custom_button_2", "text_4", "active-workspace"]
 enabled = true
 end = []
-margin_ends = 600
+layer = "overlay"
+margin_edge = 6
+margin_ends = 576
 padding = 0
 panel_overlap = 0
-radius = 35
+position = "bottom"
+radius = 80
 reserve_space = false
 shadow = false
 start = []
+thickness = 39
 
 [battery]
 warning_threshold = 30
@@ -693,7 +697,12 @@ api_key = "NopeUseYourOwn"
 download_dir = "/home/cherr/Wallpapers/Wallheaven"
 
 [plugins]
-enabled = ["noctalia/kaomoji", "noctalia/wallhaven", "dotnetrob/cat"]
+enabled = [
+    "noctalia/kaomoji",
+    "noctalia/wallhaven",
+    "dotnetrob/cat",
+    "salemsayed/niri-active-workspace",
+]
 
 [[plugins.source]]
 kind = "git"
@@ -704,12 +713,6 @@ name = "official"
 kind = "git"
 location = "https://github.com/noctalia-dev/community-plugins"
 name = "community"
-
-[[plugins.source]]
-enabled = false
-kind = "path"
-location = "~/Projects"
-name = "Cherrblyria"
 
 [shell]
 avatar_path = "/home/cherr/Pictures/Anime/メ.jpeg"
@@ -827,13 +830,18 @@ enabled = true
 interval_seconds = 600
 
 [wallpaper.default]
-path = "/home/cherr/Wallpapers/Pixiv/122513935_p0.png"
+path = "/home/cherr/Wallpapers/mmAir_-_Astray.png"
 
 [wallpaper.last]
-path = "/home/cherr/Wallpapers/Pixiv/122513935_p0.png"
+path = "/home/cherr/Wallpapers/mmAir_-_Astray.png"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/cherr/Wallpapers/Pixiv/122513935_p0.png"
+path = "/home/cherr/Wallpapers/mmAir_-_Astray.png"
+
+[widget.active-workspace]
+glyph = ""
+interactive = false
+type = "salemsayed/niri-active-workspace:active-workspace"
 
 [widget.audio_visualizer]
 color_2 = "tertiary"
@@ -870,6 +878,12 @@ capsule_radius = "auto"
 color = "on_surface_variant"
 format = "{:%R}"
 
+[widget.custom_button_2]
+color = "primary"
+glyph = "layout-grid"
+interactive = false
+type = "custom_button"
+
 [widget.date]
 color = "on_surface_variant"
 format = "{:%a, %d %b}"
@@ -905,23 +919,16 @@ color = "error"
 show_value = false
 stat = "gpu_usage"
 
-[widget.text_1]
-color = "outline"
-interactive = false
-text = "「"
-type = "text"
-
-[widget.text_2]
-color = "outline"
-interactive = false
-text = "」"
-type = "text"
-
 [widget.text_3]
 anchor = true
 color = "outline"
 interactive = false
 text = "|"
+type = "text"
+
+[widget.text_4]
+interactive = false
+text = "Workspace"
 type = "text"
 
 [widget.tray]
