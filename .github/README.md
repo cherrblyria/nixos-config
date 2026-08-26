@@ -12,12 +12,11 @@ It's just a simple one machine config w/ flake and simple modular configs.
 
 ##### In these pics
 
- - Shell: [Noctalia](https://noctalia.dev/)
- - WM: [Niri](https://github.com/niri-wm/niri)
- - Icon Theme: [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
- - Wallpaper: [kanaworks](https://www.kanaworks.com/zp)
- - Music: [Purpeech - นี่ฉันเองคนที่...](https://open.spotify.com/track/7xIA2UmWstNzDU3tba4VP1)
-
+- Shell: [Noctalia](https://noctalia.dev/)
+- WM: [Niri](https://github.com/niri-wm/niri)
+- Icon Theme: [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
+- Wallpaper: [kanaworks](https://www.kanaworks.com/zp)
+- Music: [Purpeech - นี่ฉันเองคนที่...](https://open.spotify.com/track/7xIA2UmWstNzDU3tba4VP1)
 
 #### Assets credits
 
