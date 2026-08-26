@@ -83,7 +83,7 @@ name = "Cherrblyria"
 type = "google"
 
 [control_center]
-width = 790
+width = 800
 
 [[control_center.shortcuts]]
 type = "bluetooth"
@@ -119,7 +119,7 @@ visible = true
 [desktop_widgets.widget.desktop-widget-0000000000000001]
 box_height = 128.0
 box_width = 128.0
-cx = 1243.0
+cx = 1247.0
 cy = 152.0
 output = "eDP-1"
 placement_height = 768.0
@@ -140,7 +140,7 @@ shadow = true
 [desktop_widgets.widget.desktop-widget-0000000000000002]
 box_height = 144.0
 box_width = 328.0
-cx = 1191.0
+cx = 1195.0
 cy = 344.0
 output = "eDP-1"
 placement_height = 768.0
@@ -182,7 +182,7 @@ show_when_idle = false
 [desktop_widgets.widget.desktop-widget-0000000000000008]
 box_height = 224.0
 box_width = 224.0
-cx = 1243.0
+cx = 1247.0
 cy = 152.0
 output = "eDP-1"
 placement_height = 768.0
@@ -208,8 +208,9 @@ wave_thickness = 0.29999999999999999
 [desktop_widgets.widget.desktop-widget-000000000000000a]
 box_height = 40.0
 box_width = 88.0
-cx = 1075.0
+cx = 1079.0
 cy = 240.0
+enabled = false
 output = "eDP-1"
 placement_height = 768.0
 placement_width = 1366.0
@@ -228,12 +229,12 @@ stat2 = "cpu_usage"
 [desktop_widgets.widget.desktop-widget-000000000000000b]
 box_height = 224.0
 box_width = 96.0
-cx = 1075.0
+cx = 1079.0
 cy = 152.0
 output = "eDP-1"
 placement_height = 768.0
 placement_width = 1366.0
-rotation = 0.0
+rotation = -0.0
 type = "label"
 
 [desktop_widgets.widget.desktop-widget-000000000000000b.settings]
@@ -247,8 +248,9 @@ title = ""
 [desktop_widgets.widget.desktop-widget-000000000000000c]
 box_height = 40.0
 box_width = 88.0
-cx = 1075.0
+cx = 1079.0
 cy = 196.0
+enabled = false
 output = "eDP-1"
 placement_height = 768.0
 placement_width = 1366.0
@@ -267,8 +269,8 @@ stat2 = "cpu_usage"
 [desktop_widgets.widget.desktop-widget-000000000000000d]
 box_height = 96.0
 box_width = 80.0
-cx = 1067.0
-cy = 80.0
+cx = 1079.0
+cy = 112.0
 output = "eDP-1"
 placement_height = 768.0
 placement_width = 1366.0
@@ -289,8 +291,8 @@ shadow = true
 [desktop_widgets.widget.desktop-widget-000000000000000e]
 box_height = 96.0
 box_width = 80.0
-cx = 1083.0
-cy = 128.0
+cx = 1079.0
+cy = 176.0
 output = "eDP-1"
 placement_height = 768.0
 placement_width = 1366.0
@@ -368,27 +370,43 @@ up = ["Up", "Ctrl+k"]
 address = "Nakhon Pathom"
 
 [lockscreen]
-blur_intensity = 0.29999999329447746
-tint_intensity = 0.21999999508261681
+blur_intensity = 0.0
+tint_intensity = 0.0
 
 [lockscreen_widgets]
 enabled = true
 schema_version = 2
 widget_order = [
+    "lockscreen-widget-0000000000000003",
+    "lockscreen-widget-0000000000000016",
+    "lockscreen-widget-0000000000000004",
+    "lockscreen-widget-0000000000000006",
+    "lockscreen-login-box@eDP-1",
+    "lockscreen-widget-0000000000000005",
+    "lockscreen-widget-0000000000000007",
+    "lockscreen-widget-0000000000000009",
+    "lockscreen-widget-0000000000000002",
+    "lockscreen-widget-000000000000000a",
+    "lockscreen-widget-000000000000000b",
+    "lockscreen-widget-000000000000000c",
+    "lockscreen-widget-000000000000000e",
+    "lockscreen-widget-0000000000000010",
+    "lockscreen-widget-0000000000000012",
+    "lockscreen-widget-0000000000000013",
+    "lockscreen-widget-0000000000000014",
+    "lockscreen-widget-0000000000000015",
     "lockscreen-widget-0000000000000017",
     "lockscreen-widget-0000000000000018",
-    "lockscreen-widget-0000000000000011",
-    "lockscreen-widget-0000000000000019",
-    "lockscreen-widget-000000000000000d",
     "lockscreen-widget-0000000000000008",
-    "lockscreen-widget-000000000000000e",
-    "lockscreen-login-box@eDP-1",
-    "lockscreen-widget-000000000000000c",
-    "lockscreen-widget-0000000000000016",
-    "lockscreen-widget-000000000000000f",
+    "lockscreen-widget-0000000000000019",
+    "lockscreen-widget-000000000000001a",
+    "lockscreen-widget-000000000000001b",
     "lockscreen-widget-000000000000001c",
-    "lockscreen-widget-000000000000001d",
     "lockscreen-widget-000000000000001e",
+    "lockscreen-widget-000000000000001d",
+    "lockscreen-widget-000000000000001f",
+    "lockscreen-widget-0000000000000020",
+    "lockscreen-widget-0000000000000021",
 ]
 
 [lockscreen_widgets.grid]
@@ -398,9 +416,9 @@ visible = true
 
 [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
 box_height = 70.0
-box_width = 336.0
-cx = 1187.0
-cy = 720.0
+box_width = 312.0
+cx = 1199.0
+cy = 721.253662109375
 output = "eDP-1"
 placement_height = 768.0
 placement_width = 1366.0
@@ -409,265 +427,585 @@ type = "login_box"
 
 [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
 background_color = "surface"
-background_opacity = 0.5
-background_radius = 10.0
+background_opacity = 0.0
+background_radius = 32.0
 center_password_text = true
-input_opacity = 0.65000000000000002
+input_opacity = 0.75
 input_radius = 32.0
 layout = "compact"
 show_caps_lock = true
 show_keyboard_layout = true
-show_login_button = true
+show_login_button = false
 show_media = true
-show_session_buttons = false
+show_session_buttons = true
 show_unlock_hint = false
 show_weather = true
 
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
+box_height = 32.0
+box_width = 632.0
+cx = 774.56707763671875
+cy = 40.0
+output = "eDP-1"
+placement_height = 768.0
+placement_width = 1366.0
+rotation = 0.2617993950843811
+type = "label"
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000002.settings]
+background_color = "on_surface"
+background_opacity = 1.0
+background_padding = 0
+background_radius = 0
+opacity = 0.0
+shadow = false
+title = ""
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
+box_height = 904.0
+box_width = 448.0
+cx = 128.35357666015625
+cy = 369.304931640625
+output = "eDP-1"
+placement_height = 768.0
+placement_width = 1366.0
+rotation = 0.2617993950843811
+type = "label"
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000003.settings]
+background_opacity = 0.94999999999999996
+background_padding = 0
+background_radius = 0
+opacity = 0.0
+shadow = false
+title = ""
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000004]
+box_height = 904.0
+box_width = 448.0
+cx = 1232.353515625
+cy = 414.57394409179688
+output = "eDP-1"
+placement_height = 768.0
+placement_width = 1366.0
+rotation = 0.2617993950843811
+type = "label"
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000004.settings]
+background_opacity = 0.94999999999999996
+background_padding = 0
+background_radius = 0
+opacity = 0.0
+shadow = false
+title = ""
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000005]
+box_height = 120.0
+box_width = 424.0
+cx = 892.513916015625
+cy = 0.0
+output = "eDP-1"
+placement_height = 768.0
+placement_width = 1366.0
+rotation = 0.2617993950843811
+type = "label"
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000005.settings]
+background_color = "surface_variant"
+background_opacity = 0.94999999999999996
+background_padding = 0
+background_radius = 0
+opacity = 0.0
+shadow = false
+title = ""
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000006]
+box_height = 113.67270660400391
+box_width = 429.0787353515625
+cx = 475.1171875
+cy = 767.87890625
+output = "eDP-1"
+placement_height = 768.0
+placement_width = 1366.0
+rotation = 0.2617993950843811
+type = "label"
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000006.settings]
+background_color = "surface_variant"
+background_opacity = 0.94999999999999996
+background_padding = 0
+background_radius = 0
+color = "surface_variant"
+opacity = 0.0
+shadow = false
+title = ""
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000007]
+box_height = 112.0
+box_width = 624.0
+cx = 599.1048583984375
+cy = 686.253662109375
+output = "eDP-1"
+placement_height = 768.0
+placement_width = 1366.0
+rotation = 0.2617993950843811
+type = "label"
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000007.settings]
+background_color = "on_surface"
+background_opacity = 1.0
+background_padding = 0
+background_radius = 0
+opacity = 0.0
+shadow = false
+title = ""
+
 [lockscreen_widgets.widget.lockscreen-widget-0000000000000008]
-box_height = 48.0
-box_width = 48.0
-cx = 651.0
-cy = 352.0
+box_height = 744.0
+box_width = 16.0
+cx = 979.9326171875
+cy = 464.0
+output = "eDP-1"
+placement_height = 768.0
+placement_width = 1366.0
+rotation = 0.2617993950843811
+type = "label"
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000008.settings]
+background_color = "on_surface"
+background_opacity = 1.0
+background_padding = 0
+background_radius = 0
+opacity = 0.0
+shadow = false
+title = ""
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000009]
+box_height = 744.0
+box_width = 24.0
+cx = 391.01910400390625
+cy = 302.9647216796875
+output = "eDP-1"
+placement_height = 768.0
+placement_width = 1366.0
+rotation = 0.2617993950843811
+type = "label"
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000009.settings]
+background_color = "on_surface"
+background_opacity = 1.0
+background_padding = 0
+background_radius = 0
+opacity = 0.0
+shadow = false
+title = ""
+
+[lockscreen_widgets.widget.lockscreen-widget-000000000000000a]
+box_height = 32.0
+box_width = 160.0
+cx = 812.4151611328125
+cy = 740.16033935546875
+output = "eDP-1"
+placement_height = 768.0
+placement_width = 1366.0
+rotation = 0.2617993950843811
+type = "clock"
+
+[lockscreen_widgets.widget.lockscreen-widget-000000000000000a.settings]
+background = false
+center_text = true
+color = "on_secondary"
+font_family = "Send Flowers"
+format = "{:%d/%m/%y}"
+
+[lockscreen_widgets.widget.lockscreen-widget-000000000000000b]
+box_height = 96.0
+box_width = 176.0
+cx = 203.23287963867188
+cy = 141.98930358886719
 output = "eDP-1"
 placement_height = 768.0
 placement_width = 1366.0
 rotation = 0.0
 type = "clock"
 
-[lockscreen_widgets.widget.lockscreen-widget-0000000000000008.settings]
+[lockscreen_widgets.widget.lockscreen-widget-000000000000000b.settings]
 background = false
-center_text = true
-color = "primary"
-font_family = "Playfair Display"
-format = "{:%H}"
+color = "secondary"
+font_family = "Send Flowers"
 shadow = true
 
 [lockscreen_widgets.widget.lockscreen-widget-000000000000000c]
-box_height = 256.0
-box_width = 256.0
-cx = 683.0
-cy = 384.0
+box_height = 56.0
+box_width = 344.0
+cx = 488.38616943359375
+cy = 656.32440185546875
 output = "eDP-1"
 placement_height = 768.0
 placement_width = 1366.0
-rotation = 0.0
-type = "clock"
+rotation = 0.2617993950843811
+type = "audio_visualizer"
 
 [lockscreen_widgets.widget.lockscreen-widget-000000000000000c.settings]
 background = false
-circle = false
-clock_style = "analog"
-color = "on_surface"
-
-[lockscreen_widgets.widget.lockscreen-widget-000000000000000d]
-box_height = 448.0
-box_width = 448.0
-cx = 683.0
-cy = 384.0
-output = "eDP-1"
-placement_height = 768.0
-placement_width = 1366.0
-rotation = 1.5707963705062866
-type = "fancy_audio_visualizer"
-
-[lockscreen_widgets.widget.lockscreen-widget-000000000000000d.settings]
-background = false
-background_radius = 32
-bloom_intensity = 0.35000000000000003
-fade_when_idle = false
-inner_diameter = 1.0
-primary_color = "tertiary"
-ring_opacity = 0.40000000000000002
-rotation_speed = 0.0
-secondary_color = "primary"
-sensitivity = 1.5
-visualization_mode = "wave_rings"
-wave_thickness = 0.29999999999999999
+bands = 16
+centered = true
+color_1 = "surface"
+color_2 = "surface"
+mirrored = true
+show_when_idle = true
 
 [lockscreen_widgets.widget.lockscreen-widget-000000000000000e]
-box_height = 48.0
-box_width = 48.0
-cx = 707.0
-cy = 408.0
+box_height = 56.0
+box_width = 112.0
+cx = 683.0
+cy = 384.0
+enabled = false
 output = "eDP-1"
 placement_height = 768.0
 placement_width = 1366.0
 rotation = 0.0
-type = "clock"
+type = "label"
 
 [lockscreen_widgets.widget.lockscreen-widget-000000000000000e.settings]
-background = false
-center_text = true
-color = "secondary"
-font_family = "Playfair Display"
-format = "{:%M}"
-shadow = true
+background_color = "error"
+background_opacity = 0.5
+title = ""
 
-[lockscreen_widgets.widget.lockscreen-widget-000000000000000f]
-box_height = 88.0
-box_width = 968.0
-cx = 916.1038818359375
-cy = 608.0
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000010]
+box_height = 64.0
+box_width = 72.0
+cx = 731.0
+cy = 704.0
 output = "eDP-1"
 placement_height = 768.0
 placement_width = 1366.0
-rotation = -0.2617993950843811
-type = "audio_visualizer"
+rotation = 0.52359879016876221
+type = "sticker"
 
-[lockscreen_widgets.widget.lockscreen-widget-000000000000000f.settings]
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000010.settings]
 background = false
-bands = 28
-centered = false
-color_1 = "outline"
-color_2 = "primary"
-mirrored = true
-show_when_idle = false
+image_path = "/home/cherr/Documents/Noctalia/herta_1.png"
+opacity = 1.0
 
-[lockscreen_widgets.widget.lockscreen-widget-0000000000000011]
-box_height = 128.0
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000012]
+box_height = 96.0
 box_width = 304.0
-cx = 163.0
-cy = 72.0
+cx = 1187.0
+cy = 630.276123046875
 output = "eDP-1"
 placement_height = 768.0
 placement_width = 1366.0
 rotation = 0.0
 type = "media_player"
 
-[lockscreen_widgets.widget.lockscreen-widget-0000000000000011.settings]
-background_opacity = 0.29999999999999999
-background_radius = 20
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000012.settings]
+background = false
+color = "on_surface"
 font_family = ""
 hide_when_no_media = true
 layout = "horizontal"
+shadow = true
 
-[lockscreen_widgets.widget.lockscreen-widget-0000000000000016]
-box_height = 80.0
-box_width = 896.0
-cx = 939.0
-cy = 685.41204833984375
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000013]
+box_height = 72.0
+box_width = 176.0
+cx = 99.0
+cy = 708.0
 output = "eDP-1"
 placement_height = 768.0
 placement_width = 1366.0
-rotation = -0.2617993950843811
+rotation = -0.0
+type = "weather"
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000013.settings]
+background = false
+color = "outline"
+font_family = "Send Flowers"
+forecast_days = 3
+shadow = true
+show_forecast = false
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000014]
+box_height = 72.0
+box_width = 296.0
+cx = 207.0
+cy = 76.0
+output = "eDP-1"
+placement_height = 768.0
+placement_width = 1366.0
+rotation = 0.0
+type = "label"
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000014.settings]
+background = false
+color = "primary"
+font_family = "Rouge Script"
+title = " Welcome Back "
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000015]
+box_height = 40.0
+box_width = 152.0
+cx = 820.41326904296875
+cy = 717.264892578125
+output = "eDP-1"
+placement_height = 768.0
+placement_width = 1366.0
+rotation = 0.2617993950843811
+type = "clock"
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000015.settings]
+background = false
+color = "on_secondary"
+font_family = "Send Flowers"
+format = "{:%A}"
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000016]
+box_height = 48.0
+box_width = 288.0
+cx = 197.6015625
+cy = 151.87890625
+output = "eDP-1"
+placement_height = 768.0
+placement_width = 1366.0
+rotation = 0.0
 type = "label"
 
 [lockscreen_widgets.widget.lockscreen-widget-0000000000000016.settings]
 background = false
-color = "surface"
-font_family = "Playfair Display"
-opacity = 0.20000000000000001
-shadow = false
-title = "L         O         C         K         E         D"
+color = "secondary"
+font_family = "Rouge Script"
+title = " It's                    now."
 
 [lockscreen_widgets.widget.lockscreen-widget-0000000000000017]
-box_height = 456.0
-box_width = 1736.0
-cx = 1366.0
-cy = 768.0
+box_height = 32.0
+box_width = 376.0
+cx = 468.977294921875
+cy = 727.88720703125
 output = "eDP-1"
 placement_height = 768.0
 placement_width = 1366.0
-rotation = -0.2617993950843811
+rotation = -2.8797934055328369
 type = "label"
 
 [lockscreen_widgets.widget.lockscreen-widget-0000000000000017.settings]
-background_color = "on_surface"
-background_opacity = 0.20000000000000001
+background = false
+color = "outline"
+font_family = "JuliaMono Light"
+shadow = false
+title = "L   O   C   K   E   D"
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000018]
+box_height = 24.0
+box_width = 80.0
+cx = 1043.0
+cy = 80.661178588867188
+output = "eDP-1"
+placement_height = 768.0
+placement_width = 1366.0
+rotation = 0.2617993950843811
+type = "sysmon"
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000018.settings]
+background = false
+color = "outline"
+color2 = "surface_variant"
+display = "gauge"
+font_family = "JuliaMono Light"
+gauge_layout = "horizontal"
+label_min_width = 0
+show_label = true
+stat = "ram_pct"
+stat2 = ""
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000019]
+box_height = 24.0
+box_width = 80.0
+cx = 873.2247314453125
+cy = 35.933174133300781
+output = "eDP-1"
+placement_height = 768.0
+placement_width = 1366.0
+rotation = 0.2617993950843811
+type = "sysmon"
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000019.settings]
+background = false
+color = "outline"
+color2 = "surface_variant"
+display = "gauge"
+font_family = "JuliaMono Light"
+gauge_layout = "horizontal"
+label_min_width = 0
+show_label = true
+stat = "cpu_usage"
+stat2 = ""
+
+[lockscreen_widgets.widget.lockscreen-widget-000000000000001a]
+box_height = 24.0
+box_width = 80.0
+cx = 959.5142822265625
+cy = 58.717300415039062
+output = "eDP-1"
+placement_height = 768.0
+placement_width = 1366.0
+rotation = 0.2617993950843811
+type = "sysmon"
+
+[lockscreen_widgets.widget.lockscreen-widget-000000000000001a.settings]
+background = false
+color = "outline"
+color2 = "surface_variant"
+display = "gauge"
+font_family = "JuliaMono Light"
+gauge_layout = "horizontal"
+label_min_width = 0
+show_label = true
+stat = "cpu_temp"
+stat2 = ""
+
+[lockscreen_widgets.widget.lockscreen-widget-000000000000001b]
+box_height = 8.0
+box_width = 272.0
+cx = 954.84307861328125
+cy = 626.76556396484375
+output = "eDP-1"
+placement_height = 768.0
+placement_width = 1366.0
+rotation = 1.8325958251953125
+type = "label"
+
+[lockscreen_widgets.widget.lockscreen-widget-000000000000001b.settings]
+background_color = "on_surface_variant"
+background_opacity = 0.5
 background_padding = 0
-background_radius = 0
+background_radius = 32
+color = "primary"
+opacity = 0.0
 shadow = false
 title = ""
 
-[lockscreen_widgets.widget.lockscreen-widget-0000000000000018]
-box_height = 456.0
-box_width = 1736.0
-cx = 0.0
+[lockscreen_widgets.widget.lockscreen-widget-000000000000001c]
+box_height = 8.0
+box_width = 144.0
+cx = 947.0
+cy = 713.4180908203125
+output = "eDP-1"
+placement_height = 768.0
+placement_width = 1366.0
+rotation = 1.8325958251953125
+type = "label"
+
+[lockscreen_widgets.widget.lockscreen-widget-000000000000001c.settings]
+background_color = "primary"
+background_opacity = 0.5
+background_padding = 0
+background_radius = 32
+color = "primary"
+opacity = 0.0
+shadow = false
+title = ""
+
+[lockscreen_widgets.widget.lockscreen-widget-000000000000001d]
+box_height = 256.0
+box_width = 8.0
+cx = 1351.0
+cy = 141.98930358886719
+output = "eDP-1"
+placement_height = 768.0
+placement_width = 1366.0
+rotation = -0.0
+type = "label"
+
+[lockscreen_widgets.widget.lockscreen-widget-000000000000001d.settings]
+background_color = "on_surface_variant"
+background_opacity = 0.20000000000000001
+background_padding = 0
+background_radius = 32
+opacity = 0.0
+shadow = false
+title = ""
+
+[lockscreen_widgets.widget.lockscreen-widget-000000000000001e]
+box_height = 184.0
+box_width = 8.0
+cx = 724.90045166015625
 cy = 0.0
 output = "eDP-1"
 placement_height = 768.0
 placement_width = 1366.0
-rotation = -0.2617993950843811
+rotation = 1.8325958251953125
 type = "label"
 
-[lockscreen_widgets.widget.lockscreen-widget-0000000000000018.settings]
-background_color = "on_surface"
+[lockscreen_widgets.widget.lockscreen-widget-000000000000001e.settings]
+background_color = "on_surface_variant"
 background_opacity = 0.20000000000000001
 background_padding = 0
-background_radius = 0
+background_radius = 32
+color = "secondary"
+opacity = 0.0
 shadow = false
 title = ""
 
-[lockscreen_widgets.widget.lockscreen-widget-0000000000000019]
-box_height = 80.0
-box_width = 896.0
-cx = 427.0
-cy = 82.58795166015625
+[lockscreen_widgets.widget.lockscreen-widget-000000000000001f]
+box_height = 160.0
+box_width = 8.0
+cx = 1335.0
+cy = 64.0
 output = "eDP-1"
 placement_height = 768.0
 placement_width = 1366.0
-rotation = -0.2617993950843811
+rotation = 0.0
 type = "label"
 
-[lockscreen_widgets.widget.lockscreen-widget-0000000000000019.settings]
-background = false
-color = "surface"
-font_family = "Playfair Display"
-opacity = 0.20000000000000001
+[lockscreen_widgets.widget.lockscreen-widget-000000000000001f.settings]
+background_color = "on_surface_variant"
+background_opacity = 0.10000000000000001
+background_padding = 0
+background_radius = 32
+opacity = 0.0
 shadow = false
-title = "L         O         C         K         E         D"
+title = ""
 
-[lockscreen_widgets.widget.lockscreen-widget-000000000000001c]
-box_height = 88.0
-box_width = 968.0
-cx = 449.89614868164062
-cy = 160.23089599609375
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000020]
+box_height = 80.0
+box_width = 8.0
+cx = 19.0
+cy = 736.16033935546875
 output = "eDP-1"
 placement_height = 768.0
 placement_width = 1366.0
-rotation = 2.8797934055328369
-type = "audio_visualizer"
+rotation = 1.5707963705062866
+type = "label"
 
-[lockscreen_widgets.widget.lockscreen-widget-000000000000001c.settings]
-background = false
-bands = 28
-centered = false
-color_1 = "outline"
-color_2 = "primary"
-mirrored = true
-show_when_idle = false
-
-[lockscreen_widgets.widget.lockscreen-widget-000000000000001d]
-box_height = 56.0
-box_width = 128.0
-cx = 75.0
-cy = 728.0
-output = "eDP-1"
-placement_height = 768.0
-placement_width = 1366.0
-rotation = 0.0
-type = "weather"
-
-[lockscreen_widgets.widget.lockscreen-widget-000000000000001d.settings]
-background = false
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000020.settings]
+background_color = "on_surface_variant"
+background_opacity = 0.10000000000000001
+background_padding = 0
+background_radius = 32
+opacity = 0.0
 shadow = false
-show_forecast = false
+title = ""
 
-[lockscreen_widgets.widget.lockscreen-widget-000000000000001e]
-box_height = 112.0
-box_width = 120.0
-cx = 1246.12109375
-cy = 634.76171875
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000021]
+box_height = 160.0
+box_width = 8.0
+cx = 91.0
+cy = 753.7127685546875
 output = "eDP-1"
 placement_height = 768.0
 placement_width = 1366.0
-rotation = 0.0
-type = "sticker"
+rotation = 1.5707963705062866
+type = "label"
 
-[lockscreen_widgets.widget.lockscreen-widget-000000000000001e.settings]
-background = false
-image_path = "/home/cherr/Documents/Noctalia/herta.png"
-opacity = 1.0
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000021.settings]
+background_color = "on_surface_variant"
+background_opacity = 0.20000000000000001
+background_padding = 0
+background_radius = 32
+opacity = 0.0
+shadow = false
+title = ""
 
 [nightlight]
 enabled = true
@@ -829,13 +1167,13 @@ enabled = true
 interval_seconds = 600
 
 [wallpaper.default]
-path = "/home/cherr/Wallpapers/mmAir_-_Morning.png"
+path = "/home/cherr/Wallpapers/Project Sekai/服作り奮闘中_after_training.png"
 
 [wallpaper.last]
-path = "/home/cherr/Wallpapers/mmAir_-_Morning.png"
+path = "/home/cherr/Wallpapers/Project Sekai/服作り奮闘中_after_training.png"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/cherr/Wallpapers/mmAir_-_Morning.png"
+path = "/home/cherr/Wallpapers/Project Sekai/服作り奮闘中_after_training.png"
 
 [widget.active-workspace]
 glyph = ""
