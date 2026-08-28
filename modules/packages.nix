@@ -30,7 +30,7 @@
       ];
       useGameMode = false;
     })
-    (inputs.freesmlauncher.packages.${pkgs.stdenv.hostPlatform.system}.default)
+    inputs.freesmlauncher.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     # Gnome-ish
     engrampa
