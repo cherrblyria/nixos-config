@@ -1167,13 +1167,13 @@ enabled = true
 interval_seconds = 600
 
 [wallpaper.default]
-path = "/home/cherr/Wallpapers/Project Sekai/服作り奮闘中_after_training.png"
+path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-k8dv6q.jpg"
 
 [wallpaper.last]
-path = "/home/cherr/Wallpapers/Project Sekai/服作り奮闘中_after_training.png"
+path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-k8dv6q.jpg"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/cherr/Wallpapers/Project Sekai/服作り奮闘中_after_training.png"
+path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-k8dv6q.jpg"
 
 [widget.active-workspace]
 glyph = ""
@@ -1202,6 +1202,9 @@ scale = 0.85000000000000009
 
 [widget.brightness]
 show_label = false
+
+[widget.brightness.actions]
+right = "nightlight-toggle"
 
 [widget.caffeine]
 enabled = false
@@ -1242,6 +1245,10 @@ artist_first = true
 hide_when_no_media = true
 max_length = 300
 title_scroll = "on_hover"
+
+[widget.media.actions]
+scroll_down = "none"
+scroll_up = "none"
 
 [widget.notifications]
 hide_when_no_unread = true
