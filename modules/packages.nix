@@ -18,7 +18,7 @@
     brave-origin
     czkawka
     krita
-    opencode-desktop
+    opencode
     vesktop
 
     # Games

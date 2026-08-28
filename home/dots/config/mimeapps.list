@@ -5,7 +5,6 @@ image/*=org.gnome.Loupe.desktop
 image/gif=org.gnome.Loupe.desktop
 image/png=org.gnome.Loupe.desktop
 image/jpeg=org.gnome.Loupe.desktop
-x-scheme-handler/opencode=ai.opencode.desktop.desktop
 
 [Added Associations]
 image/jpeg=org.gnome.Loupe.desktop;
