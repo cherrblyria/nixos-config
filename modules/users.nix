@@ -8,6 +8,7 @@
       "networkmanager"
       "wheel"
       "uinput"
+      "input"
     ];
     initialPassword = "password";
   };
