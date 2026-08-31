@@ -9,7 +9,7 @@
 
         set -euo pipefail
 
-        REPO_DOTS="${config.home.homeDirectory}/nixos-config/home/dots"
+        REPO_DOTS="${config.home.homeDirectory}/nixos-config/dots"
 
         # paths relative to $HOME (files or directories, both work)
         paths=(

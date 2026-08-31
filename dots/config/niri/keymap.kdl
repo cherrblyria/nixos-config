@@ -122,6 +122,7 @@ binds {
   Mod+A             { spawn-sh "noctalia msg panel-toggle control-center audio"; }
   Mod+N             { spawn-sh "noctalia msg panel-toggle control-center notifications"; }
   Mod+V             { spawn-sh "noctalia msg panel-toggle clipboard"; }
+  Mod+B             { spawn-sh "noctalia msg panel-toggle noctalia/notes:panel"; }
   Mod+Shift+W       { spawn-sh "noctalia msg panel-toggle wallpaper"; }
   Mod+Ctrl+W        { spawn-sh "noctalia msg panel-toggle noctalia/wallhaven:browser"; }
   Ctrl+Shift+Escape { spawn-sh "noctalia msg panel-toggle control-center system"; }

@@ -3,5 +3,5 @@
     enable = true;
     cli.enable = true;
   };
-  xdg.configFile."obsidian/user-flags.conf".source = ./dots/config/obsidian/user-flags.conf;
+  xdg.configFile."obsidian/user-flags.conf".source = ../dots/config/obsidian/user-flags.conf;
 }
