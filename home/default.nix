@@ -13,7 +13,7 @@ in
       _module.args.dots = dots;
       home = {
         username = "cherr";
-        homeDirectory = homeDirectory;
+        inherit homeDirectory;
         stateVersion = "26.11";
       };
       imports =
