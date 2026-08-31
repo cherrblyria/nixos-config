@@ -6,7 +6,7 @@
         # "type" = "file";
         # "source" = "${../assets/arts/herta.txt}";
         "type" = "kitty-direct";
-        "source" = "${../assets/images/herta_3.png}";
+        "source" = "${../assets/images/herta.png}";
         "width" = 30;
         "padding" = {
           "left" = 0;
