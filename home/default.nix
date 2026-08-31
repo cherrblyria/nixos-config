@@ -1,6 +1,8 @@
 { lib, ... }:
 let
   entries = builtins.readDir ./.;
+  homeDirectory = "/home/cherr";
+  dots = "${homeDirectory}/nixos-config/dots";
 in
 {
   home-manager = {
@@ -8,9 +10,10 @@ in
     useUserPackages = true;
     backupFileExtension = "backup";
     users.cherr = {
+      _module.args.dots = dots;
       home = {
         username = "cherr";
-        homeDirectory = "/home/cherr";
+        homeDirectory = homeDirectory;
         stateVersion = "26.11";
       };
       imports =
