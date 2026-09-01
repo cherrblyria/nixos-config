@@ -10,7 +10,7 @@
 
     templates."noctalia_wallhaven.toml" = {
       owner = "cherr";
-      path = "${config.users.users.cherr.home}/.config/noctalia/config.toml";
+      path = "${config.users.users.cherr.home}/.config/noctalia/wallhaven.toml";
       content = ''
         [plugin_settings."noctalia/wallhaven"]
         api_key = "${config.sops.placeholder.wallhaven_api_key}"
