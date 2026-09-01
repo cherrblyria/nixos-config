@@ -1029,7 +1029,6 @@ notes_dir = "/home/cherr/Documents/Cherr's Sanctuary/00 Notes"
 panel_open_near_click = true
 
 [plugin_settings."noctalia/wallhaven"]
-api_key = "nkVUHrBsqLDXSdHII8ExnxlNi7TOr1ai"
 download_dir = "/home/cherr/Wallpapers/Wallheaven"
 
 [plugin_settings."radimous/prismlauncher-instances"]
@@ -1174,13 +1173,13 @@ transition_on_startup = true
     interval_seconds = 600
 
     [wallpaper.default]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-gpokke.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-qrogxr.jpg"
 
     [wallpaper.last]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-gpokke.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-qrogxr.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-gpokke.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-qrogxr.jpg"
 
 [widget.active-workspace]
 glyph = ""
