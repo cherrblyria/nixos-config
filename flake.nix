@@ -13,46 +13,57 @@
   };
 
   inputs = {
+    # Nix
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Noctalia
     noctalia.url = "github:noctalia-dev/noctalia/cachix";
     noctalia-greeter = {
       url = "github:noctalia-dev/noctalia-greeter";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Secrets
     sops-nix.url = "github:Mic92/sops-nix";
+
+    # Spicetify
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
+    # Gaming
+    nix-gaming.url = "github:fufexan/nix-gaming";
     freesmlauncher = {
       url = "github:FreesmTeam/FreesmLauncher";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-gaming.url = "github:fufexan/nix-gaming";
   };
 
   outputs =
     { self, nixpkgs, ... }@inputs:
+    let
+      mkNixos =
+        dots:
+        nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs dots; };
+          modules = [
+            inputs.home-manager.nixosModules.home-manager
+            inputs.noctalia.nixosModules.default
+            inputs.noctalia-greeter.nixosModules.default
+            inputs.sops-nix.nixosModules.sops
+            inputs.spicetify-nix.nixosModules.spicetify
+
+            ./hardware-configuration.nix
+            ./home
+            ./modules
+          ];
+        };
+    in
     {
-      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          inputs.home-manager.nixosModules.home-manager
-          inputs.noctalia.nixosModules.default
-          inputs.noctalia-greeter.nixosModules.default
-          inputs.sops-nix.nixosModules.sops
-          inputs.spicetify-nix.nixosModules.spicetify
-
-          ./hardware-configuration.nix
-
-          ./home
-          ./modules
-        ];
-      };
+      nixosConfigurations.nixos = mkNixos "/home/cherr/nixos-config/dots";
+      nixosConfigurations.ci = mkNixos "${./dots}";
     };
 }

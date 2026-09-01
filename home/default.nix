@@ -1,8 +1,7 @@
-{ lib, ... }:
+{ lib, dots, ... }:
 let
   entries = builtins.readDir ./.;
   homeDirectory = "/home/cherr";
-  dots = "${homeDirectory}/nixos-config/dots";
 in
 {
   home-manager = {

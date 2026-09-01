@@ -31,7 +31,7 @@ jobs:
         run: nix flake update
       - name: Test build
         id: build
-        run: nix build .#nixosConfigurations.nixos.config.system.build.toplevel -L
+        run: nix build .#nixosConfigurations.ci.config.system.build.toplevel -L
         continue-on-error: true
       - name: Open PR if build succeeded
         if: steps.build.outcome == 'success'
