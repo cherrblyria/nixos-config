@@ -23,56 +23,67 @@
     "break",
     "break",
     {
-      "key": "{##d52d00} user  {#keys}",
+      "key": "{#31} user  {#keys}",
       "type": "title",
       "format": "{user-name}"
     },
     {
-      "key": "{##e55c18}󰇅 hname {#keys}",
+      "key": "{#31}󰇅 hname {#keys}",
       "type": "title",
       "format": "{host-name}"
     },
     {
-      "key": "{##f27e31}{icon} dist  {#keys}",
+      "key": "{#34}{icon} dist  {#keys}",
       "format": "{3}",
       "type": "os"
     },
     {
-      "key": "{##fc934d} ker   {#keys}",
+      "key": "{#34} ker   {#keys}",
       "type": "kernel"
     },
     {
-      "key": "{##ffc198}󰇄 wm    {#keys}",
+      "key": "{#34} pkgs  {#keys}",
+      "type": "packages",
+      "format": "{52} (nix) {49} (flatpak)"
+    },
+    {
+      "key": "{#33}󰇄 wm    {#keys}",
       "type": "wm",
       "format": "{1}"
     },
     {
-      "key": "{##ffffff} term  {#keys}",
+      "key": "{#33} term  {#keys}",
       "type": "terminal"
     },
+    // {
+    //   "key": "{#33} sh    {#keys}",
+    //   "type": "shell"
+    // },
     {
-      "key": "{##e7a2c8} sh    {#keys}",
-      "type": "shell"
-    },
-    {
-      "key": "{##cb60a0}󰍛 cpu   {#keys}",
+      "key": "{#31}󰍛 cpu   {#keys}",
       "format": "{}",
       "type": "cpu",
       "showPeCoreCount": true
     },
     {
-      "key": "{##bb5893}󰉉 disk  {#keys}",
+      "key": "{#31}󰉉 disk  {#keys}",
       "format": "{1} / {2} ({3})",
       "type": "disk",
       "folders": "/"
     },
     {
-      "key": "{##af3e7c} mem   {#keys}",
+      "key": "{#31} mem   {#keys}",
       "type": "memory"
     },
     {
-      "key": "{##a30263}󰅐 up    {#keys}",
+      "key": "{#37}󰅐 up    {#keys}",
       "type": "uptime"
+    },
+    "break",
+    {
+      "type": "custom",
+      "key": "   ",
+      "format": "{#37}󰮯 {#37} • {#37}• {#37}• {#31} 󰊠 {#32} 󰊠 {#33} 󰊠 {#34} 󰊠 {#35} 󰊠 {#36} 󰊠 "
     }
   ]
 }
