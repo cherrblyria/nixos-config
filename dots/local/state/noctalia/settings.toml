@@ -21,7 +21,7 @@ order = [ "Main", "Workspace-OSD" ]
     padding = 6
     panel_overlap = 0
     radius = 35
-    start = [ "launcher", "media" ]
+    start = [ "group:g1", "media" ]
 
         [bar.Main.dead_zone.actions]
         back = "workspace-switch next"
@@ -37,6 +37,17 @@ order = [ "Main", "Workspace-OSD" ]
         fill = "surface_variant"
         id = "g4"
         members = [ "tray", "nix-monitor", "wallhaven", "brightness", "volume" ]
+        opacity = 0.0
+        padding = 0.0
+
+        [[bar.Main.capsule_group]]
+        accordion = true
+        accordion_direction = "end"
+        border = ""
+        enabled = true
+        fill = "surface_variant"
+        id = "g1"
+        members = [ "launcher", "workspaces" ]
         opacity = 0.0
         padding = 0.0
 
@@ -1042,7 +1053,6 @@ enabled = [
     "dotnetrob/cat",
     "salemsayed/niri-active-workspace",
     "noctalia/world_clock",
-    "avivbintangaringga/nix-monitor",
     "radimous/prismlauncher-instances",
     "noctalia/notes"
 ]
@@ -1164,7 +1174,7 @@ wallpaper_scheme = "m3-content"
     community_ids = [ "discord", "vscode", "papirus-icons", "lazygit", "yazi" ]
 
 [wallpaper]
-directory = "/home/cherr/Wallpapers"
+directory = "~/Wallpapers"
 transition = [ "fade" ]
 transition_on_startup = true
 
@@ -1173,13 +1183,13 @@ transition_on_startup = true
     interval_seconds = 600
 
     [wallpaper.default]
-    path = "/home/cherr/Wallpapers/mmAir_-_Morning_Light.png"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-7jlqme.png"
 
     [wallpaper.last]
-    path = "/home/cherr/Wallpapers/mmAir_-_Morning_Light.png"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-7jlqme.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/cherr/Wallpapers/mmAir_-_Morning_Light.png"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-7jlqme.png"
 
 [widget.active-workspace]
 glyph = ""
@@ -1301,5 +1311,5 @@ type = "noctalia/wallhaven:wallhaven"
 show_temperature = false
 
 [widget.workspaces]
-hide_when_empty = true
-style = "minimal"
+pill_scale = 0.59999999999999998
+show_labels = false
