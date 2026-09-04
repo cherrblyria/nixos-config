@@ -18,7 +18,6 @@
     brave-origin
     czkawka
     krita
-    opencode
     vesktop
 
     # Games

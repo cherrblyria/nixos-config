@@ -116,7 +116,7 @@ widget_order = [
     [desktop_widgets.grid]
     cell_size = 8
     major_interval = 4
-    visible = false
+    visible = true
 
     [desktop_widgets.widget.desktop-widget-0000000000000001]
     box_height = 128.0
@@ -1170,7 +1170,7 @@ source = "wallpaper"
 wallpaper_scheme = "m3-content"
 
     [theme.templates]
-    builtin_ids = [ "cava", "gtk3", "gtk4", "kcolorscheme", "kitty", "niri", "qt" ]
+    builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "kcolorscheme", "kitty", "niri", "qt" ]
     community_ids = [ "discord", "vscode", "papirus-icons", "lazygit", "yazi" ]
 
 [wallpaper]
@@ -1183,13 +1183,13 @@ transition_on_startup = true
     interval_seconds = 600
 
     [wallpaper.default]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-7jlqme.png"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-9dq9wk.png"
 
     [wallpaper.last]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-7jlqme.png"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-9dq9wk.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-7jlqme.png"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-9dq9wk.png"
 
 [widget.active-workspace]
 glyph = ""
