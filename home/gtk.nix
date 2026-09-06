@@ -1,19 +1,6 @@
-{
-  config,
-  pkgs,
-  lib,
-  ...
-}:
+{ pkgs, ... }:
 {
   home = {
-    # Papirus Icons
-    activation.installPapirus = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-      if [ ! -d "${config.home.homeDirectory}/.local/share/icons/Papirus" ]; then
-        run cp -r ${pkgs.papirus-icon-theme}/share/icons/Papirus* ${config.home.homeDirectory}/.local/share/icons/
-        run chmod -R u+w ${config.home.homeDirectory}/.local/share/icons/Papirus*
-      fi
-    '';
-
     # Cursor
     pointerCursor = {
       enable = true;
@@ -32,6 +19,9 @@
       name = "adw-gtk3";
       package = pkgs.adw-gtk3;
     };
-    iconTheme.name = "Papirus";
+    iconTheme = {
+      name = "WhiteSur";
+      package = pkgs.whitesur-icon-theme;
+    };
   };
 }

@@ -1171,7 +1171,7 @@ wallpaper_scheme = "m3-content"
 
     [theme.templates]
     builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "kcolorscheme", "kitty", "niri", "qt" ]
-    community_ids = [ "discord", "vscode", "papirus-icons", "lazygit", "yazi" ]
+    community_ids = [ "discord", "vscode", "lazygit", "yazi" ]
 
 [wallpaper]
 directory = "~/Wallpapers"
@@ -1183,13 +1183,13 @@ transition_on_startup = true
     interval_seconds = 600
 
     [wallpaper.default]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-yq9wmd.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-5gqpo8.png"
 
     [wallpaper.last]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-yq9wmd.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-5gqpo8.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-yq9wmd.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-5gqpo8.png"
 
 [widget.active-workspace]
 glyph = ""

@@ -15,7 +15,6 @@ It's just a simple one machine config w/ flake and simple modular configs.
   - Frist: [sekai.best](https://sekai.best/card/1356)
   - Second: [sekai.best](https://sekai.best/card/448)
 - Music: [Pocari Sweet波卡利甜 - By the ocean](https://open.spotify.com/track/2saVwcRjiSqHI6fTIcenZo)
-<!-- - Icon Theme: [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) -->
 
 #### Assets credits
 
