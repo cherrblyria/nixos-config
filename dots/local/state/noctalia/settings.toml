@@ -1027,13 +1027,6 @@ position = "bottom_center"
 position_vertical = "center_right"
 scale = 0.85000000521540642
 
-[plugin_settings."avivbintangaringga/nix-monitor"]
-clean_command = "nh clean all --keep 3 --keep-since 3d"
-update_command = "nix flake update --flake /home/cherr/nixos-config"
-
-[plugin_settings."cherrblyria/sekai-wallpaper"]
-keep_count = 3
-
 [plugin_settings."noctalia/notes"]
 notes_dir = "/home/cherr/Documents/Cherr's Sanctuary/00 Notes"
 panel_open_near_click = true
@@ -1170,8 +1163,8 @@ screen_time_enabled = true
     mru = true
 
 [theme]
-builtin = "Catppuccin"
-community_palette = "Oxocarbon"
+builtin = "Kanagawa"
+community_palette = "Monochrome"
 mode = "dark"
 source = "wallpaper"
 wallpaper_scheme = "m3-content"
@@ -1190,13 +1183,13 @@ transition_on_startup = true
     interval_seconds = 600
 
     [wallpaper.default]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-lydeq2.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-rq3v8j.jpg"
 
     [wallpaper.last]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-lydeq2.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-rq3v8j.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-lydeq2.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-rq3v8j.jpg"
 
 [widget.active-workspace]
 glyph = ""
