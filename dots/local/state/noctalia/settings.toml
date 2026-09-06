@@ -1,4 +1,4 @@
-config_version = 13
+config_version = 14
 
 [audio]
 enable_sounds = true
@@ -1046,6 +1046,7 @@ launcher_exec_command = "freesmlauncher"
 prism_path = "~/.local/share/FreesmLauncher"
 
 [plugins]
+auto_update = "official"
 enabled = [
     "noctalia/kaomoji",
     "noctalia/wallhaven",
@@ -1068,15 +1069,19 @@ enabled = [
 
 [shell]
 avatar_path = "/home/cherr/Pictures/Anime/メ.jpeg"
+button_borders = false
+card_borders = false
 clipboard_auto_paste = "off"
-clipboard_history_max_entries = 200
+clipboard_history_max_entries = 500
 corner_radius_scale = 2.0
 date_format = "%A, %d %B %Y"
 font_family = "Inter"
+input_borders = false
 niri_overview_type_to_launch_enabled = true
 panel_anchor_bar = "Main"
 password_style = "random"
 polkit_agent = true
+popup_borders = false
 screen_time_enabled = true
 
     [shell.animation]
@@ -1161,6 +1166,9 @@ screen_time_enabled = true
     [shell.shadow]
     direction = "center"
 
+    [shell.window_switcher]
+    mru = true
+
 [theme]
 builtin = "Catppuccin"
 community_palette = "Oxocarbon"
@@ -1182,13 +1190,13 @@ transition_on_startup = true
     interval_seconds = 600
 
     [wallpaper.default]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-p98l23.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-lydeq2.jpg"
 
     [wallpaper.last]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-p98l23.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-lydeq2.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-p98l23.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-lydeq2.jpg"
 
 [widget.active-workspace]
 glyph = ""
