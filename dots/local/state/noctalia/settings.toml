@@ -2,7 +2,6 @@ config_version = 13
 
 [audio]
 enable_sounds = true
-sound_volume = 1
 
 [backdrop]
 blur_intensity = 0.29999999999999999
@@ -36,7 +35,7 @@ order = [ "Main", "Workspace-OSD" ]
         enabled = true
         fill = "surface_variant"
         id = "g4"
-        members = [ "tray", "nix-monitor", "wallhaven", "brightness", "volume" ]
+        members = [ "tray", "notes", "wallhaven", "brightness", "volume" ]
         opacity = 0.0
         padding = 0.0
 
@@ -1183,13 +1182,13 @@ transition_on_startup = true
     interval_seconds = 600
 
     [wallpaper.default]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-yq9g5x.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-p98l23.jpg"
 
     [wallpaper.last]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-yq9g5x.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-p98l23.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-yq9g5x.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-p98l23.jpg"
 
 [widget.active-workspace]
 glyph = ""
@@ -1269,9 +1268,8 @@ title_scroll = "on_hover"
     scroll_down = "none"
     scroll_up = "none"
 
-[widget.nix-monitor]
-show_text = false
-type = "avivbintangaringga/nix-monitor:nix-monitor"
+[widget.notes]
+type = "noctalia/notes:notes"
 
 [widget.notifications]
 hide_when_no_unread = true
