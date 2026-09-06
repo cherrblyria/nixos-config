@@ -1183,13 +1183,13 @@ transition_on_startup = true
     interval_seconds = 600
 
     [wallpaper.default]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-rq3v8j.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-yq9wmd.jpg"
 
     [wallpaper.last]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-rq3v8j.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-yq9wmd.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-rq3v8j.jpg"
+    path = "/home/cherr/Wallpapers/Wallheaven/wallhaven-yq9wmd.jpg"
 
 [widget.active-workspace]
 glyph = ""
